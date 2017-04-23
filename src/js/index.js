@@ -9,6 +9,7 @@ import fontAwesome from 'fontAwesome'
 import Vue from 'vue'
 import project from '../components/project/project.vue'
 import marked from '../../node_modules/marked/marked.min.js'
+import db from '../../data.json'
 
 
 
@@ -21,17 +22,20 @@ var markdownReaderDesc = "* 堆的创建、插入、删除、堆排序演示\n" 
     "* 两种演示方式切换\n";
 markdownReaderDesc = marked(markdownReaderDesc);
 
-var data = [
-    {
-        "title": "Online Markdown Reader",
-        "tags": ["JS", "Tool"],
-        "content": markdownReaderDesc,
-        "source": "https://github.com/zhangjikai/online-markdown-reader",
-        "url": "http://markdown.zhangjikai.com/",
-        "desc": "测试一下效果"
-    }
-];
+//var data = [
+//    {
+//        "title": "Online Markdown Reader",
+//        "tags": ["JS", "Tool"],
+//        "content": markdownReaderDesc,
+//        "source": "https://github.com/zhangjikai/online-markdown-reader",
+//        "url": "http://markdown.zhangjikai.com/",
+//        "desc": "测试一下效果"
+//    }
+//];
 
+var data = db;
+
+console.log(data);
 
 var vm = new Vue({
     el: '#app',

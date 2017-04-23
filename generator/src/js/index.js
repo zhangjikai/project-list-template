@@ -146,10 +146,14 @@
                     project.tags = config.tags;
                 }
 
+                if (config.hasOwnProperty("category")) {
+                    project.category = config.category;
+                }
+
                 var projectGithub = project.github;
                 var configGithub = config.github;
+                console.log(configGithub)
                 if (config.hasOwnProperty("github")) {
-
 
                     if (configGithub == null || !configGithub.hasOwnProperty("repo")) {
                         project.hasGithub = false;
@@ -158,16 +162,16 @@
                     }
 
                     if (configGithub.hasOwnProperty("repo")) {
-
                         projectGithub.repo = configGithub.repo;
                     }
-                    if (configGithub.hasOwnProperty("star") || !configGithub["star"]) {
+
+                    if (configGithub.hasOwnProperty("star") && !configGithub["star"]) {
                         //project.showStar = false;
                         projectGithub.star = false;
 
                     }
 
-                    if (configGithub.hasOwnProperty("fork") || !configGithub["fork"]) {
+                    if (configGithub.hasOwnProperty("fork") && !configGithub["fork"]) {
                         projectGithub.fork = false;
                     }
 
@@ -199,7 +203,7 @@
         var fileName = "data.json";
         var content = editor.getSession().getValue();
         if (content == null || content.trim() == "") {
-            swal("数据不能为空",  "", "error");
+            swal("数据不能为空", "", "error");
             return;
         }
         var blob = new Blob([content], {type: "application/json"});
@@ -238,11 +242,6 @@
     editor.setFontSize(14);
     editor.setOption("wrap", "free");
     ace.require("ace/ext/language_tools");
-    editor.setOptions({
-        enableBasicAutocompletion: true,
-        enableSnippets: true,
-        enableLiveAutocompletion: true
-    });
     editor.container.style.lineHeight = 1.5;
     editor.renderer.updateFontSize()
 

@@ -4,8 +4,7 @@
 
             <div class="project-header">
                 <div class="project-title">
-                    <span>{{project.title}}</span>
-
+                    <span>{{project.name}}</span>
                 </div>
 
             </div>
@@ -16,36 +15,47 @@
             </div>
             <!--<div class="project-desc" v-html="project.desc"></div>-->
             <div class="project-content" id="content">
-                <div class="main" v-html="project.content">
-
+                <div class="main" >
+                    {{project.hasShortIntro ? project.shortIntro: project.content}}
                 </div>
             </div>
-            <div class="project-content-copy" id="content-copy">
+            <!--<div class="project-content-copy" id="content-copy">
                 <div class="main" v-html="project.content"></div>
-            </div>
+            </div>-->
             <div class="project-url">
 
-                <a :href="project.url " v-if="project.url !== null" target="_blank" class="project-link">
+                <a :href="project.home " v-if="project.hasHome" target="_blank" class="project-link">
                     <i class="fa fa-home custom-fa" aria-hidden="true"></i>
                     <span>Home</span>
                 </a>
 
-                <a :href="project.source" target="_blank" v-if="project.source !== null" class="project-link">
+                <a :href="project.code" target="_blank" v-if="project.hasCode" class="project-link">
                     <i class="fa fa-code custom-fa" aria-hidden="true"></i>
                     <span>Code</span>
                 </a>
 
 
-                <a class="github-button" href="https://github.com/zhangjikai/gitbook-use" data-icon="octicon-star"
-                   data-count-href="/zhangjikai/gitbook-use/stargazers"
-                   data-count-api="/repos/zhangjikai/gitbook-use#stargazers_count"
-                   data-count-aria-label="# stargazers on GitHub" aria-label="Star zhangjikai/gitbook-use on GitHub"
+                <a class="github-button" v-if="project.github.star" :href="'https://github.com/' + project.github.repo "
+                   data-icon="octicon-star"
+                   :data-count-href="'/'+ project.github.repo + '/stargazers'"
+                   :data-count-api="'/repos/'+ project.github.repo +'#stargazers_count'"
+                   data-count-aria-label="# stargazers on GitHub"
+                   :aria-label="'Star' + project.github.repo+  'on GitHub'"
                    style="display: none">Star</a>
 
-                <a class="github-button" href="https://github.com/zhangjikai/gitbook-use/fork"
-                   data-icon="octicon-repo-forked" data-count-href="/zhangjikai/gitbook-use/network"
-                   data-count-api="/repos/zhangjikai/gitbook-use#forks_count" data-count-aria-label="# forks on GitHub"
-                   aria-label="Fork zhangjikai/gitbook-use on GitHub"
+                <!--<a class="github-button" :href="'https://github.com/' + project.github.repo  " data-icon="octicon-star"
+                   :data-count-href="'/'+ project.github.repo + '/stargazers'"
+                   :data-count-api="'/repos/'+ project.github.repo +'#stargazers_count'"
+                   data-count-aria-label="# stargazers on GitHub"
+                   :aria-label="'Star' + project.github.repo+  'on GitHub'"
+                   style="display: none">Star</a>-->
+
+                <a class="github-button" v-if="project.github.fork" :href="'https://github.com/' + project.github.repo"
+                   data-icon="octicon-repo-forked"
+                   :data-count-href="'/' + project.github.repo + '/network'"
+                   :data-count-api="'/repos/' + project.github.repo + '#forks_count'"
+                   data-count-aria-label="# forks on GitHub"
+                   :aria-label="'Fork'+ project.github.repo +'on GitHub'"
                    style="display: none">Fork</a>
 
                 <a href="javascript:void(0)" @click="expand" v-if="project.source !== null" class="project-link expand">
@@ -107,6 +117,7 @@
         data: function () {
             return {
                 isExpand: false
+
             }
         },
         methods: {
@@ -116,12 +127,12 @@
                 //console.log(vm.isExpand);
                 vm.isExpand = !vm.isExpand;
                 var content = document.querySelector("#content");
-                console.log(content);
+                //console.log(content);
                 if (vm.isExpand) {
-                    var contentCopy = document.querySelector('#content-copy');
-                    content.style.height = contentCopy.clientHeight + 'px';
+                    //var contentCopy = document.querySelector('#content-copy');
+                    //content.style.height = contentCopy.clientHeight + 'px';
                 } else {
-                    content.style.height = "0px";
+                    //content.style.height = "0px";
                 }
                 //console.log(document.querySelector('#content-copy').clientHeight)
             }

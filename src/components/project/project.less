@@ -1,0 +1,280 @@
+@import "../../less/variable";
+
+@project-width: 900px;
+@project-base-color: #41b883;
+@project-bg: #fff;
+@project-height: 200px;
+@project-radius: 4px;
+@project-border-color: #95a0ab;
+@project-base-padding: @padding-base-horizontal;
+@project-padding-large: 20px;
+@project-padding-normal: @project-base-padding;
+@project-padding-small: 4px;
+
+@title-border-color: #ccc;
+@title-text-color: @project-base-color;
+
+@tag-height: 24px;
+@tag-bg: @project-base-color;
+@tag-color: #bbb;
+
+@url-color: #fff;
+
+.project {
+  font-family: "ubuntu", "Tahoma", "Microsoft YaHei", arial, sans-serif;
+  width: @project-width;
+  min-height: 100px;
+  margin: 0 auto @project-padding-large auto;
+  background: @project-bg;
+  //border-left: @project-padding-small solid @project-base-color;
+  //box-shadow: 0px 0px 8px 2px @project-border-color;
+  box-shadow: @len-small-small @len-small-small @len-small-small @lightgray-dark;
+  padding: 0;
+  //margin-bottom: @project-padding-large;
+}
+
+@media screen and (max-width: @project-width) {
+  .project {
+    width: 100%;
+  }
+}
+
+.inner {
+  margin: 0;
+  width: auto;
+  padding: @project-padding-normal @project-padding-large;
+}
+
+.project-title {
+  margin: 0;
+  color: @title-text-color;
+  font-size: @font-size-h3;
+
+  border-bottom: 1px solid @title-border-color;
+  padding-bottom: @padding-base-vertical;
+  span {
+
+    text-align: left;
+    font-size: @font-size-h3;
+  }
+  i {
+    float: right;
+    cursor: pointer;
+  }
+
+}
+
+.project-tag {
+  padding: @project-base-padding 0px;
+  color: #aaa;
+  font-size: @font-size-small;
+  i {
+    margin-right: @padding-small-vertical;
+  }
+  a {
+    text-decoration: none;
+    color: #bbb;
+    margin-right: @project-base-padding;
+    &:hover {
+      color: #4786D6;
+    }
+  }
+}
+
+.project-desc {
+  margin-bottom: @len-small;
+}
+
+.project-content-copy {
+  position: absolute;
+  visibility: hidden;
+  z-index: 0;
+  //.main {
+  //  border-top: 2px dashed @lightgray-dark;
+  //  margin-top: @len-medium;
+  //}
+}
+
+.project-content {
+  transition: height 0.5s ease-in;
+  height: 0px;
+  overflow: hidden;
+  //.main {
+  //  border-top: 2px dashed @lightgray-dark;
+  //  margin-top: @len-medium;
+  //}
+}
+
+p {
+  margin-top: 0;
+  font-size: @font-size-normal;
+  line-height: @line-height-small;
+}
+
+li {
+  font-size: @font-size-normal;
+  line-height: @line-height-small;
+}
+
+code, pre {
+  font-family: Consolas, Monaco, Andale Mono, monospace;
+  background-color: #f7f7f7;
+  color: inherit;
+}
+
+code {
+  font-family: Consolas, Monaco, Andale Mono, monospace;
+  margin: 0 2px;
+}
+
+pre {
+  font-family: Consolas, Monaco, Andale Mono, monospace;
+  line-height: 1.2em;
+  overflow: auto;
+  padding: 6px 10px;
+  /*border-left: 5px solid #6CE26C;*/
+}
+
+pre > code {
+  font-family: Consolas, Monaco, Andale Mono, monospace;
+  border: 0;
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: 1.3em;
+  font-size: 1em;
+  white-space: pre;
+  background: 0 0;
+}
+
+code {
+  color: #666555;
+}
+
+a {
+  text-decoration: none;
+  color: @project-base-color;
+  &:hover {
+    //text-decoration: underline;
+  }
+}
+
+.project-url {
+
+  //a {
+  //  display: inline-block;
+  //  height: @tag-height;
+  //  line-height: @tag-height;
+  //  position: relative;
+  //  font-size: @font-size-small;
+  //  margin-left: 20px;
+  //  padding: 0 @project-base-padding;
+  //  background: @tag-bg;
+  //  color: @url-color;
+  //  text-decoration: none;
+  //  border-radius: @border-radius-base;
+  //  box-shadow: 1px 1px 1px @tag-bg;
+  //  &:first-child {
+  //    margin-left: 0;
+  //  }
+  //}
+
+  .project-link {
+    display: inline-block;
+    font: 700 11px/14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #eee;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fcfcfc), color-stop(100%, #eee));
+    background-image: -webkit-linear-gradient(top, #fcfcfc 0, #eee 100%);
+    background-image: -moz-linear-gradient(top, #fcfcfc 0, #eee 100%);
+    background-image: -ms-linear-gradient(top, #fcfcfc 0, #eee 100%);
+    background-image: -o-linear-gradient(top, #fcfcfc 0, #eee 100%);
+    background-image: linear-gradient(to bottom, #fcfcfc 0, #eee 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#eeeeee', GradientType=0);
+    background-repeat: no-repeat;
+    border: 1px solid #d5d5d5;
+    padding: 2px 5px 2px 4px;
+    color: #333;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #fff;
+    white-space: nowrap;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-top: @len-small-small;
+    .custom-fa {
+      font-weight: bold;
+    }
+    margin-right: @len-small-small;
+  }
+
+  iframe {
+    margin-top: @len-small-small;
+    vertical-align: bottom;
+    margin-right: @len-small-small;
+  }
+
+  //下面是实现标签效果，暂时不用了
+  /*a {
+    display: inline-block;
+    height: @tag-height;
+    line-height: @tag-height;
+    position: relative;
+    font-size: @font-size-small;
+    margin-left: 20px;
+    padding: 0 @project-base-padding;
+    background: @tag-bg;
+    color: @url-color;
+    text-decoration: none;
+    border-radius: 0px @border-radius-base @border-radius-base 0px;
+    box-shadow: 1px 1px 1px @tag-bg;
+    &:first-child{
+      margin-left: 0;
+    }
+    &:before {
+      content: "";
+      float: left;
+      position: absolute;
+      top: 0;
+      left: -12px;
+      width: 0;
+      height: 0;
+      border-color: transparent @tag-bg transparent transparent;
+      border-style: solid;
+      border-width: 12px 12px 12px 0;
+
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 0;
+      float: left;
+      width: 4px;
+      height: 4px;
+      border-radius: 2px;
+      background: #fff;
+      box-shadow: -1px -1px 2px #aaa;
+    }
+
+    &:hover {
+
+    }
+  }*/
+}
+
+.expand {
+  float: right;
+  transition: width 0.5s ease-in;
+  width: 70px;
+  text-align: center;
+  i {
+    margin-left: @len-tiny/2;
+    margin-right: @len-tiny/2;
+  }
+  span {
+    //display: inline-block;
+    //width: 50px;
+    //text-align: center;
+  }
+}

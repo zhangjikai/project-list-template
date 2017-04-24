@@ -2,11 +2,26 @@
 
 body {
   background: @body-color;
-  padding: @padding-base-vertical;
+  //padding: @padding-base-vertical;
+  font-family: @font-family-sans;
   z-index: 2;
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+  position: relative;
 }
 
 img {
   max-width: 100%;
 }
 
+#app {
+  height: 100%;
+}
+
+.project-container {
+  min-width: 300px;
+  margin-left: 260px;
+  padding: @len-small;
+  transition: all 0.5s
+}

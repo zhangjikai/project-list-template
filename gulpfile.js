@@ -79,8 +79,8 @@ gulp.task("webpack", function (callback) {
         resolve: {
             alias: {
                 vue: path.join(__dirname, "/node_modules/vue/dist/vue.min.js"),
-                fontAwesome: path.join(__dirname, "node_modules/font-awesome/css/font-awesome.min.css"),
-                marked: path.join(__dirname, "node_")
+                fontAwesome: path.join(__dirname, "node_modules/font-awesome/css/font-awesome.min.css")
+
             },
             extensions: ['.js', '.json', '.less', '.vue']
         }

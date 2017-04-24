@@ -1,0 +1,132 @@
+@import "../../less/variable";
+
+@menu-padding-hor: 20px;
+@menu-content-width : 220px;
+@menu-expand-width: @menu-content-width + 2 * @menu-padding-hor ;
+@menu-collapse-width: 50px;
+@font-color: #666;
+@item-color: #75767b;
+@main-font-family: 'Noto Sans', sans-serif;
+
+.header {
+  color: #3bafda;
+  font-size: 1.5em;
+  text-align: right;
+  font-weight: 300;
+  padding-right: 16px;
+  padding-top: @len-small;
+  padding-bottom: @len-small;
+  margin-bottom: @len-small-small;
+  border-bottom: 1px solid #ccc;
+
+  //box-shadow: 0px 4px 4px #ccc;
+  //background: #0d77b6;
+}
+
+.collapse-btn {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  height: 30px;
+  padding-left: 16px;
+  background: #fff;
+}
+
+.menu {
+  font-family: @main-font-family;
+  font-size: 14px;
+  position: fixed;
+  background: @white;
+  box-shadow: @len-tiny @len-tiny @len-small-small #ccc;
+  transition: all 0.5s;
+  overflow: hidden;
+  //overflow-x: hidden;
+  //overflow-y: auto;
+
+}
+
+.menu-expand {
+  width: @menu-expand-width;
+
+}
+
+.menu-collapse {
+  width: @menu-collapse-width;
+
+}
+
+.side-outer {
+  position: absolute;
+  overflow-y: auto;
+  top: 60px;
+  bottom: 0px;
+  padding-bottom: @len-medium-medium;
+
+}
+
+.menu-vertical {
+
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  i {
+    cursor: pointer;
+  }
+
+  .category {
+    color: @font-color;
+    display: block;
+    //border-bottom: 1px solid @bluejeans-dark;
+    font-size: 1.1em;
+    width: @menu-content-width;
+    padding: @len-small-small @menu-padding-hor;
+    padding-right: 0px;
+
+    text-decoration: none;
+    .title {
+      color: #3bafda;
+      padding-bottom: @len-small-small;
+      i {
+        margin-right: @len-small-small;
+      }
+      .menu-angle {
+        margin-right: 0px;
+        float: right;
+      }
+    }
+
+    .item {
+      position: relative;
+      margin-left: 5px;
+      padding: @len-tiny;
+      padding-left: 16px;
+      border-left: 4px solid #f5f5f5;
+      &:before {
+        content: " ";
+        position: absolute;
+        left: 0;
+        top: 12px;
+        width: 6px;
+        height: 6px;
+        margin-left: -6px;
+        background: #bbb;
+        border-radius: 50%;
+        border: 1px solid #fff;
+        transition-duration: 0.2s;
+        transition-timing-function: ease-in-out;
+        transition-delay: 0s;
+        transition-property: backgroun
+      }
+      a {
+        color: #75767b;
+      }
+      i {
+        margin-right: @len-tiny;
+      }
+    }
+
+  }
+
+}

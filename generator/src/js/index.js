@@ -111,6 +111,8 @@
         //console.log(mdContent);
         var rowTexts = mdContent.split(startTag);
         var projectList = [];
+
+
         var idIndex = 0;
 
         rowTexts.forEach(function (rowText) {
@@ -148,12 +150,15 @@
                 }
 
                 if (config.hasOwnProperty("category")) {
+
                     project.category = config.category;
+
                 }
+
 
                 var projectGithub = project.github;
                 var configGithub = config.github;
-                console.log(configGithub)
+                //console.log(configGithub)
                 if (config.hasOwnProperty("github")) {
 
                     if (configGithub == null || !configGithub.hasOwnProperty("repo")) {
@@ -188,12 +193,38 @@
             }
         });
 
+        var categoryMap = {};
+        var categoryList = [];
+        var categoryMap = {};
+
+        projectList.forEach(function (project) {
+            if (project.category != null && project.category.trim() != "") {
+
+                var plist;
+                if (categoryMap.hasOwnProperty(project.category)) {
+                    plist = categoryMap[project.category];
+                    plist.push(project.id);
+                } else {
+                    plist = [];
+                    plist.push(project.id);
+                    categoryMap[project.category] = plist;
+                    categoryList.push(project.category);
+                }
+            }
+        });
+
+        var data = {
+            projectList: projectList,
+            categoryMap: categoryMap,
+            categoryList: categoryList
+        };
+
 
         //console.log(projectList[0].content);
         // $("#test").html(projectList[0].content);
         //$("#editor").val(JSON.stringify(projectList));
 
-        editor.getSession().setValue(JSON.stringify(projectList, null, 4));
+        editor.getSession().setValue(JSON.stringify(data, null, 4));
         //console.log(JSON.stringify(projectList));
         //console.log(editor.getValue());
 

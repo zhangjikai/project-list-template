@@ -5,9 +5,7 @@
             <div class="project-header">
                 <div class="project-title">
                     <span>{{project.name}}</span>
-
                 </div>
-
             </div>
 
             <div class="project-tag">

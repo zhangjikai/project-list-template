@@ -1,11 +1,24 @@
 /** extract from bootstrap*/
 body {
   background: #F5F7FA;
-  padding: 6px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   z-index: 2;
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+  position: relative;
 }
 img {
   max-width: 100%;
+}
+#app {
+  height: 100%;
+}
+.project-container {
+  min-width: 300px;
+  margin-left: 260px;
+  padding: 12px;
+  transition: all 0.5s;
 }
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome

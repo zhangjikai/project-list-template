@@ -6,7 +6,8 @@
         "repo" : "zhangjikai/heap"
     },
     "code": "https://github.com/zhangjikai/heap",
-    "tags":["java"]
+    "tags":["java"],
+    "category": "Java"
 }
 ```
 
@@ -36,7 +37,8 @@
         "repo" : "zhangjikai/LinkGame"
     },
     "code": "https://github.com/zhangjikai/LinkGame",
-    "tags":["java"]
+    "tags":["java"],
+    "category" : "测试"
 }
 ```
 以秦时明月为背景，使用 Java 编写的一款连连看游戏，游戏的效果还是不错的，页面比较精致，同时包含背景音乐和一些动画效果。同时游戏增加了元素移动（消除一对之后剩余元素位置改变）模式，增加了游戏的趣味性。

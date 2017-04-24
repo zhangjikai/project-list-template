@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,12 +11,29 @@
 <body>
 
 <div id="app">
-<project v-for="project in projects" :project="project" :show-short="project.hasShortIntro">
+    <sidebar @collapse_click="collapseClick"></sidebar>
+    <div class="project-container" id="project-container">
+        <project v-for="project in projects" :project="project" :show-short="project.hasShortIntro">
+        </project>
+    </div>
 
-</project>
 
 </div>
 
+<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+<!--<script type="text/javascript">
+    // 在这里加载数据，为了不重新编译就可以使用新数据
+    var db, config;
+    $.ajaxSettings.async = false;
+    $.getJSON('config.json', function (json) {
+        config = json;
+    });
+
+    $.getJSON('data.json', function (json) {
+        db = json;
+    });
+    $.ajaxSettings.async = true;
+</script>-->
 
 <script type="text/javascript" src="dist/js/common.js"></script>
 <script type="text/javascript" src="dist/js/index.js"></script>

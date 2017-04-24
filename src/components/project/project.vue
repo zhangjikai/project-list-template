@@ -5,6 +5,7 @@
             <div class="project-header">
                 <div class="project-title">
                     <span>{{project.name}}</span>
+
                 </div>
 
             </div>
@@ -15,13 +16,19 @@
             </div>
             <!--<div class="project-desc" v-html="project.desc"></div>-->
             <div class="project-content" id="content">
-                <div class="main" >
-                    {{project.hasShortIntro ? project.shortIntro: project.content}}
+
+                <div class="main" v-if="showShort" v-html="project.shortIntro">
+                </div>
+                <div class="main" v-else v-html="project.content">
+                </div>
+
+            </div>
+            <div class="no-show">
+                <div class="project-content-copy" id="content-copy">
+                    <div class="main" v-html="project.content"></div>
                 </div>
             </div>
-            <!--<div class="project-content-copy" id="content-copy">
-                <div class="main" v-html="project.content"></div>
-            </div>-->
+
             <div class="project-url">
 
                 <a :href="project.home " v-if="project.hasHome" target="_blank" class="project-link">
@@ -34,7 +41,6 @@
                     <span>Code</span>
                 </a>
 
-
                 <a class="github-button" v-if="project.github.star" :href="'https://github.com/' + project.github.repo "
                    data-icon="octicon-star"
                    :data-count-href="'/'+ project.github.repo + '/stargazers'"
@@ -43,12 +49,6 @@
                    :aria-label="'Star' + project.github.repo+  'on GitHub'"
                    style="display: none">Star</a>
 
-                <!--<a class="github-button" :href="'https://github.com/' + project.github.repo  " data-icon="octicon-star"
-                   :data-count-href="'/'+ project.github.repo + '/stargazers'"
-                   :data-count-api="'/repos/'+ project.github.repo +'#stargazers_count'"
-                   data-count-aria-label="# stargazers on GitHub"
-                   :aria-label="'Star' + project.github.repo+  'on GitHub'"
-                   style="display: none">Star</a>-->
 
                 <a class="github-button" v-if="project.github.fork" :href="'https://github.com/' + project.github.repo"
                    data-icon="octicon-repo-forked"
@@ -58,10 +58,10 @@
                    :aria-label="'Fork'+ project.github.repo +'on GitHub'"
                    style="display: none">Fork</a>
 
-                <a href="javascript:void(0)" @click="expand" v-if="project.source !== null" class="project-link expand">
-                    <i class="fa " :class="{'fa-angle-double-down': !isExpand, 'fa-angle-double-up': isExpand}"
+                <a href="javascript:void(0)" @click="expand" v-if="project.hasShortIntro" class="project-link expand">
+                    <i class="fa " :class="{'fa-angle-double-down': showShort, 'fa-angle-double-up': !showShort}"
                        aria-hidden="true"></i>
-                    <span>{{isExpand ?   "收起" : "详细介绍"}}</span>
+                    <span>{{showShort ?  "详细介绍": "收起"}}</span>
                 </a>
 
 
@@ -112,26 +112,34 @@
 </template>
 
 <script>
+    import $ from "jquery"
     export default {
-        props: ["project"],
+        props: ["project", "showShort"],
         data: function () {
             return {
                 isExpand: false
-
             }
         },
         methods: {
 
             expand: function () {
                 var vm = this;
+                //console.log(this.show);
+                //console.log(this.project);
                 //console.log(vm.isExpand);
-                vm.isExpand = !vm.isExpand;
-                var content = document.querySelector("#content");
+                //vm.isExpand = !vm.isExpand;
+                vm.showShort = !vm.showShort;
+                //var content = document.querySelector("#content");
                 //console.log(content);
+                //console.log($("#content"));
+                var contentCopy = document.querySelector('#content-copy');
+                //console.log(contentCopy.clientHeight);
                 if (vm.isExpand) {
+                    //$("#content").slideDown();
                     //var contentCopy = document.querySelector('#content-copy');
                     //content.style.height = contentCopy.clientHeight + 'px';
                 } else {
+                    //$("#content").slideUp();
                     //content.style.height = "0px";
                 }
                 //console.log(document.querySelector('#content-copy').clientHeight)

@@ -8,19 +8,19 @@ import fontAwesome from 'fontAwesome'
 
 import Vue from 'vue'
 import project from '../components/project/project.vue'
-import marked from '../../node_modules/marked/marked.min.js'
+//import marked from '../../node_modules/marked/marked.min.js'
 import db from '../../data.json'
-
+import $ from 'jquery'
 
 
 Vue.component("project", project);
 
-var markdownReaderDesc = "* 堆的创建、插入、删除、堆排序演示\n" +
-    "* 最大堆与最小堆切换\n" +
-    "* 单步执行与自动执行\n" +
-    "* 可调节演示速度\n" +
-    "* 两种演示方式切换\n";
-markdownReaderDesc = marked(markdownReaderDesc);
+//var markdownReaderDesc = "* 堆的创建、插入、删除、堆排序演示\n" +
+//    "* 最大堆与最小堆切换\n" +
+//    "* 单步执行与自动执行\n" +
+//    "* 可调节演示速度\n" +
+//    "* 两种演示方式切换\n";
+//markdownReaderDesc = marked(markdownReaderDesc);
 
 //var data = [
 //    {
@@ -34,8 +34,10 @@ markdownReaderDesc = marked(markdownReaderDesc);
 //];
 
 var data = db;
-
-console.log(data);
+data.forEach(function (d) {
+    d.showShortIntro = d.hasShortIntro;
+});
+//console.log(data);
 
 var vm = new Vue({
     el: '#app',

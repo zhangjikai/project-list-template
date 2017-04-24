@@ -85,6 +85,11 @@
   margin-bottom: @len-small;
 }
 
+.no-show {
+  position: absolute;
+  height: 0px;
+  overflow: hidden;
+}
 .project-content-copy {
   position: absolute;
   visibility: hidden;
@@ -96,8 +101,8 @@
 }
 
 .project-content {
-  transition: height 0.5s ease-in;
-  height: 0px;
+  transition: all 0.5s ease-in;
+  //height: 0px;
   overflow: hidden;
   //.main {
   //  border-top: 2px dashed @lightgray-dark;

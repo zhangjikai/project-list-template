@@ -159,6 +159,12 @@ export default {
 </div>
 ```
 
+需要注意的是如果组件中的变量名采用驼峰命名，如：myValue，那么在组件标签中要将驼峰命变为 my-value，如下所示
+```html
+<div id="app">
+    <project :my-value=""></project>
+</div>
+```
 
 ### 单文件组件定义变量和函数
 ```js

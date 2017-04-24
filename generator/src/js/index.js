@@ -11,6 +11,7 @@
     var configText = "config";
 
     function Project() {
+        this.id = 0;
         this.hasShortIntro = true;
         this.hasGithub = true;
         this.hasHome = true;
@@ -110,7 +111,7 @@
         //console.log(mdContent);
         var rowTexts = mdContent.split(startTag);
         var projectList = [];
-
+        var idIndex = 0;
 
         rowTexts.forEach(function (rowText) {
             if (rowText != null && !rowText.trim() == "") {
@@ -181,7 +182,7 @@
                     projectGithub.star = false;
                     projectGithub.fork = false;
                 }
-
+                project.id = idIndex++;
                 projectList.push(project);
                 //console.log(parts[0]);
             }

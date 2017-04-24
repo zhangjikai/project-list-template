@@ -15,7 +15,7 @@
                 <a href="#" v-for="tag in project.tags">{{tag}}</a>
             </div>
             <!--<div class="project-desc" v-html="project.desc"></div>-->
-            <div class="project-content" id="content">
+            <div class="project-content" :id="'content' + project.id">
 
                 <div class="main" v-if="showShort" v-html="project.shortIntro">
                 </div>
@@ -24,7 +24,7 @@
 
             </div>
             <div class="no-show">
-                <div class="project-content-copy" id="content-copy">
+                <div class="project-content-copy" :id="'content-copy' + project.id">
                     <div class="main" v-html="project.content"></div>
                 </div>
             </div>
@@ -112,7 +112,7 @@
 </template>
 
 <script>
-    import $ from "jquery"
+
     export default {
         props: ["project", "showShort"],
         data: function () {
@@ -124,25 +124,26 @@
 
             expand: function () {
                 var vm = this;
-                //console.log(this.show);
-                //console.log(this.project);
-                //console.log(vm.isExpand);
-                //vm.isExpand = !vm.isExpand;
-                vm.showShort = !vm.showShort;
-                //var content = document.querySelector("#content");
-                //console.log(content);
-                //console.log($("#content"));
-                var contentCopy = document.querySelector('#content-copy');
-                //console.log(contentCopy.clientHeight);
-                if (vm.isExpand) {
-                    //$("#content").slideDown();
-                    //var contentCopy = document.querySelector('#content-copy');
-                    //content.style.height = contentCopy.clientHeight + 'px';
+                if(vm.showShort) {
+                    vm.showShort = !vm.showShort;
                 } else {
-                    //$("#content").slideUp();
-                    //content.style.height = "0px";
+                    setTimeout(function () {
+                        vm.showShort = !vm.showShort;
+                    }, 500);
                 }
-                //console.log(document.querySelector('#content-copy').clientHeight)
+                var content = document.querySelector("#content" + vm.project.id);
+                if (!vm.hasPreHeight) {
+                    vm.preHeight = document.querySelector('#content-copy' + vm.project.id).clientHeight;
+                    content.style.height = content.clientHeight + "px";
+                    vm.hasPreHeight = true;
+                    //console.log(vm.preHeight);
+                }
+
+                var heightCopy = content.clientHeight;
+                content.style.height = vm.preHeight + "px";
+                vm.preHeight = heightCopy;
+
+
             }
         }
     }

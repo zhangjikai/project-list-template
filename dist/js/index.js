@@ -10264,6 +10264,7 @@ return jQuery;
 
 module.exports = [
 	{
+		"id": 0,
 		"hasShortIntro": true,
 		"hasGithub": true,
 		"hasHome": false,
@@ -10284,6 +10285,7 @@ module.exports = [
 		}
 	},
 	{
+		"id": 1,
 		"hasShortIntro": true,
 		"hasGithub": true,
 		"hasHome": false,
@@ -10375,8 +10377,6 @@ l(n,e.elm,r)):(e.elm=O.createTextNode(e.text),l(n,e.elm,r))}}function s(e,t,n,r)
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
 //
 //
 //
@@ -10503,25 +10503,24 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
         expand: function () {
             var vm = this;
-            //console.log(this.show);
-            //console.log(this.project);
-            //console.log(vm.isExpand);
-            //vm.isExpand = !vm.isExpand;
-            vm.showShort = !vm.showShort;
-            //var content = document.querySelector("#content");
-            //console.log(content);
-            //console.log($("#content"));
-            var contentCopy = document.querySelector('#content-copy');
-            //console.log(contentCopy.clientHeight);
-            if (vm.isExpand) {
-                //$("#content").slideDown();
-                //var contentCopy = document.querySelector('#content-copy');
-                //content.style.height = contentCopy.clientHeight + 'px';
-            } else {}
-                //$("#content").slideUp();
-                //content.style.height = "0px";
+            if (vm.showShort) {
+                vm.showShort = !vm.showShort;
+            } else {
+                setTimeout(function () {
+                    vm.showShort = !vm.showShort;
+                }, 500);
+            }
+            var content = document.querySelector("#content" + vm.project.id);
+            if (!vm.hasPreHeight) {
+                vm.preHeight = document.querySelector('#content-copy' + vm.project.id).clientHeight;
+                content.style.height = content.clientHeight + "px";
+                vm.hasPreHeight = true;
+                //console.log(vm.preHeight);
+            }
 
-                //console.log(document.querySelector('#content-copy').clientHeight)
+            var heightCopy = content.clientHeight;
+            content.style.height = vm.preHeight + "px";
+            vm.preHeight = heightCopy;
         }
     }
 });
@@ -10599,7 +10598,7 @@ exports = module.exports = __webpack_require__(9)();
 
 
 // module
-exports.push([module.i, "/** extract from bootstrap*/\n.project {\n  font-family: \"ubuntu\", \"Tahoma\", \"Microsoft YaHei\", arial, sans-serif;\n  width: 900px;\n  min-height: 100px;\n  margin: 0 auto 20px auto;\n  background: #fff;\n  box-shadow: 7px 7px 7px #E6E9ED;\n  padding: 0;\n}\n@media screen and (max-width: 900px) {\n.project {\n    width: 100%;\n}\n}\n.inner {\n  margin: 0;\n  width: auto;\n  padding: 12px 20px;\n}\n.project-title {\n  margin: 0;\n  color: #41b883;\n  font-size: 24px;\n  border-bottom: 1px solid #ccc;\n  padding-bottom: 6px;\n}\n.project-title span {\n  text-align: left;\n  font-size: 24px;\n}\n.project-title i {\n  float: right;\n  cursor: pointer;\n}\n.project-tag {\n  padding: 12px 0px;\n  color: #aaa;\n  font-size: 12px;\n}\n.project-tag i {\n  margin-right: 5px;\n}\n.project-tag a {\n  text-decoration: none;\n  color: #bbb;\n  margin-right: 12px;\n}\n.project-tag a:hover {\n  color: #4786D6;\n}\n.project-desc {\n  margin-bottom: 12px;\n}\n.no-show {\n  position: absolute;\n  height: 0px;\n  overflow: hidden;\n}\n.project-content-copy {\n  position: absolute;\n  visibility: hidden;\n  z-index: 0;\n}\n.project-content {\n  transition: all 0.5s ease-in;\n  overflow: hidden;\n}\np {\n  margin-top: 0;\n  font-size: 16px;\n  line-height: 1.5;\n}\nli {\n  font-size: 16px;\n  line-height: 1.5;\n}\ncode,\npre {\n  font-family: Consolas, Monaco, Andale Mono, monospace;\n  background-color: #f7f7f7;\n  color: inherit;\n}\ncode {\n  font-family: Consolas, Monaco, Andale Mono, monospace;\n  margin: 0 2px;\n}\npre {\n  font-family: Consolas, Monaco, Andale Mono, monospace;\n  line-height: 1.2em;\n  overflow: auto;\n  padding: 6px 10px;\n  /*border-left: 5px solid #6CE26C;*/\n}\npre > code {\n  font-family: Consolas, Monaco, Andale Mono, monospace;\n  border: 0;\n  display: inline;\n  max-width: initial;\n  padding: 0;\n  margin: 0;\n  overflow: initial;\n  line-height: 1.3em;\n  font-size: 1em;\n  white-space: pre;\n  background: 0 0;\n}\ncode {\n  color: #666555;\n}\na {\n  text-decoration: none;\n  color: #41b883;\n}\n.project-url {\n  /*a {\n    display: inline-block;\n    height: @tag-height;\n    line-height: @tag-height;\n    position: relative;\n    font-size: @font-size-small;\n    margin-left: 20px;\n    padding: 0 @project-base-padding;\n    background: @tag-bg;\n    color: @url-color;\n    text-decoration: none;\n    border-radius: 0px @border-radius-base @border-radius-base 0px;\n    box-shadow: 1px 1px 1px @tag-bg;\n    &:first-child{\n      margin-left: 0;\n    }\n    &:before {\n      content: \"\";\n      float: left;\n      position: absolute;\n      top: 0;\n      left: -12px;\n      width: 0;\n      height: 0;\n      border-color: transparent @tag-bg transparent transparent;\n      border-style: solid;\n      border-width: 12px 12px 12px 0;\n\n    }\n    &:after {\n      content: \"\";\n      position: absolute;\n      top: 10px;\n      left: 0;\n      float: left;\n      width: 4px;\n      height: 4px;\n      border-radius: 2px;\n      background: #fff;\n      box-shadow: -1px -1px 2px #aaa;\n    }\n\n    &:hover {\n\n    }\n  }*/\n}\n.project-url .project-link {\n  display: inline-block;\n  font: 700 11px/14px 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  background-color: #eee;\n  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fcfcfc), color-stop(100%, #eee));\n  background-image: -webkit-linear-gradient(top, #fcfcfc 0, #eee 100%);\n  background-image: -moz-linear-gradient(top, #fcfcfc 0, #eee 100%);\n  background-image: -ms-linear-gradient(top, #fcfcfc 0, #eee 100%);\n  background-image: -o-linear-gradient(top, #fcfcfc 0, #eee 100%);\n  background-image: linear-gradient(to bottom, #fcfcfc 0, #eee 100%);\n  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#eeeeee', GradientType=0);\n  background-repeat: no-repeat;\n  border: 1px solid #d5d5d5;\n  padding: 2px 5px 2px 4px;\n  color: #333;\n  text-decoration: none;\n  text-shadow: 0 1px 0 #fff;\n  white-space: nowrap;\n  cursor: pointer;\n  border-radius: 3px;\n  margin-top: 7px;\n  margin-right: 7px;\n}\n.project-url .project-link .custom-fa {\n  font-weight: bold;\n}\n.project-url iframe {\n  margin-top: 7px;\n  vertical-align: bottom;\n  margin-right: 7px;\n}\n.expand {\n  float: right;\n  transition: width 0.5s ease-in;\n  width: 70px;\n  text-align: center;\n}\n.expand i {\n  margin-left: 2px;\n  margin-right: 2px;\n}\n", ""]);
+exports.push([module.i, "/** extract from bootstrap*/\n.project {\n  font-family: \"ubuntu\", \"Tahoma\", \"Microsoft YaHei\", arial, sans-serif;\n  width: 800px;\n  min-height: 100px;\n  margin: 0 auto 25px auto;\n  background: #fff;\n  box-shadow: 7px 7px 7px #E6E9ED;\n  padding: 0;\n}\n@media screen and (max-width: 800px) {\n.project {\n    width: 100%;\n}\n}\n.inner {\n  margin: 0;\n  width: auto;\n  padding: 12px 20px;\n}\n.project-title {\n  margin: 0;\n  color: #41b883;\n  font-size: 24px;\n  border-bottom: 1px solid #ccc;\n  padding-bottom: 6px;\n}\n.project-title span {\n  text-align: left;\n  font-size: 24px;\n}\n.project-title i {\n  float: right;\n  cursor: pointer;\n}\n.project-tag {\n  padding: 12px 0px;\n  color: #aaa;\n  font-size: 12px;\n}\n.project-tag i {\n  margin-right: 5px;\n}\n.project-tag a {\n  text-decoration: none;\n  color: #bbb;\n  margin-right: 12px;\n}\n.project-tag a:hover {\n  color: #4786D6;\n}\n.project-desc {\n  margin-bottom: 12px;\n}\n.no-show {\n  position: relative;\n  height: 0px;\n  overflow: hidden;\n}\n.project-content-copy {\n  position: absolute;\n  visibility: hidden;\n  z-index: 0;\n}\n.project-content {\n  transition: all 0.5s ease-in;\n  overflow: hidden;\n}\np {\n  margin-top: 0;\n  font-size: 16px;\n  line-height: 1.5;\n}\nli {\n  font-size: 16px;\n  line-height: 1.5;\n}\ncode,\npre {\n  font-family: Consolas, Monaco, Andale Mono, monospace;\n  background-color: #f7f7f7;\n  color: inherit;\n}\ncode {\n  font-family: Consolas, Monaco, Andale Mono, monospace;\n  margin: 0 2px;\n}\npre {\n  font-family: Consolas, Monaco, Andale Mono, monospace;\n  line-height: 1.2em;\n  overflow: auto;\n  padding: 6px 10px;\n  /*border-left: 5px solid #6CE26C;*/\n}\npre > code {\n  font-family: Consolas, Monaco, Andale Mono, monospace;\n  border: 0;\n  display: inline;\n  max-width: initial;\n  padding: 0;\n  margin: 0;\n  overflow: initial;\n  line-height: 1.3em;\n  font-size: 1em;\n  white-space: pre;\n  background: 0 0;\n}\ncode {\n  color: #666555;\n}\na {\n  text-decoration: none;\n  color: #41b883;\n}\n.project-url {\n  /*a {\n    display: inline-block;\n    height: @tag-height;\n    line-height: @tag-height;\n    position: relative;\n    font-size: @font-size-small;\n    margin-left: 20px;\n    padding: 0 @project-base-padding;\n    background: @tag-bg;\n    color: @url-color;\n    text-decoration: none;\n    border-radius: 0px @border-radius-base @border-radius-base 0px;\n    box-shadow: 1px 1px 1px @tag-bg;\n    &:first-child{\n      margin-left: 0;\n    }\n    &:before {\n      content: \"\";\n      float: left;\n      position: absolute;\n      top: 0;\n      left: -12px;\n      width: 0;\n      height: 0;\n      border-color: transparent @tag-bg transparent transparent;\n      border-style: solid;\n      border-width: 12px 12px 12px 0;\n\n    }\n    &:after {\n      content: \"\";\n      position: absolute;\n      top: 10px;\n      left: 0;\n      float: left;\n      width: 4px;\n      height: 4px;\n      border-radius: 2px;\n      background: #fff;\n      box-shadow: -1px -1px 2px #aaa;\n    }\n\n    &:hover {\n\n    }\n  }*/\n}\n.project-url .project-link {\n  display: inline-block;\n  font: 700 11px/14px 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  background-color: #eee;\n  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fcfcfc), color-stop(100%, #eee));\n  background-image: -webkit-linear-gradient(top, #fcfcfc 0, #eee 100%);\n  background-image: -moz-linear-gradient(top, #fcfcfc 0, #eee 100%);\n  background-image: -ms-linear-gradient(top, #fcfcfc 0, #eee 100%);\n  background-image: -o-linear-gradient(top, #fcfcfc 0, #eee 100%);\n  background-image: linear-gradient(to bottom, #fcfcfc 0, #eee 100%);\n  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#eeeeee', GradientType=0);\n  background-repeat: no-repeat;\n  border: 1px solid #d5d5d5;\n  padding: 2px 5px 2px 4px;\n  color: #333;\n  text-decoration: none;\n  text-shadow: 0 1px 0 #fff;\n  white-space: nowrap;\n  cursor: pointer;\n  border-radius: 3px;\n  margin-top: 7px;\n  margin-right: 7px;\n}\n.project-url .project-link .custom-fa {\n  font-weight: bold;\n}\n.project-url iframe {\n  margin-top: 7px;\n  vertical-align: bottom;\n  margin-right: 7px;\n}\n.expand {\n  float: right;\n  transition: width 0.5s ease-in;\n  width: 70px;\n  text-align: center;\n}\n.expand i {\n  margin-left: 2px;\n  margin-right: 2px;\n}\n", ""]);
 
 // exports
 
@@ -10746,7 +10745,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   })], 2), _vm._v(" "), _c('div', {
     staticClass: "project-content",
     attrs: {
-      "id": "content"
+      "id": 'content' + _vm.project.id
     }
   }, [(_vm.showShort) ? _c('div', {
     staticClass: "main",
@@ -10763,7 +10762,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('div', {
     staticClass: "project-content-copy",
     attrs: {
-      "id": "content-copy"
+      "id": 'content-copy' + _vm.project.id
     }
   }, [_c('div', {
     staticClass: "main",

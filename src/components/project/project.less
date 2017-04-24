@@ -1,12 +1,13 @@
 @import "../../less/variable";
 
-@project-width: 900px;
+@project-width: 800px;
 @project-base-color: #41b883;
 @project-bg: #fff;
 @project-height: 200px;
 @project-radius: 4px;
 @project-border-color: #95a0ab;
 @project-base-padding: @padding-base-horizontal;
+
 @project-padding-large: 20px;
 @project-padding-normal: @project-base-padding;
 @project-padding-small: 4px;
@@ -24,7 +25,7 @@
   font-family: "ubuntu", "Tahoma", "Microsoft YaHei", arial, sans-serif;
   width: @project-width;
   min-height: 100px;
-  margin: 0 auto @project-padding-large auto;
+  margin: 0 auto @len-medium auto;
   background: @project-bg;
   //border-left: @project-padding-small solid @project-base-color;
   //box-shadow: 0px 0px 8px 2px @project-border-color;
@@ -86,7 +87,7 @@
 }
 
 .no-show {
-  position: absolute;
+  position: relative;
   height: 0px;
   overflow: hidden;
 }

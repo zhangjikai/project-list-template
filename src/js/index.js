@@ -9,7 +9,7 @@ import fontAwesome from 'fontAwesome'
 import Vue from 'vue'
 import project from '../components/project/project.vue'
 import sidebar from '../components/sidebar/sidebar.vue'
-import db from '../../data.json'
+import projectList from '../../data.json'
 import config from  '../../config.json'
 
 
@@ -34,32 +34,52 @@ Vue.component("sidebar", sidebar);
 //    }
 //];
 
-let projectList = db.projectList;
-let categoryList = db.categoryList;
-let categoryMap = db.categoryMap;
+
+let categoryList = [];
+let categoryMap = {};
 
 if (categoryList.length == 0) {
     config.category = false;
 }
 
-if (config.category) {
-    let projectMap = {};
-    let newProjectList = [];
-    for (let pro of projectList) {
-        projectMap[pro.id] = pro;
-    }
+//var categoryList = [];
+//var categoryMap = {};
+//
+//projectList.forEach(function (project) {
+//    if (project.category != null && project.category.trim() != "") {
+//
+//        var plist;
+//        if (categoryMap.hasOwnProperty(project.category)) {
+//            plist = categoryMap[project.category];
+//            plist.push(project.id);
+//        } else {
+//            plist = [];
+//            plist.push(project.id);
+//            categoryMap[project.category] = plist;
+//            categoryList.push(project.category);
+//        }
+//    }
+//});
 
-    for (let cate of categoryList) {
-        let proIds = categoryMap[cate];
-        for(let id of proIds) {
-            newProjectList.push(projectMap[id]);
-        }
-    }
 
-    //console.log(newProjectList);
-    projectList = newProjectList;
-
-}
+//if (config.category) {
+//    let projectMap = {};
+//    let newProjectList = [];
+//    for (let pro of projectList) {
+//        projectMap[pro.id] = pro;
+//    }
+//
+//    for (let cate of categoryList) {
+//        let proIds = categoryMap[cate];
+//        for(let id of proIds) {
+//            newProjectList.push(projectMap[id]);
+//        }
+//    }
+//
+//
+//    projectList = newProjectList;
+//
+//}
 //console.log(data);
 
 var vm = new Vue({

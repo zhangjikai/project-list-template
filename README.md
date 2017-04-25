@@ -109,6 +109,33 @@ var config = {
 ## ES6 语法
 ### export
 `export default` 默认导出，不需要指定变量名，默认是文件名。
+### 变量声明
+* 使用 let 声明支持块级作用域
+* const 声明常量，和 Java 中 final 类似，对于对象和数组，只要求对象和数组的指针不发生变化
+
+
+### 字符串
+* 判断字符串是否包含在另外一个字符串中：
+    * includes()：返回布尔值，表示是否找到了参数字符串。
+    * startsWith()：返回布尔值，表示参数字符串是否在源字符串的头部。
+    * endsWith()：返回布尔值，表示参数字符串是否在源字符串的尾部。
+* 模板字符串: 使用反引号包裹
+```js
+// 普通字符串
+`In JavaScript '\n' is a line-feed.`
+
+// 多行字符串
+`In JavaScript this is
+ not legal.`
+
+console.log(`string text line 1
+string text line 2`);
+
+// 字符串中嵌入变量
+var name = "Bob", time = "today";
+`Hello ${name}, how are you ${time}?`
+```
+
 
 ## Vue
 ### Vue文件中导入外部文件

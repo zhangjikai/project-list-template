@@ -32,6 +32,12 @@
   box-shadow: @len-small-small @len-small-small @len-small-small @lightgray-dark;
   padding: 0;
   //margin-bottom: @project-padding-large;
+
+  a {
+    &:hover {
+      color: @project-base-color;
+    }
+  }
 }
 
 @media screen and (max-width: 1100px){
@@ -106,6 +112,7 @@
   transition: all 0.5s ease-in;
   //height: 0px;
   overflow: hidden;
+  margin-bottom: @len-small-small;
   //.main {
   //  border-top: 2px dashed @lightgray-dark;
   //  margin-top: @len-medium;
@@ -231,7 +238,3 @@
   }
 }
 
-
-.project-content {
-
-}

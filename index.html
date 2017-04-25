@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Vue Learn</title>
+    <title>项目列表</title>
 
+    <link href="https://cdn.bootcss.com/prism/9000.0.1/themes/prism.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/prism/9000.0.1/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
     <link rel="stylesheet" href="dist/css/index.css">
 
 </head>
@@ -12,9 +14,9 @@
 
 <div id="app">
     <sidebar @collapse_click="collapseClick" :category-map="categoryMap" :show-by-category="showByCategory"
-             :projects="projects"></sidebar>
+              :projects="projects" id="sidebar"></sidebar>
     <div class="project-container" id="project-container">
-        <project v-for="project in projects" :project="project" :show-short="project.hasShortIntro">
+        <project v-for="project in projects" :project="project" :show-short="project.hasShortIntro" :config="config">
         </project>
     </div>
 
@@ -39,7 +41,8 @@
 <script type="text/javascript" src="dist/js/common.js"></script>
 <script type="text/javascript" src="dist/js/index.js"></script>
 
-<!-- Place this tag in your head or just before your close body tag. -->
+
+
 <script async defer src="http://button.zhangjikai.com/buttons.js"></script>
 
 </body>

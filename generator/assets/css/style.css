@@ -3,6 +3,20 @@ body {
   font: 14px/1.42857 "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: #fff;
 }
+body {
+  margin: 0 auto;
+  font-family: "ubuntu", "Tahoma", "Microsoft YaHei", arial, sans-serif;
+  color: #444444;
+  line-height: 1;
+  padding: 10px;
+  font-size: 14px;
+}
+@media screen and (min-width: 882px) {
+  body {
+    width: 862px;
+    margin: 0 auto;
+  }
+}
 #editor {
   height: 400px;
   border: 1px solid #ddd;
@@ -12,6 +26,27 @@ body {
     height: 400px;
     margin: 0 auto;
   }
+}
+h1,
+h2,
+h3,
+h4 {
+  color: #111111;
+  font-weight: 400;
+  margin-top: 1em;
+}
+h1 {
+  font-size: 48px;
+  line-height: 54px;
+}
+h2 {
+  font-size: 36px;
+  line-height: 42px;
+}
+h1,
+h2 {
+  border-bottom: 1px solid #EFEAEA;
+  padding-bottom: 10px;
 }
 #content {
   margin-top: 2em;
@@ -147,7 +182,6 @@ nav a#openup {
 #upload {
   width: auto;
   z-index: 3;
-  margin-top: 58px;
   position: relative;
   background: #F5F7FA;
   border: 2px dashed #ddd;
@@ -360,4 +394,11 @@ nav a#openup {
 }
 .sweet-alert h2 {
   border-bottom: none;
+}
+#outer {
+  height: 0px;
+  overflow: hidden;
+}
+#gen-html {
+  visibility: hidden;
 }

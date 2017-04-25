@@ -1,3 +1,8 @@
 {
-    "category": true
+    "category": true,
+    "homeText": "Home",
+    "codeText": "Code",
+    "expandText": "详细介绍",
+    "collapseText": "收起",
+    "defaultCategory": "---------------------------"
 }

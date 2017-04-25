@@ -337,7 +337,12 @@ function applyToTag (styleElement, obj) {
 /***/ (function(module, exports) {
 
 module.exports = {
-	"category": true
+	"category": true,
+	"homeText": "Home",
+	"codeText": "Code",
+	"expandText": "详细介绍",
+	"collapseText": "收起",
+	"defaultCategory": "---------------------------"
 };
 
 /***/ }),
@@ -346,18 +351,40 @@ module.exports = {
 
 module.exports = [
 	{
+		"id": 0,
+		"hasShortIntro": true,
+		"hasGithub": true,
+		"hasHome": false,
+		"hasCode": true,
+		"name": "堆排序演示程序",
+		"content": "<p>使用 Java 编写的堆排序演示程序，目前主要包含以下功能：</p>\n<ul>\n<li>堆的创建、插入、删除、堆排序演示</li>\n<li>最大堆与最小堆切换</li>\n<li>单步执行与自动执行</li>\n<li>可调节演示速度</li>\n<li>两种演示方式切换</li>\n</ul>\n<!-- more -->\n<h2 id=\"-\">程序截图</h2>\n<p>创建堆\n<img src=\"https://raw.githubusercontent.com/zhangjikai/heap/master/screenshot/%E5%A0%86-%E5%88%9B%E5%BB%BA-1.gif\" alt=\"\"></p>\n<p>堆排序\n<img src=\"https://raw.githubusercontent.com/zhangjikai/heap/master/screenshot/%E5%A0%86-%E6%8E%92%E5%BA%8F.gif\" alt=\"\"></p>\n<p>试下代码</p>\n<pre class=\"line-numbers language-js\"><code class=\" language-js\"><span class=\"token punctuation\">{</span>\n    <span class=\"token string\">\"name\"</span><span class=\"token punctuation\">:</span> <span class=\"token string\">\"堆排序演示程序\"</span><span class=\"token punctuation\">,</span>\n    <span class=\"token string\">\"github\"</span><span class=\"token punctuation\">:</span> <span class=\"token punctuation\">{</span>\n        <span class=\"token string\">\"repo\"</span><span class=\"token punctuation\">:</span> <span class=\"token string\">\"zhangjikai/heap\"</span>\n    <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n    <span class=\"token string\">\"code\"</span><span class=\"token punctuation\">:</span> <span class=\"token string\">\"https://github.com/zhangjikai/heap\"</span><span class=\"token punctuation\">,</span>\n    <span class=\"token string\">\"category\"</span><span class=\"token punctuation\">:</span> <span class=\"token string\">\"Java\"</span><span class=\"token punctuation\">,</span>\n    <span class=\"token string\">\"tags\"</span> <span class=\"token punctuation\">:</span> <span class=\"token string\">\"Java\"</span>\n<span class=\"token punctuation\">}</span><span aria-hidden=\"true\" class=\"line-numbers-rows\"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>",
+		"shortIntro": "<p>使用 Java 编写的堆排序演示程序，目前主要包含以下功能：</p>\n<ul>\n<li>堆的创建、插入、删除、堆排序演示</li>\n<li>最大堆与最小堆切换</li>\n<li>单步执行与自动执行</li>\n<li>可调节演示速度</li>\n<li>两种演示方式切换</li>\n</ul>\n",
+		"tags": [
+			"Java"
+		],
+		"category": "",
+		"home": "",
+		"code": "https://github.com/zhangjikai/heap",
+		"github": {
+			"star": "true",
+			"fork": "true",
+			"repo": "zhangjikai/heap"
+		}
+	},
+	{
 		"id": 1,
 		"hasShortIntro": true,
 		"hasGithub": true,
 		"hasHome": false,
 		"hasCode": true,
-		"name": "Java 办连连看",
-		"content": "<p>以秦时明月为背景，使用 Java 编写的一款连连看游戏，游戏的效果还是不错的，页面比较精致，同时包含背景音乐和一些动画效果。同时游戏增加了元素移动（消除一对之后剩余元素位置改变）模式，增加了游戏的趣味性。</p>\n<!-- more -->\n<h2 id=\"-\">程序截图</h2>\n<p><img src=\"https://raw.githubusercontent.com/zhangjikai/LinkGame/master/screenshot/game.gif\" alt=\"\"></p>\n",
+		"name": "连连看",
+		"content": "<p>以秦时明月为背景，使用 Java 编写的一款连连看游戏，游戏的效果还是不错的，页面比较精致，同时包含背景音乐和一些动画效果。同时游戏增加了元素移动（消除一对之后剩余元素位置改变）模式，增加了游戏的趣味性。</p>\n<!-- more -->\n<h2 id=\"-\">截图</h2>\n<p><img src=\"https://raw.githubusercontent.com/zhangjikai/LinkGame/master/screenshot/game.gif\" alt=\"\"></p>\n",
 		"shortIntro": "<p>以秦时明月为背景，使用 Java 编写的一款连连看游戏，游戏的效果还是不错的，页面比较精致，同时包含背景音乐和一些动画效果。同时游戏增加了元素移动（消除一对之后剩余元素位置改变）模式，增加了游戏的趣味性。</p>\n",
 		"tags": [
-			"java"
+			"Java",
+			"游戏"
 		],
-		"category": "测试",
+		"category": "Java",
 		"home": "",
 		"code": "https://github.com/zhangjikai/LinkGame",
 		"github": {
@@ -367,24 +394,114 @@ module.exports = [
 		}
 	},
 	{
-		"id": 0,
+		"id": 2,
 		"hasShortIntro": true,
 		"hasGithub": true,
 		"hasHome": false,
 		"hasCode": true,
-		"name": "堆排序演示程序",
-		"content": "<p>使用 Java 编写的堆排序演示程序，目前主要包含以下功能：</p>\n<ul>\n<li>堆的创建、插入、删除、堆排序演示</li>\n<li>最大堆与最小堆切换</li>\n<li>单步执行与自动执行</li>\n<li>可调节演示速度</li>\n<li>两种演示方式切换</li>\n</ul>\n<!-- more -->\n<h2 id=\"-\">程序截图</h2>\n<p>创建堆\n<img src=\"https://raw.githubusercontent.com/zhangjikai/heap/master/screenshot/%E5%A0%86-%E5%88%9B%E5%BB%BA-1.gif\" alt=\"\"></p>\n<p>堆排序\n<img src=\"https://raw.githubusercontent.com/zhangjikai/heap/master/screenshot/%E5%A0%86-%E6%8E%92%E5%BA%8F.gif\" alt=\"\"></p>\n",
-		"shortIntro": "<p>使用 Java 编写的堆排序演示程序，目前主要包含以下功能：</p>\n<ul>\n<li>堆的创建、插入、删除、堆排序演示</li>\n<li>最大堆与最小堆切换</li>\n<li>单步执行与自动执行</li>\n<li>可调节演示速度</li>\n<li>两种演示方式切换</li>\n</ul>\n",
+		"name": "扫雷",
+		"content": "<p>使用 Java 实现的扫雷程序，界面仿照 Win7 的扫雷程序，功能比较完善。</p>\n<!-- more -->\n<h2 id=\"-\">截图</h2>\n<p><img src=\"https://raw.githubusercontent.com/zhangjikai/Minesweeper/master/screenshot/%E6%89%AB%E9%9B%B7.gif\" alt=\"\"></p>\n",
+		"shortIntro": "<p>使用 Java 实现的扫雷程序，界面仿照 Win7 的扫雷程序，功能比较完善。</p>\n",
 		"tags": [
-			"java"
+			"Java",
+			"游戏"
 		],
 		"category": "Java",
 		"home": "",
-		"code": "https://github.com/zhangjikai/heap",
+		"code": "https://github.com/zhangjikai/Minesweeper",
 		"github": {
 			"star": "true",
 			"fork": "true",
-			"repo": "zhangjikai/heap"
+			"repo": "zhangjikai/Minesweeper"
+		}
+	},
+	{
+		"id": 3,
+		"hasShortIntro": true,
+		"hasGithub": true,
+		"hasHome": false,
+		"hasCode": true,
+		"name": "在线文件共享",
+		"content": "<p>用来共享文件。后台使用 Spring MVC，前台使用的是一个现有的 <a href=\"https://github.com/joni2back/angular-filemanager\">在线文件管理系统</a>，在该系统的基础上修改了文件上传，添加了手机扫码快速打开的功能。</p>\n<!-- more -->\n<h2 id=\"-\">截图</h2>\n<p><img src=\"https://camo.githubusercontent.com/4d9452a923099fb148a131fcf987d967ae904f69/687474703a2f2f3778717035752e636f6d312e7a302e676c622e636c6f7564646e2e636f6d2f66696c652d6d616e6167657230342e6a7067\" alt=\"\"></p>\n<pre class=\"line-numbers language-js\"><code class=\" language-js\"><span class=\"token punctuation\">{</span>\n    <span class=\"token string\">\"name\"</span><span class=\"token punctuation\">:</span> <span class=\"token string\">\"堆排序演示程序\"</span><span class=\"token punctuation\">,</span>\n    <span class=\"token string\">\"github\"</span><span class=\"token punctuation\">:</span> <span class=\"token punctuation\">{</span>\n        <span class=\"token string\">\"repo\"</span><span class=\"token punctuation\">:</span> <span class=\"token string\">\"zhangjikai/heap\"</span>\n    <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n    <span class=\"token string\">\"code\"</span><span class=\"token punctuation\">:</span> <span class=\"token string\">\"https://github.com/zhangjikai/heap\"</span><span class=\"token punctuation\">,</span>\n    <span class=\"token string\">\"category\"</span><span class=\"token punctuation\">:</span> <span class=\"token string\">\"Java\"</span><span class=\"token punctuation\">,</span>\n    <span class=\"token string\">\"tags\"</span> <span class=\"token punctuation\">:</span> <span class=\"token string\">\"Java\"</span>\n<span class=\"token punctuation\">}</span><span aria-hidden=\"true\" class=\"line-numbers-rows\"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>",
+		"shortIntro": "<p>用来共享文件。后台使用 Spring MVC，前台使用的是一个现有的 <a href=\"https://github.com/joni2back/angular-filemanager\">在线文件管理系统</a>，在该系统的基础上修改了文件上传，添加了手机扫码快速打开的功能。</p>\n",
+		"tags": [
+			"Java",
+			"工具"
+		],
+		"category": "Java",
+		"home": "",
+		"code": "https://github.com/zhangjikai/FileManager",
+		"github": {
+			"star": "true",
+			"fork": "true",
+			"repo": "zhangjikai/FileManager"
+		}
+	},
+	{
+		"id": 4,
+		"hasShortIntro": true,
+		"hasGithub": true,
+		"hasHome": true,
+		"hasCode": true,
+		"name": "基于Three.js 框架的 3D 射击游戏",
+		"content": "<p>基于 three.js 的一款 3D 射击游戏。</p>\n<!-- more -->\n<h2 id=\"-\">介绍</h2>\n<p>首先选取一张包含人脸的图片，人脸尽可能大以便于裁剪。裁剪框有三条提示线，分别对应人的双眼和嘴。通过调节图片的大小，使双眼和嘴尽量重合。裁剪的图片会被用做怪物的脸。\n游戏设置了四种武器：</p>\n<ul>\n<li>普通子弹 - 第一次击中怪物后，会使怪物脸发生变形，第二次击中怪物后才会杀死怪物</li>\n<li>冷冻弹 - 爆炸后使怪物停止移动</li>\n<li>炮弹 - 爆炸后会产生很多小子弹，不会自动引爆，发射后需要点击普通子弹操作引爆</li>\n<li>激光 - 碰到怪物就可以杀死怪物</li>\n</ul>\n<p>游戏设置了两种模式 - 闯关模式和计分模式。本来还有一个对战模式，通信使用 websocket + java web, 但是因为没有 java 服务器，所以把这个模式去掉了。</p>\n<p>如果在移动端玩这个游戏，注意使用横屏模式。建议使用 chrome 浏览器。</p>\n<h2 id=\"-\">截图</h2>\n<p><img src=\"https://raw.githubusercontent.com/zhangjikai/MindYourHead/master/images/demo/game.png\" alt=\"\"></p>\n",
+		"shortIntro": "<p>基于 three.js 的一款 3D 射击游戏。</p>\n",
+		"tags": [
+			"Three.js",
+			"游戏"
+		],
+		"category": "HTML5 & JS",
+		"home": "http://head.zhangjikai.com/",
+		"code": "https://github.com/zhangjikai/MindYourHead",
+		"github": {
+			"star": "true",
+			"fork": "true",
+			"repo": "zhangjikai/MindYourHead"
+		}
+	},
+	{
+		"id": 5,
+		"hasShortIntro": true,
+		"hasGithub": true,
+		"hasHome": true,
+		"hasCode": true,
+		"name": "Markdown 在线阅读器",
+		"content": "<p>一款在线的 Markdown文件阅读器，使用<a href=\"https://github.com/chjj/marked\">marked</a> 解析markdown文件，通过扩展库的方法，添加了一些扩展功能。同时程序可以方便添加新的扩展。</p>\n<p><a href=\"http://www.zhangjikai.com/markdown/sample.html\">示例预览</a></p>\n<!-- more -->\n<h2 id=\"-\">程序功能</h2>\n<ul>\n<li><code>Prism.js</code> / <code>Highlight.js</code> 代码高亮</li>\n<li>自动生成目录</li>\n<li>本地图片显示</li>\n<li>导出 Html （包含样式）<ul>\n<li>BackToTop</li>\n<li>多说</li>\n</ul>\n</li>\n<li>扩展功能<ul>\n<li>Toto 列表</li>\n<li><a href=\"https://github.com/mathjax/MathJax\">MathJax</a></li>\n<li><a href=\"https://github.com/bramp/js-sequence-diagrams\">时序图 (Js sequence diagrams)</a></li>\n<li><a href=\"https://github.com/Ranks/emojify.js\">Emoji (Emojify.js)</a></li>\n<li><a href=\"http://echarts.baidu.com/\">ECharts</a></li>\n<li><a href=\"http://fancybox.net/\">Fancybox</a></li>\n</ul>\n</li>\n</ul>\n",
+		"shortIntro": "<p>一款在线的 Markdown文件阅读器，使用<a href=\"https://github.com/chjj/marked\">marked</a> 解析markdown文件，通过扩展库的方法，添加了一些扩展功能。同时程序可以方便添加新的扩展。</p>\n<p><a href=\"http://www.zhangjikai.com/markdown/sample.html\">示例预览</a></p>\n",
+		"tags": [
+			"Markdown",
+			"工具"
+		],
+		"category": "HTML5 & JS",
+		"home": "http://markdown.zhangjikai.com/",
+		"code": "https://github.com/zhangjikai/online-markdown-reader",
+		"github": {
+			"star": "true",
+			"fork": "true",
+			"repo": "zhangjikai/online-markdown-reader"
+		}
+	},
+	{
+		"id": 6,
+		"hasShortIntro": false,
+		"hasGithub": true,
+		"hasHome": true,
+		"hasCode": true,
+		"name": "GitHub Page 在线生成器",
+		"content": "<p>将 Markdown 文件转换为不同主题的 GitHub Page 网页。</p>\n",
+		"shortIntro": "",
+		"tags": [
+			"Markdown",
+			"GitHub Page",
+			"工具"
+		],
+		"category": "",
+		"home": "http://page.zhangjikai.com/",
+		"code": "https://github.com/zhangjikai/online-ghpages-generator",
+		"github": {
+			"star": "true",
+			"fork": "true",
+			"repo": "zhangjikai/online-ghpages-generator"
 		}
 	}
 ];
@@ -611,7 +728,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ["project", "showShort"],
+    props: ["project", "showShort", "config"],
     data: function () {
         return {
             isExpand: false
@@ -686,173 +803,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ["categoryMap", "showByCategory", "projects"],
     data: function () {
         return {
-            isCollapse: false
+            isCollapse: true
         };
     },
     methods: {
@@ -866,13 +822,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 }, 350);
             } else {
                 vm.isCollapse = !vm.isCollapse;
+                console.log(222);
                 menuContent.style.display = "block";
             }
 
             vm.$emit('collapse_click', vm.isCollapse);
-            console.log(vm.categoryMap);
         }
     }
+
 });
 
 /***/ }),
@@ -937,39 +894,53 @@ __WEBPACK_IMPORTED_MODULE_3_vue___default.a.component("sidebar", __WEBPACK_IMPOR
 let categoryMap = new Map();
 let categoryObjMap = {};
 let showByCategory = __WEBPACK_IMPORTED_MODULE_7__config_json___default.a.category;
-
+let newProjectList = __WEBPACK_IMPORTED_MODULE_6__data_json___default.a;
+let isCollapse = document.body.clientWidth < 768;
+console.log(document.body.clientWidth);
+//console.log(projectList);
 if (showByCategory) {
     let arrList;
+    let projectMap = new Map();
     for (let pro of __WEBPACK_IMPORTED_MODULE_6__data_json___default.a) {
-        if (pro.category != null && pro.category.trim() != "") {
-            if (categoryMap.has(pro.category)) {
-                arrList = categoryMap.get(pro.category);
-                arrList.push({
-                    id: pro.id,
-                    name: pro.name
-                });
-            } else {
-                arrList = [];
-                arrList.push({
-                    id: pro.id,
-                    name: pro.name
-                });
-                categoryMap.set(pro.category, arrList);
-                //categorySet.add(pro.category);
-            }
+        projectMap.set(pro.id, pro);
+        if (pro.category == null || pro.category.trim() == "") {
+            pro.category = __WEBPACK_IMPORTED_MODULE_7__config_json___default.a.defaultCategory;
+        }
+
+        if (categoryMap.has(pro.category)) {
+            arrList = categoryMap.get(pro.category);
+            arrList.push({
+                id: pro.id,
+                name: pro.name
+            });
+        } else {
+            arrList = [];
+            arrList.push({
+                id: pro.id,
+                name: pro.name
+            });
+            categoryMap.set(pro.category, arrList);
         }
     }
 
-    if (categoryMap.size == 0) {
-        showByCategory = false;
+    for (let key of categoryMap.keys()) {
+        categoryObjMap[key] = categoryMap.get(key);
     }
 
-    if (showByCategory) {
-        for (let key of categoryMap.keys()) {
-            categoryObjMap[key] = categoryMap.get(key);
+    newProjectList = [];
+
+    for (let cate of categoryMap.keys()) {
+        let pros = categoryMap.get(cate);
+        for (let pro of pros) {
+            newProjectList.push(projectMap.get(pro.id));
         }
     }
 }
+
+//console.log(projectList);
+
+//projectList = newProjectList;
+
 
 //showByCategory = false;
 
@@ -997,41 +968,22 @@ if (showByCategory) {
 //});
 
 
-//if (config.category) {
-//    let projectMap = {};
-//    let newProjectList = [];
-//    for (let pro of projectList) {
-//        projectMap[pro.id] = pro;
-//    }
-//
-//    for (let cate of categoryList) {
-//        let proIds = categoryMap[cate];
-//        for(let id of proIds) {
-//            newProjectList.push(projectMap[id]);
-//        }
-//    }
-//
-//
-//    projectList = newProjectList;
-//
-//}
 //console.log(data);
 
-var vm = new __WEBPACK_IMPORTED_MODULE_3_vue___default.a({
+var app = new __WEBPACK_IMPORTED_MODULE_3_vue___default.a({
     el: '#app',
     data: function () {
         return {
-            projects: __WEBPACK_IMPORTED_MODULE_6__data_json___default.a,
-            //categorySet: categorySet,
+            projects: newProjectList,
             categoryMap: categoryObjMap,
-            showByCategory: showByCategory
+            showByCategory: showByCategory,
+            config: __WEBPACK_IMPORTED_MODULE_7__config_json___default.a
+
         };
     },
     methods: {
         collapseClick: function (isCollapse) {
-            //console.log(isCollapse);
             var container = document.querySelector("#project-container");
-            console.log(container);
             if (isCollapse) {
                 container.style.marginLeft = "50px";
             } else {
@@ -1040,6 +992,11 @@ var vm = new __WEBPACK_IMPORTED_MODULE_3_vue___default.a({
         }
     }
 });
+
+app.collapseClick(isCollapse);
+if (!isCollapse) {
+    app.$children[0].collapse();
+}
 
 __WEBPACK_IMPORTED_MODULE_2__node_modules_smooth_scroll_dist_js_smooth_scroll_min_js___default.a.init();
 
@@ -1052,7 +1009,7 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, "/** extract from bootstrap*/\n.header {\n  color: #3bafda;\n  font-size: 1.5em;\n  text-align: right;\n  font-weight: 300;\n  padding-right: 16px;\n  padding-top: 12px;\n  padding-bottom: 12px;\n  margin-bottom: 7px;\n  border-bottom: 1px solid #ccc;\n}\n.collapse-btn {\n  position: fixed;\n  top: 0px;\n  bottom: 0px;\n  height: 30px;\n  padding-left: 16px;\n  background: #fff;\n}\n.menu {\n  font-family: 'Noto Sans', sans-serif;\n  font-size: 14px;\n  position: fixed;\n  background: #FFF;\n  box-shadow: 4px 4px 7px #ccc;\n  transition: all 0.5s;\n  overflow: hidden;\n}\n.menu-expand {\n  width: 260px;\n}\n.menu-collapse {\n  width: 50px;\n}\n.side-outer {\n  position: absolute;\n  overflow-y: auto;\n  top: 60px;\n  bottom: 0px;\n  padding-bottom: 18px;\n}\n.menu-vertical {\n  height: 100%;\n  top: 0;\n  left: 0;\n  z-index: 1000;\n}\n.menu-vertical i {\n  cursor: pointer;\n}\n.menu-vertical .category {\n  color: #666;\n  display: block;\n  font-size: 1.1em;\n  width: 220px;\n  padding: 7px 20px;\n  padding-right: 0px;\n  text-decoration: none;\n}\n.menu-vertical .category .title {\n  color: #3bafda;\n  padding-bottom: 7px;\n}\n.menu-vertical .category .title i {\n  margin-right: 7px;\n}\n.menu-vertical .category .title .menu-angle {\n  margin-right: 0px;\n  float: right;\n}\n.menu-vertical .category .item {\n  position: relative;\n  margin-left: 5px;\n  padding: 4px;\n  padding-left: 16px;\n  border-left: 4px solid #f5f5f5;\n}\n.menu-vertical .category .item:before {\n  content: \" \";\n  position: absolute;\n  left: 0;\n  top: 12px;\n  width: 6px;\n  height: 6px;\n  margin-left: -6px;\n  background: #bbb;\n  border-radius: 50%;\n  border: 1px solid #fff;\n  transition-duration: 0.2s;\n  transition-timing-function: ease-in-out;\n  transition-delay: 0s;\n  transition-property: backgroun;\n}\n.menu-vertical .category .item a {\n  display: inline-block;\n  width: auto;\n  color: #75767b;\n  position: relative;\n  padding-bottom: 4px;\n  text-decoration: none;\n}\n.menu-vertical .category .item a:hover:before {\n  visibility: visible;\n  -webkit-transform: scaleX(1);\n  -moz-transform: scaleX(1);\n  -ms-transform: scaleX(1);\n  -o-transform: scaleX(1);\n  transform: scaleX(1);\n}\n.menu-vertical .category .item a:before {\n  content: \"\";\n  position: absolute;\n  width: 100%;\n  height: 2px;\n  bottom: 0;\n  left: 0;\n  background-color: #3bafda;\n  -webkit-transform: scaleX(0);\n  -moz-transform: scaleX(0);\n  -ms-transform: scaleX(0);\n  -o-transform: scaleX(0);\n  transform: scaleX(0);\n  transition-duration: 0.2s;\n  transition-timing-function: ease-in-out;\n  transition-delay: 0s;\n}\n.menu-vertical .category .item i {\n  margin-right: 4px;\n}\n.menu-vertical .category .extra-space {\n  padding-bottom: 7px;\n}\n", ""]);
+exports.push([module.i, "/** extract from bootstrap*/\n.header {\n  color: #3bafda;\n  font-size: 1.5em;\n  text-align: right;\n  font-weight: 300;\n  padding-right: 16px;\n  padding-top: 12px;\n  padding-bottom: 12px;\n  margin-bottom: 7px;\n  border-bottom: 1px solid #ccc;\n}\n.collapse-btn {\n  position: fixed;\n  top: 0px;\n  bottom: 0px;\n  height: 30px;\n  padding-left: 16px;\n  background: #fff;\n}\n.menu {\n  font-family: 'Noto Sans', sans-serif;\n  font-size: 14px;\n  position: fixed;\n  background: #FFF;\n  box-shadow: 4px 4px 7px #ccc;\n  transition: all 0.5s;\n  overflow: hidden;\n  -webkit-overflow-scrolling: touch;\n  -webkit-transform: translateZ(0);\n}\n.menu-expand {\n  width: 260px;\n}\n.menu-collapse {\n  width: 50px;\n}\n.side-outer {\n  position: absolute;\n  overflow-y: auto;\n  top: 60px;\n  bottom: 0px;\n  display: none;\n  padding-bottom: 18px;\n}\n.menu-vertical {\n  height: 100%;\n  top: 0;\n  left: 0;\n  z-index: 1000;\n}\n.menu-vertical i {\n  cursor: pointer;\n}\n.menu-vertical .category {\n  color: #666;\n  display: block;\n  font-size: 1.1em;\n  width: 220px;\n  padding: 7px 20px;\n  padding-right: 0px;\n  text-decoration: none;\n}\n.menu-vertical .category .title {\n  color: #3bafda;\n  padding-bottom: 7px;\n}\n.menu-vertical .category .title i {\n  margin-right: 7px;\n}\n.menu-vertical .category .title .menu-angle {\n  margin-right: 0px;\n  float: right;\n}\n.menu-vertical .category .item {\n  position: relative;\n  margin-left: 5px;\n  padding: 4px;\n  padding-left: 16px;\n  border-left: 4px solid #f5f5f5;\n}\n.menu-vertical .category .item:before {\n  content: \" \";\n  position: absolute;\n  left: 0;\n  top: 12px;\n  width: 6px;\n  height: 6px;\n  margin-left: -6px;\n  background: #bbb;\n  border-radius: 50%;\n  border: 1px solid #fff;\n  transition-duration: 0.2s;\n  transition-timing-function: ease-in-out;\n  transition-delay: 0s;\n  transition-property: backgroun;\n}\n.menu-vertical .category .item a {\n  display: inline-block;\n  width: auto;\n  color: #75767b;\n  position: relative;\n  padding-bottom: 4px;\n  text-decoration: none;\n}\n.menu-vertical .category .item a:hover:before {\n  visibility: visible;\n  -webkit-transform: scaleX(1);\n  -moz-transform: scaleX(1);\n  -ms-transform: scaleX(1);\n  -o-transform: scaleX(1);\n  transform: scaleX(1);\n}\n.menu-vertical .category .item a:before {\n  content: \"\";\n  position: absolute;\n  width: 100%;\n  height: 2px;\n  bottom: 0;\n  left: 0;\n  background-color: #3bafda;\n  -webkit-transform: scaleX(0);\n  -moz-transform: scaleX(0);\n  -ms-transform: scaleX(0);\n  -o-transform: scaleX(0);\n  transform: scaleX(0);\n  transition-duration: 0.2s;\n  transition-timing-function: ease-in-out;\n  transition-delay: 0s;\n}\n.menu-vertical .category .item i {\n  margin-right: 4px;\n}\n.menu-vertical .category .extra-space {\n  padding-bottom: 7px;\n}\n", ""]);
 
 // exports
 
@@ -1066,7 +1023,7 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, "/** extract from bootstrap*/\n.project {\n  font-family: \"ubuntu\", \"Tahoma\", \"Microsoft YaHei\", arial, sans-serif;\n  width: 800px;\n  min-height: 100px;\n  margin: 0 auto 25px auto;\n  background: #fff;\n  box-shadow: 7px 7px 7px #E6E9ED;\n  padding: 0;\n}\n@media screen and (max-width: 1100px) {\n.project {\n    width: 100%;\n}\n}\n.inner {\n  margin: 0;\n  width: auto;\n  padding: 12px 20px;\n  overflow: hidden;\n}\n.project-title {\n  margin: 0;\n  color: #3bafda;\n  font-size: 24px;\n  border-bottom: 1px solid #ccc;\n  padding-bottom: 6px;\n}\n.project-title span {\n  text-align: left;\n  font-size: 24px;\n}\n.project-title i {\n  float: right;\n  cursor: pointer;\n}\n.project-tag {\n  padding: 12px 0px;\n  color: #aaa;\n  font-size: 12px;\n}\n.project-tag i {\n  margin-right: 5px;\n}\n.project-tag a {\n  text-decoration: none;\n  color: #bbb;\n  margin-right: 12px;\n}\n.project-tag a:hover {\n  color: #4786D6;\n}\n.project-desc {\n  margin-bottom: 12px;\n}\n.no-show {\n  position: relative;\n  height: 0px;\n  overflow: hidden;\n}\n.project-content-copy {\n  position: absolute;\n  visibility: hidden;\n  z-index: 0;\n}\n.project-content {\n  transition: all 0.5s ease-in;\n  overflow: hidden;\n}\n.project-url {\n  /*a {\n    display: inline-block;\n    height: @tag-height;\n    line-height: @tag-height;\n    position: relative;\n    font-size: @font-size-small;\n    margin-left: 20px;\n    padding: 0 @project-base-padding;\n    background: @tag-bg;\n    color: @url-color;\n    text-decoration: none;\n    border-radius: 0px @border-radius-base @border-radius-base 0px;\n    box-shadow: 1px 1px 1px @tag-bg;\n    &:first-child{\n      margin-left: 0;\n    }\n    &:before {\n      content: \"\";\n      float: left;\n      position: absolute;\n      top: 0;\n      left: -12px;\n      width: 0;\n      height: 0;\n      border-color: transparent @tag-bg transparent transparent;\n      border-style: solid;\n      border-width: 12px 12px 12px 0;\n\n    }\n    &:after {\n      content: \"\";\n      position: absolute;\n      top: 10px;\n      left: 0;\n      float: left;\n      width: 4px;\n      height: 4px;\n      border-radius: 2px;\n      background: #fff;\n      box-shadow: -1px -1px 2px #aaa;\n    }\n\n    &:hover {\n\n    }\n  }*/\n}\n.project-url .project-link {\n  display: inline-block;\n  font: 700 11px/14px 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  background-color: #eee;\n  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fcfcfc), color-stop(100%, #eee));\n  background-image: -webkit-linear-gradient(top, #fcfcfc 0, #eee 100%);\n  background-image: -moz-linear-gradient(top, #fcfcfc 0, #eee 100%);\n  background-image: -ms-linear-gradient(top, #fcfcfc 0, #eee 100%);\n  background-image: -o-linear-gradient(top, #fcfcfc 0, #eee 100%);\n  background-image: linear-gradient(to bottom, #fcfcfc 0, #eee 100%);\n  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#eeeeee', GradientType=0);\n  background-repeat: no-repeat;\n  border: 1px solid #d5d5d5;\n  padding: 2px 5px 2px 4px;\n  color: #333;\n  text-decoration: none;\n  text-shadow: 0 1px 0 #fff;\n  white-space: nowrap;\n  cursor: pointer;\n  border-radius: 3px;\n  margin-top: 7px;\n  margin-right: 7px;\n}\n.project-url .project-link .custom-fa {\n  font-weight: bold;\n}\n.project-url iframe {\n  margin-top: 7px;\n  vertical-align: bottom;\n  margin-right: 7px;\n}\n.expand {\n  float: right;\n  transition: width 0.5s ease-in;\n  width: 70px;\n  text-align: center;\n}\n.expand i {\n  margin-left: 2px;\n  margin-right: 2px;\n}\n.project-container {\n  /*a.anchor {\n      display: block;\n      position: relative;\n      top: -250px;\n      visibility: hidden;\n  }*/\n}\n.project-container img {\n  max-width: 100%;\n  border: none;\n  padding: 0.7em 0;\n}\n.project-container h1,\n.project-container h2,\n.project-container h3,\n.project-container h4 {\n  color: #111111;\n  font-weight: 400;\n  margin-top: 1em;\n}\n.project-container h1,\n.project-container h2,\n.project-container h3,\n.project-container h4,\n.project-container h5 {\n  /*font-family: Georgia, Palatino, serif;*/\n}\n.project-container h1,\n.project-container h2,\n.project-container h3,\n.project-container h4,\n.project-container h5,\n.project-container dl {\n  margin-bottom: 16px;\n  padding: 0;\n}\n.project-container h1 .octicon-link,\n.project-container h2 .octicon-link,\n.project-container h3 .octicon-link,\n.project-container h4 .octicon-link,\n.project-container h5 .octicon-link,\n.project-container h6 .octicon-link {\n  color: #000;\n  vertical-align: middle;\n  visibility: hidden;\n}\n.project-container h1:hover .anchor,\n.project-container h2:hover .anchor,\n.project-container h3:hover .anchor,\n.project-container h4:hover .anchor,\n.project-container h5:hover .anchor,\n.project-container h6:hover .anchor {\n  text-decoration: none;\n}\n.project-container h1:hover .anchor .octicon-link,\n.project-container h2:hover .anchor .octicon-link,\n.project-container h3:hover .anchor .octicon-link,\n.project-container h4:hover .anchor .octicon-link,\n.project-container h5:hover .anchor .octicon-link,\n.project-container h6:hover .anchor .octicon-link {\n  visibility: visible;\n}\n.project-container .octicon {\n  display: inline-block;\n  vertical-align: text-top;\n  fill: currentColor;\n}\n.project-container .anchor {\n  float: left;\n  padding-right: 4px;\n  margin-left: -20px;\n  line-height: 1;\n}\n.project-container p {\n  margin-top: 8px;\n  margin-bottom: 3px;\n  /*padding-left: 7px;*/\n}\n.project-container h1 {\n  font-size: 48px;\n  line-height: 54px;\n}\n.project-container h2 {\n  font-size: 36px;\n  line-height: 42px;\n}\n.project-container h1,\n.project-container h2 {\n  border-bottom: 1px solid #EFEAEA;\n  padding-bottom: 10px;\n}\n.project-container h3 {\n  font-size: 24px;\n  line-height: 30px;\n}\n.project-container h4 {\n  font-size: 21px;\n  line-height: 26px;\n}\n.project-container h5 {\n  font-size: 18px;\n  line-height: 23px;\n}\n.project-container a {\n  /*color: #0099ff;*/\n  color: #4078c0;\n  margin: 0 2px;\n  padding: 0;\n  vertical-align: baseline;\n  text-decoration: none;\n}\n.project-container a:hover {\n  text-decoration: none;\n  color: #ff6600;\n}\n.project-container a:visited {\n  /*color: purple;*/\n}\n.project-container ul,\n.project-container ol {\n  padding: 0;\n  padding-left: 2em;\n  margin: 0;\n}\n.project-container li {\n  line-height: 24px;\n}\n.project-container p,\n.project-container ul,\n.project-container ol {\n  font-size: 16px;\n  line-height: 24px;\n}\n.project-container ol ol,\n.project-container ul ol {\n  list-style-type: lower-roman;\n}\n.project-container code,\n.project-container pre {\n  font-family: Consolas, Monaco, Andale Mono, monospace;\n  background-color: #f7f7f7;\n  color: inherit;\n}\n.project-container code {\n  font-family: Consolas, Monaco, Andale Mono, monospace;\n  margin: 0 2px;\n}\n.project-container pre {\n  font-family: Consolas, Monaco, Andale Mono, monospace;\n  line-height: 1.2em;\n  overflow: auto;\n  padding: 6px 10px;\n  /*border-left: 5px solid #6CE26C;*/\n}\n.project-container pre > code {\n  font-family: Consolas, Monaco, Andale Mono, monospace;\n  border: 0;\n  display: inline;\n  max-width: initial;\n  padding: 0;\n  margin: 0;\n  overflow: initial;\n  line-height: 1.3em;\n  font-size: 1em;\n  white-space: pre;\n  background: 0 0;\n}\n.project-container code {\n  color: #666555;\n}\n.project-container pre[class*=\"language-\"]::-moz-selection,\n.project-container pre[class*=\"language-\"] ::-moz-selection,\n.project-container code[class*=\"language-\"]::-moz-selection,\n.project-container code[class*=\"language-\"] ::-moz-selection {\n  background: #f7f7f7;\n}\n.project-container pre[class*=\"language-\"]::selection,\n.project-container pre[class*=\"language-\"] ::selection,\n.project-container code[class*=\"language-\"]::selection,\n.project-container code[class*=\"language-\"] ::selection {\n  background: #f7f7f7;\n}\n.project-container :not(pre) > code[class*=\"language-\"],\n.project-container pre[class*=\"language-\"] {\n  background: #f7f7f7;\n}\n.project-container aside {\n  display: block;\n  float: right;\n  width: 390px;\n}\n.project-container blockquote {\n  border-left: .5em solid #eee;\n  padding: 0 0 0 2em;\n  margin-left: 0;\n}\n.project-container blockquote cite {\n  font-size: 14px;\n  line-height: 20px;\n  color: #bfbfbf;\n}\n.project-container blockquote cite:before {\n  content: '\\2014   \\A0';\n}\n.project-container blockquote p {\n  color: #666;\n}\n.project-container hr {\n  text-align: left;\n  color: #999;\n  height: 2px;\n  padding: 0;\n  margin: 16px 0;\n  background-color: #e7e7e7;\n  border: 0 none;\n}\n.project-container dl {\n  padding: 0;\n}\n.project-container dl dt {\n  padding: 10px 0;\n  margin-top: 16px;\n  font-size: 1em;\n  font-style: italic;\n  font-weight: bold;\n}\n.project-container dl dd {\n  padding: 0 16px;\n  margin-bottom: 16px;\n}\n.project-container dd {\n  margin-left: 0;\n}\n.project-container table {\n  *border-collapse: collapse;\n  /* IE7 and lower */\n  border-spacing: 0;\n  width: 100%;\n}\n.project-container table {\n  border: solid #ccc 1px;\n}\n.project-container table tr:hover {\n  background: #fbf8e9;\n  -o-transition: all 0.1s ease-in-out;\n  -webkit-transition: all 0.1s ease-in-out;\n  -moz-transition: all 0.1s ease-in-out;\n  -ms-transition: all 0.1s ease-in-out;\n  transition: all 0.1s ease-in-out;\n}\n.project-container table td,\n.project-container .table th {\n  border-left: 1px solid #ccc;\n  border-top: 1px solid #ccc;\n  padding: 10px;\n  text-align: left;\n}\n.project-container table th {\n  border-top: none;\n  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);\n  padding: 5px;\n  border-left: 1px solid #ccc;\n}\n.project-container table td:first-child,\n.project-container table th:first-child {\n  border-left: none;\n}\n.project-container .task-list-item-checkbox {\n  margin: 0 0.2em 0.25em -2.3em;\n  vertical-align: middle;\n}\n.project-container [type=\"checkbox\"],\n.project-container [type=\"radio\"] {\n  box-sizing: border-box;\n  padding: 0;\n}\n.project-container strong {\n  margin: 3px;\n}\n.project-container .diagram {\n  max-width: 100%;\n  overflow-x: auto;\n  overflow-y: hidden;\n}\n.project-container #ds-thread {\n  margin-top: 2em;\n}\n.project-container .fancybox-image {\n  display: block;\n  cursor: pointer;\n}\n.project-container .fancybox-image img {\n  max-height: 100%;\n}\n.project-container .fancybox-next span {\n  left: auto;\n  right: 20px;\n}\n.project-container .fancybox-prev span {\n  left: 20px;\n}\n", ""]);
+exports.push([module.i, "\n.project-container {\n  /*a.anchor {\n      display: block;\n      position: relative;\n      top: -250px;\n      visibility: hidden;\n  }*/\n  /*pre > code {\n    font-family: Consolas, Monaco, Andale Mono, monospace;\n    border: 0;\n    //display: inline;\n    //max-width: initial;\n    padding: 0;\n    margin: 0;\n    overflow: initial;\n    line-height: 1.3em;\n    font-size: 1em;\n    white-space: pre;\n    background: 0 0;\n  }*/\n}\n.project-container img {\n  max-width: 100%;\n  border: none;\n  padding: 0.5em 0;\n}\n.project-container h1,\n.project-container h2,\n.project-container h3,\n.project-container h4 {\n  color: #111111;\n  font-weight: 400;\n  margin-top: 0.5em;\n}\n.project-container h1,\n.project-container h2,\n.project-container h3,\n.project-container h4,\n.project-container h5 {\n  /*font-family: Georgia, Palatino, serif;*/\n}\n.project-container h1,\n.project-container h2,\n.project-container h3,\n.project-container h4,\n.project-container h5,\n.project-container dl {\n  margin-bottom: 0.6em;\n  padding: 0;\n}\n.project-container h1 .octicon-link,\n.project-container h2 .octicon-link,\n.project-container h3 .octicon-link,\n.project-container h4 .octicon-link,\n.project-container h5 .octicon-link,\n.project-container h6 .octicon-link {\n  color: #000;\n  vertical-align: middle;\n  visibility: hidden;\n}\n.project-container h1:hover .anchor,\n.project-container h2:hover .anchor,\n.project-container h3:hover .anchor,\n.project-container h4:hover .anchor,\n.project-container h5:hover .anchor,\n.project-container h6:hover .anchor {\n  text-decoration: none;\n}\n.project-container h1:hover .anchor .octicon-link,\n.project-container h2:hover .anchor .octicon-link,\n.project-container h3:hover .anchor .octicon-link,\n.project-container h4:hover .anchor .octicon-link,\n.project-container h5:hover .anchor .octicon-link,\n.project-container h6:hover .anchor .octicon-link {\n  visibility: visible;\n}\n.project-container .octicon {\n  display: inline-block;\n  vertical-align: text-top;\n  fill: currentColor;\n}\n.project-container .anchor {\n  float: left;\n  padding-right: 4px;\n  margin-left: -20px;\n  line-height: 1;\n}\n.project-container p {\n  margin-top: 8px;\n  margin-bottom: 3px;\n  /*padding-left: 7px;*/\n}\n.project-container h1 {\n  font-size: 36px;\n  line-height: 42px;\n}\n.project-container h2 {\n  font-size: 30px;\n  line-height: 36px;\n}\n.project-container h1,\n.project-container h2 {\n  border-bottom: 1px solid #EFEAEA;\n  padding-bottom: 10px;\n}\n.project-container h3 {\n  font-size: 24px;\n  line-height: 30px;\n}\n.project-container h4 {\n  font-size: 18px;\n  line-height: 24px;\n}\n.project-container h5 {\n  font-size: 16px;\n  line-height: 22px;\n}\n.project-container a {\n  /*color: #0099ff;*/\n  color: #4078c0;\n  margin: 0 2px;\n  padding: 0;\n  vertical-align: baseline;\n  text-decoration: none;\n}\n.project-container a:hover {\n  text-decoration: none;\n  color: #ff6600;\n}\n.project-container a:visited {\n  /*color: purple;*/\n}\n.project-container ul,\n.project-container ol {\n  padding: 0;\n  padding-left: 2em;\n  margin: 0;\n}\n.project-container li {\n  line-height: 1.6em;\n}\n.project-container p,\n.project-container ul,\n.project-container ol {\n  font-size: 1em;\n  line-height: 1.6em;\n}\n.project-container ol ol,\n.project-container ul ol {\n  list-style-type: lower-roman;\n}\n.project-container code,\n.project-container pre {\n  font-family: Consolas, Monaco, Andale Mono, monospace;\n  background-color: #f7f7f7;\n  color: inherit;\n}\n.project-container code {\n  color: #666555;\n}\n.project-container pre {\n  font-size: 0.9em;\n}\n.project-container pre[class*=\"language-\"]::-moz-selection,\n.project-container pre[class*=\"language-\"] ::-moz-selection,\n.project-container code[class*=\"language-\"]::-moz-selection,\n.project-container code[class*=\"language-\"] ::-moz-selection {\n  background: #f7f7f7;\n}\n.project-container pre[class*=\"language-\"]::selection,\n.project-container pre[class*=\"language-\"] ::selection,\n.project-container code[class*=\"language-\"]::selection,\n.project-container code[class*=\"language-\"] ::selection {\n  background: #f7f7f7;\n}\n.project-container :not(pre) > code[class*=\"language-\"],\n.project-container pre[class*=\"language-\"] {\n  background: #f7f7f7;\n}\n.project-container aside {\n  display: block;\n  float: right;\n  width: 390px;\n}\n.project-container blockquote {\n  border-left: .5em solid #eee;\n  padding: 0 0 0 2em;\n  margin-left: 0;\n}\n.project-container blockquote cite {\n  font-size: 14px;\n  line-height: 20px;\n  color: #bfbfbf;\n}\n.project-container blockquote cite:before {\n  content: '\\2014   \\A0';\n}\n.project-container blockquote p {\n  color: #666;\n}\n.project-container hr {\n  text-align: left;\n  color: #999;\n  height: 2px;\n  padding: 0;\n  margin: 1em 0;\n  background-color: #e7e7e7;\n  border: 0 none;\n}\n.project-container dl {\n  padding: 0;\n}\n.project-container dl dt {\n  padding: 10px 0;\n  margin-top: 1em;\n  font-size: 1em;\n  font-style: italic;\n  font-weight: bold;\n}\n.project-container dl dd {\n  padding: 0 1em;\n  margin-bottom: 1em;\n}\n.project-container dd {\n  margin-left: 0;\n}\n.project-container table {\n  *border-collapse: collapse;\n  /* IE7 and lower */\n  border-spacing: 0;\n  width: 100%;\n}\n.project-container table {\n  border: solid #ccc 1px;\n}\n.project-container table tr:hover {\n  background: #fbf8e9;\n  -o-transition: all 0.1s ease-in-out;\n  -webkit-transition: all 0.1s ease-in-out;\n  -moz-transition: all 0.1s ease-in-out;\n  -ms-transition: all 0.1s ease-in-out;\n  transition: all 0.1s ease-in-out;\n}\n.project-container table td,\n.project-container .table th {\n  border-left: 1px solid #ccc;\n  border-top: 1px solid #ccc;\n  padding: 10px;\n  text-align: left;\n}\n.project-container table th {\n  border-top: none;\n  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);\n  padding: 5px;\n  border-left: 1px solid #ccc;\n}\n.project-container table td:first-child,\n.project-container table th:first-child {\n  border-left: none;\n}\n.project-container .task-list-item-checkbox {\n  margin: 0 0.2em 0.25em -2.3em;\n  vertical-align: middle;\n}\n.project-container [type=\"checkbox\"],\n.project-container [type=\"radio\"] {\n  box-sizing: border-box;\n  padding: 0;\n}\n.project-container strong {\n  margin: 3px;\n}\n.project-container .diagram {\n  max-width: 100%;\n  overflow-x: auto;\n  overflow-y: hidden;\n}\n.project-container #ds-thread {\n  margin-top: 2em;\n}\n.project-container .fancybox-image {\n  display: block;\n  cursor: pointer;\n}\n.project-container .fancybox-image img {\n  max-height: 100%;\n}\n.project-container .fancybox-next span {\n  left: auto;\n  right: 20px;\n}\n.project-container .fancybox-prev span {\n  left: 20px;\n}\n/** extract from bootstrap*/\n.project {\n  font-family: \"ubuntu\", \"Tahoma\", \"Microsoft YaHei\", arial, sans-serif;\n  width: 800px;\n  min-height: 100px;\n  margin: 0 auto 25px auto;\n  background: #fff;\n  box-shadow: 7px 7px 7px #E6E9ED;\n  padding: 0;\n}\n.project a:hover {\n  color: #3bafda;\n}\n@media screen and (max-width: 1100px) {\n.project {\n    width: 100%;\n}\n}\n.inner {\n  margin: 0;\n  width: auto;\n  padding: 12px 20px;\n  overflow: hidden;\n}\n.project-title {\n  margin: 0;\n  color: #3bafda;\n  font-size: 24px;\n  border-bottom: 1px solid #ccc;\n  padding-bottom: 6px;\n}\n.project-title span {\n  text-align: left;\n  font-size: 24px;\n}\n.project-title i {\n  float: right;\n  cursor: pointer;\n}\n.project-tag {\n  padding: 12px 0px;\n  color: #aaa;\n  font-size: 12px;\n}\n.project-tag i {\n  margin-right: 5px;\n}\n.project-tag a {\n  text-decoration: none;\n  color: #bbb;\n  margin-right: 12px;\n}\n.project-tag a:hover {\n  color: #4786D6;\n}\n.project-desc {\n  margin-bottom: 12px;\n}\n.no-show {\n  position: relative;\n  height: 0px;\n  overflow: hidden;\n}\n.project-content-copy {\n  position: absolute;\n  visibility: hidden;\n  z-index: 0;\n}\n.project-content {\n  transition: all 0.5s ease-in;\n  overflow: hidden;\n  margin-bottom: 7px;\n}\n.project-url {\n  /*a {\n    display: inline-block;\n    height: @tag-height;\n    line-height: @tag-height;\n    position: relative;\n    font-size: @font-size-small;\n    margin-left: 20px;\n    padding: 0 @project-base-padding;\n    background: @tag-bg;\n    color: @url-color;\n    text-decoration: none;\n    border-radius: 0px @border-radius-base @border-radius-base 0px;\n    box-shadow: 1px 1px 1px @tag-bg;\n    &:first-child{\n      margin-left: 0;\n    }\n    &:before {\n      content: \"\";\n      float: left;\n      position: absolute;\n      top: 0;\n      left: -12px;\n      width: 0;\n      height: 0;\n      border-color: transparent @tag-bg transparent transparent;\n      border-style: solid;\n      border-width: 12px 12px 12px 0;\n\n    }\n    &:after {\n      content: \"\";\n      position: absolute;\n      top: 10px;\n      left: 0;\n      float: left;\n      width: 4px;\n      height: 4px;\n      border-radius: 2px;\n      background: #fff;\n      box-shadow: -1px -1px 2px #aaa;\n    }\n\n    &:hover {\n\n    }\n  }*/\n}\n.project-url .project-link {\n  display: inline-block;\n  font: 700 11px/14px 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  background-color: #eee;\n  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fcfcfc), color-stop(100%, #eee));\n  background-image: -webkit-linear-gradient(top, #fcfcfc 0, #eee 100%);\n  background-image: -moz-linear-gradient(top, #fcfcfc 0, #eee 100%);\n  background-image: -ms-linear-gradient(top, #fcfcfc 0, #eee 100%);\n  background-image: -o-linear-gradient(top, #fcfcfc 0, #eee 100%);\n  background-image: linear-gradient(to bottom, #fcfcfc 0, #eee 100%);\n  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#eeeeee', GradientType=0);\n  background-repeat: no-repeat;\n  border: 1px solid #d5d5d5;\n  padding: 2px 5px 2px 4px;\n  color: #333;\n  text-decoration: none;\n  text-shadow: 0 1px 0 #fff;\n  white-space: nowrap;\n  cursor: pointer;\n  border-radius: 3px;\n  margin-top: 7px;\n  margin-right: 7px;\n}\n.project-url .project-link .custom-fa {\n  font-weight: bold;\n}\n.project-url iframe {\n  margin-top: 7px;\n  vertical-align: bottom;\n  margin-right: 7px;\n}\n.expand {\n  float: right;\n  transition: width 0.5s ease-in;\n  width: 70px;\n  text-align: center;\n}\n.expand i {\n  margin-left: 2px;\n  margin-right: 2px;\n}\n", ""]);
 
 // exports
 
@@ -1211,7 +1168,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "aria-hidden": "true"
     }
-  }), _vm._v(" "), _c('span', [_vm._v("Home")])]) : _vm._e(), _vm._v(" "), (_vm.project.hasCode) ? _c('a', {
+  }), _vm._v(" "), _c('span', [_vm._v(_vm._s(_vm.config.homeText))])]) : _vm._e(), _vm._v(" "), (_vm.project.hasCode) ? _c('a', {
     staticClass: "project-link",
     attrs: {
       "href": _vm.project.code,
@@ -1222,7 +1179,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "aria-hidden": "true"
     }
-  }), _vm._v(" "), _c('span', [_vm._v("Code")])]) : _vm._e(), _vm._v(" "), (_vm.project.github.star) ? _c('a', {
+  }), _vm._v(" "), _c('span', [_vm._v(_vm._s(_vm.config.codeText))])]) : _vm._e(), _vm._v(" "), (_vm.project.github.star) ? _c('a', {
     staticClass: "github-button",
     staticStyle: {
       "display": "none"
@@ -1264,7 +1221,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "aria-hidden": "true"
     }
-  }), _vm._v(" "), _c('span', [_vm._v(_vm._s(_vm.showShort ? "详细介绍" : "收起"))])]) : _vm._e()])])])
+  }), _vm._v(" "), _c('span', [_vm._v(_vm._s(_vm.showShort ? _vm.config.expandText : _vm.config.collapseText))])]) : _vm._e()])])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {

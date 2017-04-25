@@ -40,40 +40,56 @@ Vue.component("sidebar", sidebar);
 let categoryMap = new Map();
 let categoryObjMap = {};
 let showByCategory = config.category;
-
+let newProjectList = projectList;
+let isCollapse = document.body.clientWidth < 768;
+console.log(document.body.clientWidth);
+//console.log(projectList);
 if (showByCategory) {
     let arrList;
+    let projectMap = new Map();
     for (let pro of projectList) {
-        if (pro.category != null && pro.category.trim() != "") {
-            if (categoryMap.has(pro.category)) {
-                arrList = categoryMap.get(pro.category);
-                arrList.push({
-                    id: pro.id,
-                    name: pro.name
-                });
+        projectMap.set(pro.id, pro);
+        if (pro.category == null || pro.category.trim() == "") {
+            pro.category = config.defaultCategory;
+        }
 
-            } else {
-                arrList = [];
-                arrList.push({
-                    id: pro.id,
-                    name: pro.name
-                });
-                categoryMap.set(pro.category, arrList);
-                //categorySet.add(pro.category);
-            }
+        if (categoryMap.has(pro.category)) {
+            arrList = categoryMap.get(pro.category);
+            arrList.push({
+                id: pro.id,
+                name: pro.name
+            });
+
+        } else {
+            arrList = [];
+            arrList.push({
+                id: pro.id,
+                name: pro.name
+            });
+            categoryMap.set(pro.category, arrList);
+
         }
     }
 
-    if (categoryMap.size == 0) {
-        showByCategory = false;
+
+    for (let key of categoryMap.keys()) {
+        categoryObjMap[key] = categoryMap.get(key);
     }
 
-    if(showByCategory) {
-        for(let key of categoryMap.keys()) {
-            categoryObjMap[key] = categoryMap.get(key);
+    newProjectList = [];
+
+    for (let cate of categoryMap.keys()) {
+        let pros = categoryMap.get(cate);
+        for (let pro of pros) {
+            newProjectList.push(projectMap.get(pro.id));
         }
     }
 }
+
+//console.log(projectList);
+
+//projectList = newProjectList;
+
 
 //showByCategory = false;
 
@@ -101,41 +117,22 @@ if (showByCategory) {
 //});
 
 
-//if (config.category) {
-//    let projectMap = {};
-//    let newProjectList = [];
-//    for (let pro of projectList) {
-//        projectMap[pro.id] = pro;
-//    }
-//
-//    for (let cate of categoryList) {
-//        let proIds = categoryMap[cate];
-//        for(let id of proIds) {
-//            newProjectList.push(projectMap[id]);
-//        }
-//    }
-//
-//
-//    projectList = newProjectList;
-//
-//}
 //console.log(data);
 
-var vm = new Vue({
+var app = new Vue({
     el: '#app',
     data: function () {
         return {
-            projects: projectList,
-            //categorySet: categorySet,
+            projects: newProjectList,
             categoryMap: categoryObjMap,
-            showByCategory: showByCategory
+            showByCategory: showByCategory,
+            config: config
+
         }
     },
     methods: {
         collapseClick: function (isCollapse) {
-            //console.log(isCollapse);
             var container = document.querySelector("#project-container");
-            console.log(container);
             if (isCollapse) {
                 container.style.marginLeft = "50px";
             } else {
@@ -144,6 +141,11 @@ var vm = new Vue({
         }
     }
 });
+
+app.collapseClick(isCollapse);
+if(!isCollapse) {
+    app.$children[0].collapse();
+}
 
 smoothScroll.init();
 

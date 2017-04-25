@@ -1,17 +1,39 @@
 [
     {
+        "id": 0,
+        "hasShortIntro": true,
+        "hasGithub": true,
+        "hasHome": false,
+        "hasCode": true,
+        "name": "堆排序演示程序",
+        "content": "<p>使用 Java 编写的堆排序演示程序，目前主要包含以下功能：</p>\n<ul>\n<li>堆的创建、插入、删除、堆排序演示</li>\n<li>最大堆与最小堆切换</li>\n<li>单步执行与自动执行</li>\n<li>可调节演示速度</li>\n<li>两种演示方式切换</li>\n</ul>\n<!-- more -->\n<h2 id=\"-\">程序截图</h2>\n<p>创建堆\n<img src=\"https://raw.githubusercontent.com/zhangjikai/heap/master/screenshot/%E5%A0%86-%E5%88%9B%E5%BB%BA-1.gif\" alt=\"\"></p>\n<p>堆排序\n<img src=\"https://raw.githubusercontent.com/zhangjikai/heap/master/screenshot/%E5%A0%86-%E6%8E%92%E5%BA%8F.gif\" alt=\"\"></p>\n<p>试下代码</p>\n<pre class=\"line-numbers language-js\"><code class=\" language-js\"><span class=\"token punctuation\">{</span>\n    <span class=\"token string\">\"name\"</span><span class=\"token punctuation\">:</span> <span class=\"token string\">\"堆排序演示程序\"</span><span class=\"token punctuation\">,</span>\n    <span class=\"token string\">\"github\"</span><span class=\"token punctuation\">:</span> <span class=\"token punctuation\">{</span>\n        <span class=\"token string\">\"repo\"</span><span class=\"token punctuation\">:</span> <span class=\"token string\">\"zhangjikai/heap\"</span>\n    <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n    <span class=\"token string\">\"code\"</span><span class=\"token punctuation\">:</span> <span class=\"token string\">\"https://github.com/zhangjikai/heap\"</span><span class=\"token punctuation\">,</span>\n    <span class=\"token string\">\"category\"</span><span class=\"token punctuation\">:</span> <span class=\"token string\">\"Java\"</span><span class=\"token punctuation\">,</span>\n    <span class=\"token string\">\"tags\"</span> <span class=\"token punctuation\">:</span> <span class=\"token string\">\"Java\"</span>\n<span class=\"token punctuation\">}</span><span aria-hidden=\"true\" class=\"line-numbers-rows\"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>",
+        "shortIntro": "<p>使用 Java 编写的堆排序演示程序，目前主要包含以下功能：</p>\n<ul>\n<li>堆的创建、插入、删除、堆排序演示</li>\n<li>最大堆与最小堆切换</li>\n<li>单步执行与自动执行</li>\n<li>可调节演示速度</li>\n<li>两种演示方式切换</li>\n</ul>\n",
+        "tags": [
+            "Java"
+        ],
+        "category": "",
+        "home": "",
+        "code": "https://github.com/zhangjikai/heap",
+        "github": {
+            "star": "true",
+            "fork": "true",
+            "repo": "zhangjikai/heap"
+        }
+    },
+    {
         "id": 1,
         "hasShortIntro": true,
         "hasGithub": true,
         "hasHome": false,
         "hasCode": true,
-        "name": "Java 办连连看",
-        "content": "<p>以秦时明月为背景，使用 Java 编写的一款连连看游戏，游戏的效果还是不错的，页面比较精致，同时包含背景音乐和一些动画效果。同时游戏增加了元素移动（消除一对之后剩余元素位置改变）模式，增加了游戏的趣味性。</p>\n<!-- more -->\n<h2 id=\"-\">程序截图</h2>\n<p><img src=\"https://raw.githubusercontent.com/zhangjikai/LinkGame/master/screenshot/game.gif\" alt=\"\"></p>\n",
+        "name": "连连看",
+        "content": "<p>以秦时明月为背景，使用 Java 编写的一款连连看游戏，游戏的效果还是不错的，页面比较精致，同时包含背景音乐和一些动画效果。同时游戏增加了元素移动（消除一对之后剩余元素位置改变）模式，增加了游戏的趣味性。</p>\n<!-- more -->\n<h2 id=\"-\">截图</h2>\n<p><img src=\"https://raw.githubusercontent.com/zhangjikai/LinkGame/master/screenshot/game.gif\" alt=\"\"></p>\n",
         "shortIntro": "<p>以秦时明月为背景，使用 Java 编写的一款连连看游戏，游戏的效果还是不错的，页面比较精致，同时包含背景音乐和一些动画效果。同时游戏增加了元素移动（消除一对之后剩余元素位置改变）模式，增加了游戏的趣味性。</p>\n",
         "tags": [
-            "java"
+            "Java",
+            "游戏"
         ],
-        "category": "测试",
+        "category": "Java",
         "home": "",
         "code": "https://github.com/zhangjikai/LinkGame",
         "github": {
@@ -21,25 +43,114 @@
         }
     },
     {
-        "id": 0,
+        "id": 2,
         "hasShortIntro": true,
         "hasGithub": true,
         "hasHome": false,
         "hasCode": true,
-        "name": "堆排序演示程序",
-        "content": "<p>使用 Java 编写的堆排序演示程序，目前主要包含以下功能：</p>\n<ul>\n<li>堆的创建、插入、删除、堆排序演示</li>\n<li>最大堆与最小堆切换</li>\n<li>单步执行与自动执行</li>\n<li>可调节演示速度</li>\n<li>两种演示方式切换</li>\n</ul>\n<!-- more -->\n<h2 id=\"-\">程序截图</h2>\n<p>创建堆\n<img src=\"https://raw.githubusercontent.com/zhangjikai/heap/master/screenshot/%E5%A0%86-%E5%88%9B%E5%BB%BA-1.gif\" alt=\"\"></p>\n<p>堆排序\n<img src=\"https://raw.githubusercontent.com/zhangjikai/heap/master/screenshot/%E5%A0%86-%E6%8E%92%E5%BA%8F.gif\" alt=\"\"></p>\n",
-        "shortIntro": "<p>使用 Java 编写的堆排序演示程序，目前主要包含以下功能：</p>\n<ul>\n<li>堆的创建、插入、删除、堆排序演示</li>\n<li>最大堆与最小堆切换</li>\n<li>单步执行与自动执行</li>\n<li>可调节演示速度</li>\n<li>两种演示方式切换</li>\n</ul>\n",
+        "name": "扫雷",
+        "content": "<p>使用 Java 实现的扫雷程序，界面仿照 Win7 的扫雷程序，功能比较完善。</p>\n<!-- more -->\n<h2 id=\"-\">截图</h2>\n<p><img src=\"https://raw.githubusercontent.com/zhangjikai/Minesweeper/master/screenshot/%E6%89%AB%E9%9B%B7.gif\" alt=\"\"></p>\n",
+        "shortIntro": "<p>使用 Java 实现的扫雷程序，界面仿照 Win7 的扫雷程序，功能比较完善。</p>\n",
         "tags": [
-            "java"
+            "Java",
+            "游戏"
         ],
         "category": "Java",
         "home": "",
-        "code": "https://github.com/zhangjikai/heap",
+        "code": "https://github.com/zhangjikai/Minesweeper",
         "github": {
             "star": "true",
             "fork": "true",
-            "repo": "zhangjikai/heap"
+            "repo": "zhangjikai/Minesweeper"
+        }
+    },
+    {
+        "id": 3,
+        "hasShortIntro": true,
+        "hasGithub": true,
+        "hasHome": false,
+        "hasCode": true,
+        "name": "在线文件共享",
+        "content": "<p>用来共享文件。后台使用 Spring MVC，前台使用的是一个现有的 <a href=\"https://github.com/joni2back/angular-filemanager\">在线文件管理系统</a>，在该系统的基础上修改了文件上传，添加了手机扫码快速打开的功能。</p>\n<!-- more -->\n<h2 id=\"-\">截图</h2>\n<p><img src=\"https://camo.githubusercontent.com/4d9452a923099fb148a131fcf987d967ae904f69/687474703a2f2f3778717035752e636f6d312e7a302e676c622e636c6f7564646e2e636f6d2f66696c652d6d616e6167657230342e6a7067\" alt=\"\"></p>\n<pre class=\"line-numbers language-js\"><code class=\" language-js\"><span class=\"token punctuation\">{</span>\n    <span class=\"token string\">\"name\"</span><span class=\"token punctuation\">:</span> <span class=\"token string\">\"堆排序演示程序\"</span><span class=\"token punctuation\">,</span>\n    <span class=\"token string\">\"github\"</span><span class=\"token punctuation\">:</span> <span class=\"token punctuation\">{</span>\n        <span class=\"token string\">\"repo\"</span><span class=\"token punctuation\">:</span> <span class=\"token string\">\"zhangjikai/heap\"</span>\n    <span class=\"token punctuation\">}</span><span class=\"token punctuation\">,</span>\n    <span class=\"token string\">\"code\"</span><span class=\"token punctuation\">:</span> <span class=\"token string\">\"https://github.com/zhangjikai/heap\"</span><span class=\"token punctuation\">,</span>\n    <span class=\"token string\">\"category\"</span><span class=\"token punctuation\">:</span> <span class=\"token string\">\"Java\"</span><span class=\"token punctuation\">,</span>\n    <span class=\"token string\">\"tags\"</span> <span class=\"token punctuation\">:</span> <span class=\"token string\">\"Java\"</span>\n<span class=\"token punctuation\">}</span><span aria-hidden=\"true\" class=\"line-numbers-rows\"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>",
+        "shortIntro": "<p>用来共享文件。后台使用 Spring MVC，前台使用的是一个现有的 <a href=\"https://github.com/joni2back/angular-filemanager\">在线文件管理系统</a>，在该系统的基础上修改了文件上传，添加了手机扫码快速打开的功能。</p>\n",
+        "tags": [
+            "Java",
+            "工具"
+        ],
+        "category": "Java",
+        "home": "",
+        "code": "https://github.com/zhangjikai/FileManager",
+        "github": {
+            "star": "true",
+            "fork": "true",
+            "repo": "zhangjikai/FileManager"
+        }
+    },
+    {
+        "id": 4,
+        "hasShortIntro": true,
+        "hasGithub": true,
+        "hasHome": true,
+        "hasCode": true,
+        "name": "基于Three.js 框架的 3D 射击游戏",
+        "content": "<p>基于 three.js 的一款 3D 射击游戏。</p>\n<!-- more -->\n<h2 id=\"-\">介绍</h2>\n<p>首先选取一张包含人脸的图片，人脸尽可能大以便于裁剪。裁剪框有三条提示线，分别对应人的双眼和嘴。通过调节图片的大小，使双眼和嘴尽量重合。裁剪的图片会被用做怪物的脸。\n游戏设置了四种武器：</p>\n<ul>\n<li>普通子弹 - 第一次击中怪物后，会使怪物脸发生变形，第二次击中怪物后才会杀死怪物</li>\n<li>冷冻弹 - 爆炸后使怪物停止移动</li>\n<li>炮弹 - 爆炸后会产生很多小子弹，不会自动引爆，发射后需要点击普通子弹操作引爆</li>\n<li>激光 - 碰到怪物就可以杀死怪物</li>\n</ul>\n<p>游戏设置了两种模式 - 闯关模式和计分模式。本来还有一个对战模式，通信使用 websocket + java web, 但是因为没有 java 服务器，所以把这个模式去掉了。</p>\n<p>如果在移动端玩这个游戏，注意使用横屏模式。建议使用 chrome 浏览器。</p>\n<h2 id=\"-\">截图</h2>\n<p><img src=\"https://raw.githubusercontent.com/zhangjikai/MindYourHead/master/images/demo/game.png\" alt=\"\"></p>\n",
+        "shortIntro": "<p>基于 three.js 的一款 3D 射击游戏。</p>\n",
+        "tags": [
+            "Three.js",
+            "游戏"
+        ],
+        "category": "HTML5 & JS",
+        "home": "http://head.zhangjikai.com/",
+        "code": "https://github.com/zhangjikai/MindYourHead",
+        "github": {
+            "star": "true",
+            "fork": "true",
+            "repo": "zhangjikai/MindYourHead"
+        }
+    },
+    {
+        "id": 5,
+        "hasShortIntro": true,
+        "hasGithub": true,
+        "hasHome": true,
+        "hasCode": true,
+        "name": "Markdown 在线阅读器",
+        "content": "<p>一款在线的 Markdown文件阅读器，使用<a href=\"https://github.com/chjj/marked\">marked</a> 解析markdown文件，通过扩展库的方法，添加了一些扩展功能。同时程序可以方便添加新的扩展。</p>\n<p><a href=\"http://www.zhangjikai.com/markdown/sample.html\">示例预览</a></p>\n<!-- more -->\n<h2 id=\"-\">程序功能</h2>\n<ul>\n<li><code>Prism.js</code> / <code>Highlight.js</code> 代码高亮</li>\n<li>自动生成目录</li>\n<li>本地图片显示</li>\n<li>导出 Html （包含样式）<ul>\n<li>BackToTop</li>\n<li>多说</li>\n</ul>\n</li>\n<li>扩展功能<ul>\n<li>Toto 列表</li>\n<li><a href=\"https://github.com/mathjax/MathJax\">MathJax</a></li>\n<li><a href=\"https://github.com/bramp/js-sequence-diagrams\">时序图 (Js sequence diagrams)</a></li>\n<li><a href=\"https://github.com/Ranks/emojify.js\">Emoji (Emojify.js)</a></li>\n<li><a href=\"http://echarts.baidu.com/\">ECharts</a></li>\n<li><a href=\"http://fancybox.net/\">Fancybox</a></li>\n</ul>\n</li>\n</ul>\n",
+        "shortIntro": "<p>一款在线的 Markdown文件阅读器，使用<a href=\"https://github.com/chjj/marked\">marked</a> 解析markdown文件，通过扩展库的方法，添加了一些扩展功能。同时程序可以方便添加新的扩展。</p>\n<p><a href=\"http://www.zhangjikai.com/markdown/sample.html\">示例预览</a></p>\n",
+        "tags": [
+            "Markdown",
+            "工具"
+        ],
+        "category": "HTML5 & JS",
+        "home": "http://markdown.zhangjikai.com/",
+        "code": "https://github.com/zhangjikai/online-markdown-reader",
+        "github": {
+            "star": "true",
+            "fork": "true",
+            "repo": "zhangjikai/online-markdown-reader"
+        }
+    },
+    {
+        "id": 6,
+        "hasShortIntro": false,
+        "hasGithub": true,
+        "hasHome": true,
+        "hasCode": true,
+        "name": "GitHub Page 在线生成器",
+        "content": "<p>将 Markdown 文件转换为不同主题的 GitHub Page 网页。</p>\n",
+        "shortIntro": "",
+        "tags": [
+            "Markdown",
+            "GitHub Page",
+            "工具"
+        ],
+        "category": "",
+        "home": "http://page.zhangjikai.com/",
+        "code": "https://github.com/zhangjikai/online-ghpages-generator",
+        "github": {
+            "star": "true",
+            "fork": "true",
+            "repo": "zhangjikai/online-ghpages-generator"
         }
     }
-
 ]

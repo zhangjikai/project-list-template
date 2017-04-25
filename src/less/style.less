@@ -8,8 +8,14 @@ body {
   padding: 0px;
   margin: 0px;
   height: 100%;
-  position: relative;
-  scroll-behavior: smooth;
+  font-size: 16px;
+
+}
+
+@media screen and (max-width: 992px) {
+  body {
+    font-size: 14px;
+  }
 }
 
 img {
@@ -22,7 +28,7 @@ img {
 
 .project-container {
   min-width: 300px;
-  margin-left: 260px;
+  margin-left: 50px;
   padding: @len-small;
   transition: all 0.5s
 }

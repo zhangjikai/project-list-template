@@ -31,12 +31,12 @@
 
                 <a :href="project.home " v-if="project.hasHome" target="_blank" class="project-link">
                     <i class="fa fa-home custom-fa" aria-hidden="true"></i>
-                    <span>Home</span>
+                    <span>{{config.homeText}}</span>
                 </a>
 
                 <a :href="project.code" target="_blank" v-if="project.hasCode" class="project-link">
                     <i class="fa fa-code custom-fa" aria-hidden="true"></i>
-                    <span>Code</span>
+                    <span>{{config.codeText}}</span>
                 </a>
 
                 <a class="github-button" v-if="project.github.star" :href="'https://github.com/' + project.github.repo "
@@ -59,7 +59,7 @@
                 <a href="javascript:void(0)" @click="expand" v-if="project.hasShortIntro" class="project-link expand">
                     <i class="fa " :class="{'fa-angle-double-down': showShort, 'fa-angle-double-up': !showShort}"
                        aria-hidden="true"></i>
-                    <span>{{showShort ?  "详细介绍": "收起"}}</span>
+                    <span>{{showShort ?  config.expandText: config.collapseText}}</span>
                 </a>
 
 
@@ -112,7 +112,7 @@
 <script>
 
     export default {
-        props: ["project", "showShort"],
+        props: ["project", "showShort", "config"],
         data: function () {
             return {
                 isExpand: false
@@ -151,7 +151,8 @@
 
 <style lang="less">
 
-    @import "project.less";
+
     @import "markdown.less";
+    @import "project.less";
 
 </style>

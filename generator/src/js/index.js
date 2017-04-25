@@ -41,7 +41,7 @@
                 return "";
 
             default :
-                return "<pre><code class='language-" + lang +
+                return "<pre><code class='language-" + language +
                     "'>" + code + "</code></pre>";
         }
     };
@@ -128,7 +128,14 @@
                 }
                 config = {};
                 var content = marked(rowText);
-                project.content = content;
+                console.log(content);
+                $("#gen-html").html(content);
+                $("pre").addClass("line-numbers");
+                Prism.highlightAll();
+                console.log($("#gen-html").html())
+
+
+                project.content = $("#gen-html").html();
                 if (config.hasOwnProperty("name")) {
                     project.name = config.name;
                 }

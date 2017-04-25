@@ -2,7 +2,7 @@
 ## 效果
 
 ## 使用
-1.clone 项目到本地
+1. clone 项目到本地
     ```
     git clone git@github.com:zhangjikai/project-list-template.git
     cd project-list-template

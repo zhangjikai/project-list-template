@@ -20,6 +20,7 @@
 ## Markdown 文件规则
 一个完整的项目介绍如下所示：
 <pre lang="no-highlight"><code>&lt;!-- start -->
+
 ```config
 {
     "name": "Markdown 语法介绍",
@@ -34,6 +35,7 @@
 }
 ```
 介绍 Markdown 的相关语法。
+
 &lt;!-- more -->
 
 ## Emphasis

@@ -49,5 +49,6 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 - Or minuses
 + Or pluses
 ```
+</code></pre>
 
-`&lt;!-- start -->` 表示开始一个新的项目介绍，程序通过该标识符将不同的程序介绍分开。`&lt;!-- start -->` 跟一个代码块，语言标记为 `config`，用来设置项目的基本信息
+`&lt;!-- start -->` 表示开始一个新的项目介绍，程序通过该标识符将不同的项目介绍分开。`&lt;!-- start -->` 跟一个代码块，语言标记为 `config`，用来设置项目的基本信息

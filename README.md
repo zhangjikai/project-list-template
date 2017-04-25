@@ -15,7 +15,35 @@
     npm install
     gulp
     ```
-    如果不想重新编译文件，可以使用 without-recompile 中的程序，该文件夹下的程序使用 `$.getJSON` 获取 json 文件，因此只需替换即可。
+    如果不想重新编译文件，可以使用 without-recompile 中的文件，该文件夹下的程序使用 `$.getJSON` 获取 json 文件，只需替换 json 文件，不需要重新编译。
 
 ## Markdown 文件规则
-完整的示例如下所示：
+一个完整的项目介绍如下所示：
+<pre lang="no-highlight"><code><!-- start -->
+```config
+{
+    "name": "Markdown 语法介绍",
+    "github": {
+        "repo": "zhangjikai/project-list-template",
+        "star":true,
+        "fork":true
+    },
+    "code": "https://github.com/zhangjikai/project-list-template",
+    "category": "Markdown",
+    "tags" : ["markdown"]
+}
+```
+介绍 Markdown 的相关语法。
+<!-- more -->
+# H1
+## H2
+### H3
+#### H4
+##### H5
+###### H6
+## Emphasis
+Emphasis, aka italics, with *asterisks* or _underscores_.
+Strong emphasis, aka bold, with **asterisks** or __underscores__.
+Combined emphasis with **asterisks and _underscores_**.
+Strikethrough uses two tildes. ~~Scratch this.~~
+```

@@ -51,4 +51,42 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 ```
 </code></pre>
 
-`<!-- start -->` 表示开始一个新的项目介绍，程序通过该标识符将不同的项目介绍分开。`<!-- start -->` 后面一个代码块，lang 设为 `config`，用来设置项目的基本信息
+### 项目开始标记
+ `<!-- start -->` 表示开始一个新的项目介绍，程序中通过该标识符将不同的项目介绍分开。
+
+### 项目信息
+程序中使用 lang 为 `config` 的代码块来设置项目的基本信息。代码块中是 JSON 格式的代码，下面是程序支持的所有的配置以及其默认值
+<pre lang="no-highlight"><code>```config
+{
+    "name": "",
+    "home": "",
+    "code": "",
+    "category": "---------------------------",
+    "tags" : [],
+    "github": {
+        "repo": "",
+        "star":true,
+        "fork":true
+    }
+
+}
+```
+</code></pre>
+
+* `name` - 项目名称
+* `home` - 项目主页，为空则不显示相关按钮
+* `code` - 项目代码地址，为空则不显示相关按钮
+* `category` - 项目类别，根据该值进行分类显示，可以在 config.json 修改默认类别的值
+* `tags` - 项目标签，数组类型
+* `github` - 显示 github 的相关信息
+  * `repo` - github 地址，格式为 `用户名/仓库`，如 `zhangjikai/project-list-template`
+  * `star` - 是否显示 star 信息，默认为 true，如果 `repo` 为空，则将该值置为 false
+  * `fork` - 是否显示 fork 信息，默认为 true，如果 `repo` 为空，则将该值置为 false
+
+### 项目介绍
+在项目介绍中使用正常的 Markdown 语法即可，如果项目介绍过长，可以使用 `<!-- more -->` 分割内容，`<!-- more -->` 之后的内容会被折叠起来，如下面的形式
+```
+项目简介
+<!-- more -->
+项目详细介绍
+```

@@ -1,5 +1,19 @@
 # 项目列表模板
-## 效果
+
+<!-- toc -->
+
+- [前言](#%E5%89%8D%E8%A8%80)
+- [使用](#%E4%BD%BF%E7%94%A8)
+- [Markdown 文件规则](#markdown-%E6%96%87%E4%BB%B6%E8%A7%84%E5%88%99)
+  * [项目开始标记](#项目开始标记)
+  * [项目信息](#项目信息)
+  * [项目介绍](#%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D)
+- [全局配置](#%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE)
+
+<!-- tocstop -->
+
+## 前言
+使用 Vue.js 写的一个项目列表，效果如下所示。只需要按一定规则编写 Markdown 文件，然后使用 [在线的转换工具](http://project.zhangjikai.com/generator/) 将 Markdown 文件转换为 JSON 文件，将生成的 JSON 文件替换项目中的文件，然后重新编译一下即可。
 
 ## 使用
 1. clone 项目到本地
@@ -8,7 +22,7 @@
     cd project-list-template
     ```
 2. 按照规则编写 Markdown 文件
-3. 使用 在线工具 转换为 json 文件
+3. 使用 [在线工具](http://project.zhangjikai.com/generator/) 转换为 json 文件
 4. 替换 data.json
 5. 运行程序重新编译
     ```
@@ -84,9 +98,20 @@ Strikethrough uses two tildes. ~~Scratch this.~~
   * `fork` - 是否显示 fork 信息，默认为 true，如果 `repo` 为空，则将该值置为 false
 
 ### 项目介绍
-在项目介绍中使用正常的 Markdown 语法即可，如果项目介绍过长，可以使用 `<!-- more -->` 分割内容，`<!-- more -->` 之后的内容会被折叠起来，如下面的形式
+在项目介绍中使用正常的 Markdown 语法即可，如果项目介绍过长，可以使用 `<!-- more -->` 分割内容，如下面的形式, `<!-- more -->` 之后的内容会被折叠起来，
 ```
 项目简介
 <!-- more -->
 项目详细介绍
 ```
+
+## 全局配置
+可以在 config.json 里进行全局配置，下面是支持的配置项：
+
+* `category` - 是否按类别显示项目，默认为 true
+* `homeText` - 主页按钮显示的文字
+* `codeText` - 代码地址按钮显示的文字
+* `expandText` - 详细介绍按钮显示的文字
+* `collapseText` - 收起介绍按钮显示的文字
+* `defaultCategory` - 项目默认类别
+* `github` - github corner，格式为 `用户名` 或者 `用户名/仓库`，为空则不显示

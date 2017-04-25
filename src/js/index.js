@@ -9,8 +9,8 @@ import smoothScroll from '../../node_modules/smooth-scroll/dist/js/smooth-scroll
 import Vue from 'vue'
 import project from '../components/project/project.vue'
 import sidebar from '../components/sidebar/sidebar.vue'
-import projectList from '../../data.json'
-import config from  '../../config.json'
+/*import projectList from '../../data.json'
+import config from  '../../config.json'*/
 
 
 Vue.component("project", project);

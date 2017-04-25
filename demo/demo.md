@@ -93,7 +93,7 @@ Reference-style:
 
 ## Code
 
-```
+```css
 body{
     margin: 0 auto;
     font-family: Georgia, Palatino, serif;

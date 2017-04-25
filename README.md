@@ -13,7 +13,7 @@
 <!-- tocstop -->
 
 ## 前言
-使用 Vue.js 写的一个项目列表，效果如下所示。只需要按一定规则编写 Markdown 文件，然后使用 [在线的转换工具](http://project.zhangjikai.com/generator/) 将 Markdown 文件转换为 JSON 文件，将生成的 JSON 文件替换项目中的文件，然后重新编译一下即可。
+使用 Vue.js 写的一个项目列表，效果如下所示。不需要修改模板文件，只要按一定规则编写 Markdown 文件即可。同时该项目逻辑比较简单，可以作为 Vue.js 的一个入门示例项目。
 
 ## 使用
 1. clone 项目到本地
@@ -98,7 +98,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
   * `fork` - 是否显示 fork 信息，默认为 true，如果 `repo` 为空，则将该值置为 false
 
 ### 项目介绍
-在项目介绍中使用正常的 Markdown 语法即可，如果项目介绍过长，可以使用 `<!-- more -->` 分割内容，如下面的形式, `<!-- more -->` 之后的内容会被折叠起来，
+在项目介绍中使用正常的 Markdown 语法即可，如果项目介绍过长，可以使用 `<!-- more -->` 分割内容， `<!-- more -->` 之后的内容会被折叠起来，
 ```
 项目简介
 <!-- more -->

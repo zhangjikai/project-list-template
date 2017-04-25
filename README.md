@@ -64,7 +64,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 * Unordered list can use asterisks
 - Or minuses
 + Or pluses
-```
+
 </code></pre>
 
 ### 项目开始标记

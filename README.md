@@ -19,7 +19,7 @@
 
 ## Markdown 文件规则
 一个完整的项目介绍如下所示：
-<pre lang="no-highlight"><code><!-- start -->
+<pre lang="no-highlight"><code>&lt;!-- start -->
 ```config
 {
     "name": "Markdown 语法介绍",
@@ -34,16 +34,14 @@
 }
 ```
 介绍 Markdown 的相关语法。
-<!-- more -->
-# H1
-## H2
-### H3
-#### H4
-##### H5
-###### H6
+&lt;!-- more -->
 ## Emphasis
 Emphasis, aka italics, with *asterisks* or _underscores_.
 Strong emphasis, aka bold, with **asterisks** or __underscores__.
 Combined emphasis with **asterisks and _underscores_**.
 Strikethrough uses two tildes. ~~Scratch this.~~
+## Lists
+* Unordered list can use asterisks
+- Or minuses
++ Or pluses
 ```

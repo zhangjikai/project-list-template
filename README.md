@@ -119,24 +119,63 @@ var config = {
     * includes()：返回布尔值，表示是否找到了参数字符串。
     * startsWith()：返回布尔值，表示参数字符串是否在源字符串的头部。
     * endsWith()：返回布尔值，表示参数字符串是否在源字符串的尾部。
+    ```js
+    var s = 'Hello world!';
+    
+    s.startsWith('Hello') // true
+    s.endsWith('!') // true
+    s.includes('o') // true
+    
+ 
+    // 第二个参数表示开始搜索的位置
+    s.startsWith('world', 6) // true
+    s.endsWith('Hello', 5) // true
+    s.includes('Hello', 6) // false
+    ```
 * 模板字符串: 使用反引号包裹
-```js
-// 普通字符串
-`In JavaScript '\n' is a line-feed.`
+    ```js
+    // 普通字符串
+    `In JavaScript '\n' is a line-feed.`
+    
+    // 多行字符串
+    `In JavaScript this is
+     not legal.`
+    
+    console.log(`string text line 1
+    string text line 2`);
+    
+    // 字符串中嵌入变量
+    var name = "Bob", time = "today";
+    `Hello ${name}, how are you ${time}?`
+    ```
 
-// 多行字符串
-`In JavaScript this is
- not legal.`
-
-console.log(`string text line 1
-string text line 2`);
-
-// 字符串中嵌入变量
-var name = "Bob", time = "today";
-`Hello ${name}, how are you ${time}?`
-```
-
-
+### 数值扩展
+* ES6 提供了二进制和八进制数值的新的写法，分别用前缀0b（或0B）和0o（或0O）表示
+    ```js
+    0b111110111 === 503 // true
+    0o767 === 503 // true
+    ```
+* Number.isFinite(): 用来检查一个数值是否为有限的（finite）。
+    ```js
+    Number.isFinite(15); // true
+    Number.isFinite(0.8); // true
+    Number.isFinite(NaN); // false
+    Number.isFinite(Infinity); // false
+    Number.isFinite(-Infinity); // false
+    Number.isFinite('foo'); // false
+    Number.isFinite('15'); // false
+    Number.isFinite(true); // false
+    ```
+* Number.isNaN(): 用来检查一个值是否为NaN。
+    ```js
+    Number.isNaN(NaN) // true
+    Number.isNaN(15) // false
+    Number.isNaN('15') // false
+    Number.isNaN(true) // false
+    Number.isNaN(9/NaN) // true
+    Number.isNaN('true'/0) // true
+    Number.isNaN('true'/'true') // true
+    ```
 ## Vue
 ### Vue文件中导入外部文件
 如果在 Vue 文件中导入了样式文件，如果想要提取出来，需要配置 Vue 的loader，具体方式还没查

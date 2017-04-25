@@ -11,7 +11,7 @@
 <body>
 
 <div id="app">
-    <sidebar @collapse_click="collapseClick"></sidebar>
+    <sidebar @collapse_click="collapseClick" :category-map="categoryMap" :show-by-category="showByCategory" :projects="projects"></sidebar>
     <div class="project-container" id="project-container">
         <project v-for="project in projects" :project="project" :show-short="project.hasShortIntro">
         </project>

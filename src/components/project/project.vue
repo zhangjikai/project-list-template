@@ -1,5 +1,5 @@
 <template>
-    <div class="project">
+    <div class="project" :id="'project-' + project.id">
         <div class="inner">
 
             <div class="project-header">

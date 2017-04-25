@@ -5,7 +5,7 @@
 
 import style from '../less/style.less'
 import fontAwesome from 'fontAwesome'
-
+import smoothScroll from '../../node_modules/smooth-scroll/dist/js/smooth-scroll.min.js'
 import Vue from 'vue'
 import project from '../components/project/project.vue'
 import sidebar from '../components/sidebar/sidebar.vue'
@@ -35,12 +35,51 @@ Vue.component("sidebar", sidebar);
 //];
 
 
-let categoryList = [];
-let categoryMap = {};
+//let categorySet = new Set();
 
-if (categoryList.length == 0) {
-    config.category = false;
+let categoryMap = new Map();
+let categoryObjMap = {};
+let showByCategory = config.category;
+
+if (showByCategory) {
+    let arrList;
+    for (let pro of projectList) {
+        if (pro.category != null && pro.category.trim() != "") {
+            if (categoryMap.has(pro.category)) {
+                arrList = categoryMap.get(pro.category);
+                arrList.push({
+                    id: pro.id,
+                    name: pro.name
+                });
+
+            } else {
+                arrList = [];
+                arrList.push({
+                    id: pro.id,
+                    name: pro.name
+                });
+                categoryMap.set(pro.category, arrList);
+                //categorySet.add(pro.category);
+            }
+        }
+    }
+
+    if (categoryMap.size == 0) {
+        showByCategory = false;
+    }
+
+    if(showByCategory) {
+        for(let key of categoryMap.keys()) {
+            categoryObjMap[key] = categoryMap.get(key);
+        }
+    }
 }
+
+//showByCategory = false;
+
+
+//console.log(categoryMap.keys());
+
 
 //var categoryList = [];
 //var categoryMap = {};
@@ -87,8 +126,9 @@ var vm = new Vue({
     data: function () {
         return {
             projects: projectList,
-            categoryList: categoryList,
-            categoryMap: categoryMap
+            //categorySet: categorySet,
+            categoryMap: categoryObjMap,
+            showByCategory: showByCategory
         }
     },
     methods: {
@@ -104,6 +144,8 @@ var vm = new Vue({
         }
     }
 });
+
+smoothScroll.init();
 
 
 

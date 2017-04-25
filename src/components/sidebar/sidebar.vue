@@ -7,8 +7,33 @@
             <i class="fa fa-bars" aria-hidden="true" @click="collapse"></i>
         </div>
 
+
         <div class="side-outer" id="side-outer">
-            <div class="category">
+            <div v-if="showByCategory">
+                <div class="category" v-for="(values, key) in categoryMap">
+                    <div class="title">
+                        <i class="fa fa-inbox" aria-hidden="true"></i>
+                        <span>{{key}}</span>
+                    </div>
+
+                    <div v-if="values.length != 0" class="content">
+                        <div class="item" v-for="v in values"><a :href="'#project-' + v.id" data-scroll>{{v.name}}</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div v-else>
+                <div class="category">
+                    <div v-if="projects.length != 0" class="content ">
+                        <div class="item extra-space" v-for="p in projects"><a :href="'#project-' + p.id" data-scroll>{{p.name}}</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--<div class="category">
                 <div class="title">
                     <i class="fa fa-inbox" aria-hidden="true"></i>
                     <span>Java</span>
@@ -30,7 +55,7 @@
 
                 </div>
                 <div class="item">
-                    <!--<i class="fa fa-inbox" aria-hidden="true"></i>-->
+                    &lt;!&ndash;<i class="fa fa-inbox" aria-hidden="true"></i>&ndash;&gt;
                     <a>基于Three.js 框架的 3D 射击游戏</a>
                 </div>
                 <div class="item"><a>Markdown 在线阅读器</a></div>
@@ -44,7 +69,7 @@
 
                 </div>
                 <div class="item">
-                    <!--<i class="fa fa-inbox" aria-hidden="true"></i>-->
+                    &lt;!&ndash;<i class="fa fa-inbox" aria-hidden="true"></i>&ndash;&gt;
                     <a>基于Three.js 框架的 3D 射击游戏</a>
                 </div>
                 <div class="item"><a>Markdown 在线阅读器</a></div>
@@ -58,7 +83,7 @@
 
                 </div>
                 <div class="item">
-                    <!--<i class="fa fa-inbox" aria-hidden="true"></i>-->
+                    &lt;!&ndash;<i class="fa fa-inbox" aria-hidden="true"></i>&ndash;&gt;
                     <a>基于Three.js 框架的 3D 射击游戏</a>
                 </div>
                 <div class="item"><a>Markdown 在线阅读器</a></div>
@@ -72,7 +97,7 @@
 
                 </div>
                 <div class="item">
-                    <!--<i class="fa fa-inbox" aria-hidden="true"></i>-->
+                    &lt;!&ndash;<i class="fa fa-inbox" aria-hidden="true"></i>&ndash;&gt;
                     <a>基于Three.js 框架的 3D 射击游戏</a>
                 </div>
                 <div class="item"><a>Markdown 在线阅读器</a></div>
@@ -86,12 +111,12 @@
 
                 </div>
                 <div class="item">
-                    <!--<i class="fa fa-inbox" aria-hidden="true"></i>-->
+                    &lt;!&ndash;<i class="fa fa-inbox" aria-hidden="true"></i>&ndash;&gt;
                     <a>基于Three.js 框架的 3D 射击游戏</a>
                 </div>
                 <div class="item"><a>Markdown 在线阅读器</a></div>
 
-            </div>
+            </div>-->
 
             <!--<div class="category">
                 <div class="title">
@@ -173,6 +198,7 @@
 
 <script>
     export default {
+        props: ["categoryMap", "showByCategory", "projects"],
         data: function () {
             return {
                 isCollapse: false
@@ -183,7 +209,6 @@
                 var vm = this;
                 var menuContent = document.querySelector("#side-outer");
                 if (!vm.isCollapse) {
-
                     vm.isCollapse = !vm.isCollapse;
                     setTimeout(function () {
                         menuContent.style.display = "none";
@@ -195,6 +220,7 @@
                 }
 
                 vm.$emit('collapse_click', vm.isCollapse);
+                console.log(vm.categoryMap);
             }
         }
     }

@@ -176,6 +176,48 @@ var config = {
     Number.isNaN('true'/0) // true
     Number.isNaN('true'/'true') // true
     ```
+* ES6将全局方法parseInt()和parseFloat()，移植到Number对象上面，行为完全保持不变。
+    ```js
+    // ES5的写法
+    parseInt('12.34') // 12
+    parseFloat('123.45#') // 123.45
+    
+    // ES6的写法
+    Number.parseInt('12.34') // 12
+    Number.parseFloat('123.45#') // 123.45
+    ```
+* Number.isInteger(): 用来判断一个值是否为整数。需要注意的是，在JavaScript内部，整数和浮点数是同样的储存方法，所以3和3.0被视为同一个值。
+    ```js
+    Number.isInteger(25) // true
+    Number.isInteger(25.0) // true
+    Number.isInteger(25.1) // false
+    Number.isInteger("15") // false
+    Number.isInteger(true) // false
+    ```
+    
+* Math.trunc(): 用于去除一个数的小数部分，返回整数部分。
+    ```js
+    Math.trunc(4.1) // 4
+    Math.trunc(4.9) // 4
+    Math.trunc(-4.1) // -4
+    Math.trunc(-4.9) // -4
+    Math.trunc(-0.1234) // -0
+    ```
+* Math.sign(): 方法用来判断一个数到底是正数、负数、还是零。
+    - 参数为正数，返回+1；
+    - 参数为负数，返回-1；
+    - 参数为0，返回0；
+    - 参数为-0，返回-0;
+    - 其他值，返回NaN
+    ```js
+    Math.sign(-5) // -1
+    Math.sign(5) // +1
+    Math.sign(0) // +0
+    Math.sign(-0) // -0
+    Math.sign(NaN) // NaN
+    Math.sign('foo'); // NaN
+    Math.sign();      // NaN
+    ```
 ## Vue
 ### Vue文件中导入外部文件
 如果在 Vue 文件中导入了样式文件，如果想要提取出来，需要配置 Vue 的loader，具体方式还没查
@@ -232,6 +274,58 @@ export default {
 </div>
 ```
 
+### 单文件组件向父组件传递
+* 在引用单文件时绑定监听变量，下面的意思是说，子组件修改 `collapse_click` 变量时，会触发 collapseClick 方法，需要注意的一点是，这里的变量是不能是驼峰 `collapseClick` 或者加连接线形式 `collapse-click`
+    ```html
+    <sidebar @collapse_click="collapseClick"></sidebar>
+    ```
+ * 父组件
+    ```js
+    var vm = new Vue({
+        el: '#app',
+        methods: {
+            collapseClick: function (isCollapse) {
+                //console.log(isCollapse);
+                var container = document.querySelector("#project-container");
+                console.log(container);
+                if (isCollapse) {
+                    container.style.marginLeft = "50px";
+                } else {
+                    container.style.marginLeft = "260px";
+                }
+            }
+        }
+    });
+    ```
+* 子组件调用 `$emit` 触发事件
+    ```js
+    export default {
+            data: function () {
+                return {
+                    isCollapse: false
+                }
+            },
+            methods: {
+                collapse: function () {
+                    var vm = this;
+                    var menuContent = document.querySelector("#side-outer");
+                    if (!vm.isCollapse) {
+    
+                        vm.isCollapse = !vm.isCollapse;
+                        setTimeout(function () {
+                            menuContent.style.display = "none";
+                        }, 350);
+    
+                    } else {
+                        vm.isCollapse = !vm.isCollapse;
+                        menuContent.style.display = "block";
+                    }
+    
+                    vm.$emit('collapse_click', vm.isCollapse);
+                }
+            }
+        }
+    ```
 ### 单文件组件定义变量和函数
 ```js
 <script>

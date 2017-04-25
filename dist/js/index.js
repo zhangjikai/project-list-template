@@ -346,27 +346,6 @@ module.exports = {
 
 module.exports = [
 	{
-		"id": 0,
-		"hasShortIntro": true,
-		"hasGithub": true,
-		"hasHome": false,
-		"hasCode": true,
-		"name": "堆排序演示程序",
-		"content": "<p>使用 Java 编写的堆排序演示程序，目前主要包含以下功能：</p>\n<ul>\n<li>堆的创建、插入、删除、堆排序演示</li>\n<li>最大堆与最小堆切换</li>\n<li>单步执行与自动执行</li>\n<li>可调节演示速度</li>\n<li>两种演示方式切换</li>\n</ul>\n<!-- more -->\n<h2 id=\"-\">程序截图</h2>\n<p>创建堆\n<img src=\"https://raw.githubusercontent.com/zhangjikai/heap/master/screenshot/%E5%A0%86-%E5%88%9B%E5%BB%BA-1.gif\" alt=\"\"></p>\n<p>堆排序\n<img src=\"https://raw.githubusercontent.com/zhangjikai/heap/master/screenshot/%E5%A0%86-%E6%8E%92%E5%BA%8F.gif\" alt=\"\"></p>\n",
-		"shortIntro": "<p>使用 Java 编写的堆排序演示程序，目前主要包含以下功能：</p>\n<ul>\n<li>堆的创建、插入、删除、堆排序演示</li>\n<li>最大堆与最小堆切换</li>\n<li>单步执行与自动执行</li>\n<li>可调节演示速度</li>\n<li>两种演示方式切换</li>\n</ul>\n",
-		"tags": [
-			"java"
-		],
-		"category": "Java",
-		"home": "",
-		"code": "https://github.com/zhangjikai/heap",
-		"github": {
-			"star": "true",
-			"fork": "true",
-			"repo": "zhangjikai/heap"
-		}
-	},
-	{
 		"id": 1,
 		"hasShortIntro": true,
 		"hasGithub": true,
@@ -385,6 +364,27 @@ module.exports = [
 			"star": "true",
 			"fork": "true",
 			"repo": "zhangjikai/LinkGame"
+		}
+	},
+	{
+		"id": 0,
+		"hasShortIntro": true,
+		"hasGithub": true,
+		"hasHome": false,
+		"hasCode": true,
+		"name": "堆排序演示程序",
+		"content": "<p>使用 Java 编写的堆排序演示程序，目前主要包含以下功能：</p>\n<ul>\n<li>堆的创建、插入、删除、堆排序演示</li>\n<li>最大堆与最小堆切换</li>\n<li>单步执行与自动执行</li>\n<li>可调节演示速度</li>\n<li>两种演示方式切换</li>\n</ul>\n<!-- more -->\n<h2 id=\"-\">程序截图</h2>\n<p>创建堆\n<img src=\"https://raw.githubusercontent.com/zhangjikai/heap/master/screenshot/%E5%A0%86-%E5%88%9B%E5%BB%BA-1.gif\" alt=\"\"></p>\n<p>堆排序\n<img src=\"https://raw.githubusercontent.com/zhangjikai/heap/master/screenshot/%E5%A0%86-%E6%8E%92%E5%BA%8F.gif\" alt=\"\"></p>\n",
+		"shortIntro": "<p>使用 Java 编写的堆排序演示程序，目前主要包含以下功能：</p>\n<ul>\n<li>堆的创建、插入、删除、堆排序演示</li>\n<li>最大堆与最小堆切换</li>\n<li>单步执行与自动执行</li>\n<li>可调节演示速度</li>\n<li>两种演示方式切换</li>\n</ul>\n",
+		"tags": [
+			"java"
+		],
+		"category": "Java",
+		"home": "",
+		"code": "https://github.com/zhangjikai/heap",
+		"github": {
+			"star": "true",
+			"fork": "true",
+			"repo": "zhangjikai/heap"
 		}
 	}
 ];
@@ -822,8 +822,34 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+    props: ["categoryMap", "showByCategory", "projects"],
     data: function () {
         return {
             isCollapse: false
@@ -834,7 +860,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var vm = this;
             var menuContent = document.querySelector("#side-outer");
             if (!vm.isCollapse) {
-
                 vm.isCollapse = !vm.isCollapse;
                 setTimeout(function () {
                     menuContent.style.display = "none";
@@ -845,6 +870,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             }
 
             vm.$emit('collapse_click', vm.isCollapse);
+            console.log(vm.categoryMap);
         }
     }
 });
@@ -859,16 +885,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__less_style_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__less_style_less__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_fontAwesome__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_fontAwesome___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_fontAwesome__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vue__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_project_project_vue__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_project_project_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_project_project_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_sidebar_sidebar_vue__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_sidebar_sidebar_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_sidebar_sidebar_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__data_json__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__data_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__data_json__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__config_json__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__config_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__config_json__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__node_modules_smooth_scroll_dist_js_smooth_scroll_min_js__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__node_modules_smooth_scroll_dist_js_smooth_scroll_min_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__node_modules_smooth_scroll_dist_js_smooth_scroll_min_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_vue__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_project_project_vue__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_project_project_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_project_project_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_sidebar_sidebar_vue__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_sidebar_sidebar_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__components_sidebar_sidebar_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__data_json__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__data_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__data_json__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__config_json__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__config_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__config_json__);
 /**
  * Created by ZhangJikai on 2017/2/19.
  */
@@ -882,8 +910,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-__WEBPACK_IMPORTED_MODULE_2_vue___default.a.component("project", __WEBPACK_IMPORTED_MODULE_3__components_project_project_vue___default.a);
-__WEBPACK_IMPORTED_MODULE_2_vue___default.a.component("sidebar", __WEBPACK_IMPORTED_MODULE_4__components_sidebar_sidebar_vue___default.a);
+__WEBPACK_IMPORTED_MODULE_3_vue___default.a.component("project", __WEBPACK_IMPORTED_MODULE_4__components_project_project_vue___default.a);
+__WEBPACK_IMPORTED_MODULE_3_vue___default.a.component("sidebar", __WEBPACK_IMPORTED_MODULE_5__components_sidebar_sidebar_vue___default.a);
 
 //var markdownReaderDesc = "* 堆的创建、插入、删除、堆排序演示\n" +
 //    "* 最大堆与最小堆切换\n" +
@@ -904,12 +932,50 @@ __WEBPACK_IMPORTED_MODULE_2_vue___default.a.component("sidebar", __WEBPACK_IMPOR
 //];
 
 
-let categoryList = [];
-let categoryMap = {};
+//let categorySet = new Set();
 
-if (categoryList.length == 0) {
-    __WEBPACK_IMPORTED_MODULE_6__config_json___default.a.category = false;
+let categoryMap = new Map();
+let categoryObjMap = {};
+let showByCategory = __WEBPACK_IMPORTED_MODULE_7__config_json___default.a.category;
+
+if (showByCategory) {
+    let arrList;
+    for (let pro of __WEBPACK_IMPORTED_MODULE_6__data_json___default.a) {
+        if (pro.category != null && pro.category.trim() != "") {
+            if (categoryMap.has(pro.category)) {
+                arrList = categoryMap.get(pro.category);
+                arrList.push({
+                    id: pro.id,
+                    name: pro.name
+                });
+            } else {
+                arrList = [];
+                arrList.push({
+                    id: pro.id,
+                    name: pro.name
+                });
+                categoryMap.set(pro.category, arrList);
+                //categorySet.add(pro.category);
+            }
+        }
+    }
+
+    if (categoryMap.size == 0) {
+        showByCategory = false;
+    }
+
+    if (showByCategory) {
+        for (let key of categoryMap.keys()) {
+            categoryObjMap[key] = categoryMap.get(key);
+        }
+    }
 }
+
+//showByCategory = false;
+
+
+//console.log(categoryMap.keys());
+
 
 //var categoryList = [];
 //var categoryMap = {};
@@ -951,13 +1017,14 @@ if (categoryList.length == 0) {
 //}
 //console.log(data);
 
-var vm = new __WEBPACK_IMPORTED_MODULE_2_vue___default.a({
+var vm = new __WEBPACK_IMPORTED_MODULE_3_vue___default.a({
     el: '#app',
     data: function () {
         return {
-            projects: __WEBPACK_IMPORTED_MODULE_5__data_json___default.a,
-            categoryList: categoryList,
-            categoryMap: categoryMap
+            projects: __WEBPACK_IMPORTED_MODULE_6__data_json___default.a,
+            //categorySet: categorySet,
+            categoryMap: categoryObjMap,
+            showByCategory: showByCategory
         };
     },
     methods: {
@@ -974,6 +1041,8 @@ var vm = new __WEBPACK_IMPORTED_MODULE_2_vue___default.a({
     }
 });
 
+__WEBPACK_IMPORTED_MODULE_2__node_modules_smooth_scroll_dist_js_smooth_scroll_min_js___default.a.init();
+
 /***/ }),
 /* 13 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -983,7 +1052,7 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, "/** extract from bootstrap*/\n.header {\n  color: #3bafda;\n  font-size: 1.5em;\n  text-align: right;\n  font-weight: 300;\n  padding-right: 16px;\n  padding-top: 12px;\n  padding-bottom: 12px;\n  margin-bottom: 7px;\n  border-bottom: 1px solid #ccc;\n}\n.collapse-btn {\n  position: fixed;\n  top: 0px;\n  bottom: 0px;\n  height: 30px;\n  padding-left: 16px;\n  background: #fff;\n}\n.menu {\n  font-family: 'Noto Sans', sans-serif;\n  font-size: 14px;\n  position: fixed;\n  background: #FFF;\n  box-shadow: 4px 4px 7px #ccc;\n  transition: all 0.5s;\n  overflow: hidden;\n}\n.menu-expand {\n  width: 260px;\n}\n.menu-collapse {\n  width: 50px;\n}\n.side-outer {\n  position: absolute;\n  overflow-y: auto;\n  top: 60px;\n  bottom: 0px;\n  padding-bottom: 18px;\n}\n.menu-vertical {\n  height: 100%;\n  top: 0;\n  left: 0;\n  z-index: 1000;\n}\n.menu-vertical i {\n  cursor: pointer;\n}\n.menu-vertical .category {\n  color: #666;\n  display: block;\n  font-size: 1.1em;\n  width: 220px;\n  padding: 7px 20px;\n  padding-right: 0px;\n  text-decoration: none;\n}\n.menu-vertical .category .title {\n  color: #3bafda;\n  padding-bottom: 7px;\n}\n.menu-vertical .category .title i {\n  margin-right: 7px;\n}\n.menu-vertical .category .title .menu-angle {\n  margin-right: 0px;\n  float: right;\n}\n.menu-vertical .category .item {\n  position: relative;\n  margin-left: 5px;\n  padding: 4px;\n  padding-left: 16px;\n  border-left: 4px solid #f5f5f5;\n}\n.menu-vertical .category .item:before {\n  content: \" \";\n  position: absolute;\n  left: 0;\n  top: 12px;\n  width: 6px;\n  height: 6px;\n  margin-left: -6px;\n  background: #bbb;\n  border-radius: 50%;\n  border: 1px solid #fff;\n  transition-duration: 0.2s;\n  transition-timing-function: ease-in-out;\n  transition-delay: 0s;\n  transition-property: backgroun;\n}\n.menu-vertical .category .item a {\n  color: #75767b;\n}\n.menu-vertical .category .item i {\n  margin-right: 4px;\n}\n", ""]);
+exports.push([module.i, "/** extract from bootstrap*/\n.header {\n  color: #3bafda;\n  font-size: 1.5em;\n  text-align: right;\n  font-weight: 300;\n  padding-right: 16px;\n  padding-top: 12px;\n  padding-bottom: 12px;\n  margin-bottom: 7px;\n  border-bottom: 1px solid #ccc;\n}\n.collapse-btn {\n  position: fixed;\n  top: 0px;\n  bottom: 0px;\n  height: 30px;\n  padding-left: 16px;\n  background: #fff;\n}\n.menu {\n  font-family: 'Noto Sans', sans-serif;\n  font-size: 14px;\n  position: fixed;\n  background: #FFF;\n  box-shadow: 4px 4px 7px #ccc;\n  transition: all 0.5s;\n  overflow: hidden;\n}\n.menu-expand {\n  width: 260px;\n}\n.menu-collapse {\n  width: 50px;\n}\n.side-outer {\n  position: absolute;\n  overflow-y: auto;\n  top: 60px;\n  bottom: 0px;\n  padding-bottom: 18px;\n}\n.menu-vertical {\n  height: 100%;\n  top: 0;\n  left: 0;\n  z-index: 1000;\n}\n.menu-vertical i {\n  cursor: pointer;\n}\n.menu-vertical .category {\n  color: #666;\n  display: block;\n  font-size: 1.1em;\n  width: 220px;\n  padding: 7px 20px;\n  padding-right: 0px;\n  text-decoration: none;\n}\n.menu-vertical .category .title {\n  color: #3bafda;\n  padding-bottom: 7px;\n}\n.menu-vertical .category .title i {\n  margin-right: 7px;\n}\n.menu-vertical .category .title .menu-angle {\n  margin-right: 0px;\n  float: right;\n}\n.menu-vertical .category .item {\n  position: relative;\n  margin-left: 5px;\n  padding: 4px;\n  padding-left: 16px;\n  border-left: 4px solid #f5f5f5;\n}\n.menu-vertical .category .item:before {\n  content: \" \";\n  position: absolute;\n  left: 0;\n  top: 12px;\n  width: 6px;\n  height: 6px;\n  margin-left: -6px;\n  background: #bbb;\n  border-radius: 50%;\n  border: 1px solid #fff;\n  transition-duration: 0.2s;\n  transition-timing-function: ease-in-out;\n  transition-delay: 0s;\n  transition-property: backgroun;\n}\n.menu-vertical .category .item a {\n  display: inline-block;\n  width: auto;\n  color: #75767b;\n  position: relative;\n  padding-bottom: 4px;\n}\n.menu-vertical .category .item a:hover:before {\n  visibility: visible;\n  -webkit-transform: scaleX(1);\n  -moz-transform: scaleX(1);\n  -ms-transform: scaleX(1);\n  -o-transform: scaleX(1);\n  transform: scaleX(1);\n}\n.menu-vertical .category .item a:before {\n  content: \"\";\n  position: absolute;\n  width: 100%;\n  height: 2px;\n  bottom: 0;\n  left: 0;\n  background-color: #3bafda;\n  -webkit-transform: scaleX(0);\n  -moz-transform: scaleX(0);\n  -ms-transform: scaleX(0);\n  -o-transform: scaleX(0);\n  transform: scaleX(0);\n  transition-duration: 0.2s;\n  transition-timing-function: ease-in-out;\n  transition-delay: 0s;\n}\n.menu-vertical .category .item i {\n  margin-right: 4px;\n}\n.menu-vertical .category .extra-space {\n  padding-bottom: 7px;\n}\n", ""]);
 
 // exports
 
@@ -1023,95 +1092,48 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     on: {
       "click": _vm.collapse
     }
-  })]), _vm._v(" "), _vm._m(0)])
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
+  })]), _vm._v(" "), _c('div', {
     staticClass: "side-outer",
     attrs: {
       "id": "side-outer"
     }
-  }, [_c('div', {
+  }, [(_vm.showByCategory) ? _c('div', _vm._l((_vm.categoryMap), function(values, key) {
+    return _c('div', {
+      staticClass: "category"
+    }, [_c('div', {
+      staticClass: "title"
+    }, [_c('i', {
+      staticClass: "fa fa-inbox",
+      attrs: {
+        "aria-hidden": "true"
+      }
+    }), _vm._v(" "), _c('span', [_vm._v(_vm._s(key))])]), _vm._v(" "), (values.length != 0) ? _c('div', {
+      staticClass: "content"
+    }, _vm._l((values), function(v) {
+      return _c('div', {
+        staticClass: "item"
+      }, [_c('a', {
+        attrs: {
+          "href": '#project-' + v.id,
+          "data-scroll": ""
+        }
+      }, [_vm._v(_vm._s(v.name))])])
+    })) : _vm._e()])
+  })) : _c('div', [_c('div', {
     staticClass: "category"
-  }, [_c('div', {
-    staticClass: "title"
-  }, [_c('i', {
-    staticClass: "fa fa-inbox",
-    attrs: {
-      "aria-hidden": "true"
-    }
-  }), _vm._v(" "), _c('span', [_vm._v("Java")])]), _vm._v(" "), _c('div', {
-    staticClass: "content"
-  }, [_c('div', {
-    staticClass: "item"
-  }, [_c('a', [_vm._v("堆排序演示程序")])]), _vm._v(" "), _c('div', {
-    staticClass: "item"
-  }, [_c('a', [_vm._v("连连看")])])])]), _vm._v(" "), _c('div', {
-    staticClass: "category"
-  }, [_c('div', {
-    staticClass: "title"
-  }, [_c('i', {
-    staticClass: "fa fa-inbox",
-    attrs: {
-      "aria-hidden": "true"
-    }
-  }), _vm._v(" "), _c('span', [_vm._v("HTML5 & JS")])]), _vm._v(" "), _c('div', {
-    staticClass: "item"
-  }, [_c('a', [_vm._v("基于Three.js 框架的 3D 射击游戏")])]), _vm._v(" "), _c('div', {
-    staticClass: "item"
-  }, [_c('a', [_vm._v("Markdown 在线阅读器")])])]), _vm._v(" "), _c('div', {
-    staticClass: "category"
-  }, [_c('div', {
-    staticClass: "title"
-  }, [_c('i', {
-    staticClass: "fa fa-inbox",
-    attrs: {
-      "aria-hidden": "true"
-    }
-  }), _vm._v(" "), _c('span', [_vm._v("HTML5 & JS")])]), _vm._v(" "), _c('div', {
-    staticClass: "item"
-  }, [_c('a', [_vm._v("基于Three.js 框架的 3D 射击游戏")])]), _vm._v(" "), _c('div', {
-    staticClass: "item"
-  }, [_c('a', [_vm._v("Markdown 在线阅读器")])])]), _vm._v(" "), _c('div', {
-    staticClass: "category"
-  }, [_c('div', {
-    staticClass: "title"
-  }, [_c('i', {
-    staticClass: "fa fa-inbox",
-    attrs: {
-      "aria-hidden": "true"
-    }
-  }), _vm._v(" "), _c('span', [_vm._v("HTML5 & JS")])]), _vm._v(" "), _c('div', {
-    staticClass: "item"
-  }, [_c('a', [_vm._v("基于Three.js 框架的 3D 射击游戏")])]), _vm._v(" "), _c('div', {
-    staticClass: "item"
-  }, [_c('a', [_vm._v("Markdown 在线阅读器")])])]), _vm._v(" "), _c('div', {
-    staticClass: "category"
-  }, [_c('div', {
-    staticClass: "title"
-  }, [_c('i', {
-    staticClass: "fa fa-inbox",
-    attrs: {
-      "aria-hidden": "true"
-    }
-  }), _vm._v(" "), _c('span', [_vm._v("HTML5 & JS")])]), _vm._v(" "), _c('div', {
-    staticClass: "item"
-  }, [_c('a', [_vm._v("基于Three.js 框架的 3D 射击游戏")])]), _vm._v(" "), _c('div', {
-    staticClass: "item"
-  }, [_c('a', [_vm._v("Markdown 在线阅读器")])])]), _vm._v(" "), _c('div', {
-    staticClass: "category"
-  }, [_c('div', {
-    staticClass: "title"
-  }, [_c('i', {
-    staticClass: "fa fa-inbox",
-    attrs: {
-      "aria-hidden": "true"
-    }
-  }), _vm._v(" "), _c('span', [_vm._v("HTML5 & JS")])]), _vm._v(" "), _c('div', {
-    staticClass: "item"
-  }, [_c('a', [_vm._v("基于Three.js 框架的 3D 射击游戏")])]), _vm._v(" "), _c('div', {
-    staticClass: "item"
-  }, [_c('a', [_vm._v("Markdown 在线阅读器")])])])])
-}]}
+  }, [(_vm.projects.length != 0) ? _c('div', {
+    staticClass: "content "
+  }, _vm._l((_vm.projects), function(p) {
+    return _c('div', {
+      staticClass: "item extra-space"
+    }, [_c('a', {
+      attrs: {
+        "href": '#project-' + p.id,
+        "data-scroll": ""
+      }
+    }, [_vm._v(_vm._s(p.name))])])
+  })) : _vm._e()])])])])
+},staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
@@ -1126,7 +1148,10 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "project"
+    staticClass: "project",
+    attrs: {
+      "id": 'project-' + _vm.project.id
+    }
   }, [_c('div', {
     staticClass: "inner"
   }, [_c('div', {
@@ -1360,6 +1385,28 @@ try {
 
 module.exports = g;
 
+
+/***/ }),
+/* 22 */,
+/* 23 */,
+/* 24 */,
+/* 25 */,
+/* 26 */,
+/* 27 */,
+/* 28 */,
+/* 29 */,
+/* 30 */,
+/* 31 */,
+/* 32 */,
+/* 33 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(global) {var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! smooth-scroll v10.3.1 | (c) 2017 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/smooth-scroll */
+!(function(e,t){ true?!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (t(e)),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)):"object"==typeof exports?module.exports=t(e):e.smoothScroll=t(e)})("undefined"!=typeof global?global:this.window||this.global,(function(e){"use strict";var t,n,o,r,a,c,l,i={},u="querySelector"in document&&"addEventListener"in e,s={selector:"[data-scroll]",selectorHeader:null,speed:500,easing:"easeInOutCubic",offset:0,callback:function(){}},f=function(){var e={},t=!1,n=0,o=arguments.length;"[object Boolean]"===Object.prototype.toString.call(arguments[0])&&(t=arguments[0],n++);for(;n<o;n++){var r=arguments[n];!(function(n){for(var o in n)Object.prototype.hasOwnProperty.call(n,o)&&(t&&"[object Object]"===Object.prototype.toString.call(n[o])?e[o]=f(!0,e[o],n[o]):e[o]=n[o])})(r)}return e},d=function(e){return Math.max(e.scrollHeight,e.offsetHeight,e.clientHeight)},h=function(e,t){for(Element.prototype.matches||(Element.prototype.matches=Element.prototype.matchesSelector||Element.prototype.mozMatchesSelector||Element.prototype.msMatchesSelector||Element.prototype.oMatchesSelector||Element.prototype.webkitMatchesSelector||function(e){for(var t=(this.document||this.ownerDocument).querySelectorAll(e),n=t.length;--n>=0&&t.item(n)!==this;);return n>-1});e&&e!==document;e=e.parentNode)if(e.matches(t))return e;return null},m=function(e){"#"===e.charAt(0)&&(e=e.substr(1));for(var t,n=String(e),o=n.length,r=-1,a="",c=n.charCodeAt(0);++r<o;){if(0===(t=n.charCodeAt(r)))throw new InvalidCharacterError("Invalid character: the input contains U+0000.");a+=t>=1&&t<=31||127==t||0===r&&t>=48&&t<=57||1===r&&t>=48&&t<=57&&45===c?"\\"+t.toString(16)+" ":t>=128||45===t||95===t||t>=48&&t<=57||t>=65&&t<=90||t>=97&&t<=122?n.charAt(r):"\\"+n.charAt(r)}return"#"+a},p=function(e,t){var n;return"easeInQuad"===e&&(n=t*t),"easeOutQuad"===e&&(n=t*(2-t)),"easeInOutQuad"===e&&(n=t<.5?2*t*t:(4-2*t)*t-1),"easeInCubic"===e&&(n=t*t*t),"easeOutCubic"===e&&(n=--t*t*t+1),"easeInOutCubic"===e&&(n=t<.5?4*t*t*t:(t-1)*(2*t-2)*(2*t-2)+1),"easeInQuart"===e&&(n=t*t*t*t),"easeOutQuart"===e&&(n=1- --t*t*t*t),"easeInOutQuart"===e&&(n=t<.5?8*t*t*t*t:1-8*--t*t*t*t),"easeInQuint"===e&&(n=t*t*t*t*t),"easeOutQuint"===e&&(n=1+--t*t*t*t*t),"easeInOutQuint"===e&&(n=t<.5?16*t*t*t*t*t:1+16*--t*t*t*t*t),n||t},g=function(e,t,n){var o=0;if(e.offsetParent)do{o+=e.offsetTop,e=e.offsetParent}while(e);return o=Math.max(o-t-n,0),Math.min(o,y()-b())},b=function(){return Math.max(document.documentElement.clientHeight,e.innerHeight||0)},y=function(){return Math.max(document.body.scrollHeight,document.documentElement.scrollHeight,document.body.offsetHeight,document.documentElement.offsetHeight,document.body.clientHeight,document.documentElement.clientHeight)},v=function(e){return e&&"object"==typeof JSON&&"function"==typeof JSON.parse?JSON.parse(e):{}},O=function(e){return e?d(e)+e.offsetTop:0},S=function(t,n,o){o||(t.focus(),document.activeElement.id!==t.id&&(t.setAttribute("tabindex","-1"),t.focus(),t.style.outline="none"),e.scrollTo(0,n))};i.animateScroll=function(n,o,c){var i=v(o?o.getAttribute("data-options"):null),u=f(t||s,c||{},i),d="[object Number]"===Object.prototype.toString.call(n),h=d||!n.tagName?null:n;if(d||h){var m=e.pageYOffset;u.selectorHeader&&!r&&(r=document.querySelector(u.selectorHeader)),a||(a=O(r));var b,E,I=d?n:g(h,a,parseInt("function"==typeof u.offset?u.offset():u.offset,10)),H=I-m,A=y(),j=0,C=function(t,r,a){var c=e.pageYOffset;(t==r||c==r||e.innerHeight+c>=A)&&(clearInterval(a),S(n,r,d),u.callback(n,o))},M=function(){j+=16,b=j/parseInt(u.speed,10),b=b>1?1:b,E=m+H*p(u.easing,b),e.scrollTo(0,Math.floor(E)),C(E,I,l)};0===e.pageYOffset&&e.scrollTo(0,0),(function(){clearInterval(l),l=setInterval(M,16)})()}};var E=function(t){try{m(decodeURIComponent(e.location.hash))}catch(t){m(e.location.hash)}n&&(n.id=n.getAttribute("data-scroll-id"),i.animateScroll(n,o),n=null,o=null)},I=function(r){if(0===r.button&&!r.metaKey&&!r.ctrlKey&&(o=h(r.target,t.selector))&&"a"===o.tagName.toLowerCase()&&o.hostname===e.location.hostname&&o.pathname===e.location.pathname&&/#/.test(o.href)){var a;try{a=m(decodeURIComponent(o.hash))}catch(e){a=m(o.hash)}if("#"===a){r.preventDefault(),n=document.body;var c=n.id?n.id:"smooth-scroll-top";return n.setAttribute("data-scroll-id",c),n.id="",void(e.location.hash.substring(1)===c?E():e.location.hash=c)}n=document.querySelector(a),n&&(n.setAttribute("data-scroll-id",n.id),n.id="",o.hash===e.location.hash&&(r.preventDefault(),E()))}},H=function(e){c||(c=setTimeout((function(){c=null,a=O(r)}),66))};return i.destroy=function(){t&&(document.removeEventListener("click",I,!1),e.removeEventListener("resize",H,!1),t=null,n=null,o=null,r=null,a=null,c=null,l=null)},i.init=function(n){u&&(i.destroy(),t=f(s,n||{}),r=t.selectorHeader?document.querySelector(t.selectorHeader):null,a=O(r),document.addEventListener("click",I,!1),e.addEventListener("hashchange",E,!1),r&&e.addEventListener("resize",H,!1))},i}));
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(21)))
 
 /***/ })
 ],[12]);

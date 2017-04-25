@@ -152,5 +152,6 @@
 <style lang="less">
 
     @import "project.less";
+    @import "markdown.less";
 
 </style>

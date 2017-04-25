@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Vue Learn</title>
-    <link rel="stylesheet" href="node_modules/vue-github-buttons/dist/vue-github-buttons.min.css">
+
     <link rel="stylesheet" href="dist/css/index.css">
 
 </head>
 <body>
 
 <div id="app">
-    <sidebar @collapse_click="collapseClick" :category-map="categoryMap" :show-by-category="showByCategory" :projects="projects"></sidebar>
+    <sidebar @collapse_click="collapseClick" :category-map="categoryMap" :show-by-category="showByCategory"
+             :projects="projects"></sidebar>
     <div class="project-container" id="project-container">
         <project v-for="project in projects" :project="project" :show-short="project.hasShortIntro">
         </project>

@@ -8,6 +8,7 @@
   * [项目开始标记](#项目开始标记)
   * [项目信息](#项目信息)
   * [项目介绍](#%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D)
+  * [完整示例](#完整示例)
 - [全局配置](#%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE)
 
 <!-- tocstop -->
@@ -108,6 +109,9 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 <!-- more -->
 项目详细介绍
 ```
+
+### 完整示例
+[这里](demo/demo.md) 是一个完整的 Markdown 文件示例。
 
 ## 全局配置
 可以在 config.json 里进行全局配置，下面是支持的配置项：

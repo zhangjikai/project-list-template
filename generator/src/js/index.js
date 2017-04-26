@@ -114,91 +114,117 @@
 
 
         var idIndex = 0;
-
-        rowTexts.forEach(function (rowText) {
+        var rowText;
+        //rowTexts.forEach(function (rowText) {
+        for (var i = 0; i < rowTexts.length; i++) {
+            rowText = rowTexts[i];
             if (rowText != null && !rowText.trim() == "") {
+                try {
+                    var project = new Project();
+                    var textParts = rowText.split(moreTag);
+                    if (textParts.length == 1) {
+                        project.hasShortIntro = false;
+                    } else {
+                        project.shortIntro = marked(textParts[0]);
 
-                var project = new Project();
-                var textParts = rowText.split(moreTag);
-                if (textParts.length == 1) {
-                    project.hasShortIntro = false;
-                } else {
-                    project.shortIntro = marked(textParts[0]);
+                    }
+                    config = {};
 
-                }
-                config = {};
-                var content = marked(rowText);
-                console.log(content);
-                $("#gen-html").html(content);
-                $("pre").addClass("line-numbers");
-                Prism.highlightAll();
-                console.log($("#gen-html").html())
+                    var content = marked(rowText);
 
-
-                project.content = $("#gen-html").html();
-                if (config.hasOwnProperty("name")) {
-                    project.name = config.name;
-                }
-
-                if (config.hasOwnProperty("code")) {
-                    project.code = config.code;
-                } else {
-                    project.hasCode = false;
-                }
-
-                if (config.hasOwnProperty("home")) {
-                    project.home = config.home;
-                } else {
-                    project.hasHome = false;
-                }
-
-                if (config.hasOwnProperty("tags")) {
-                    project.tags = config.tags;
-                }
-
-                if (config.hasOwnProperty("category")) {
-
-                    project.category = config.category;
-
-                }
+                    //console.log(content);
+                    $("#gen-html").html(content);
+                    $("pre").addClass("line-numbers");
+                    Prism.highlightAll();
+                    //console.log($("#gen-html").html())
 
 
-                var projectGithub = project.github;
-                var configGithub = config.github;
-                //console.log(configGithub)
-                if (config.hasOwnProperty("github")) {
+                    project.content = $("#gen-html").html();
+                    if (config.hasOwnProperty("name")) {
+                        project.name = config.name;
+                    }
 
-                    if (configGithub == null || !configGithub.hasOwnProperty("repo")) {
+                    if (config.hasOwnProperty("code")) {
+                        project.code = config.code;
+                    } else {
+                        project.hasCode = false;
+                    }
+
+                    if (config.hasOwnProperty("home")) {
+                        project.home = config.home;
+                    } else {
+                        project.hasHome = false;
+                    }
+
+                    if (config.hasOwnProperty("tags")) {
+                        project.tags = config.tags;
+                    }
+
+                    if (config.hasOwnProperty("category")) {
+
+                        project.category = config.category;
+
+                    }
+
+
+                    var projectGithub = project.github;
+                    var configGithub = config.github;
+                    //console.log(configGithub)
+                    if (config.hasOwnProperty("github")) {
+
+                        if (configGithub == null || !configGithub.hasOwnProperty("repo")) {
+                            project.hasGithub = false;
+                            project.star = false;
+                            project.star = false;
+                        }
+
+                        if (configGithub.hasOwnProperty("repo")) {
+                            projectGithub.repo = configGithub.repo;
+                        }
+
+                        if (configGithub.hasOwnProperty("star") && !configGithub["star"]) {
+                            //project.showStar = false;
+                            projectGithub.star = false;
+
+                        }
+
+                        if (configGithub.hasOwnProperty("fork") && !configGithub["fork"]) {
+                            projectGithub.fork = false;
+                        }
+
+
+                    } else {
                         project.hasGithub = false;
-                        project.star = false;
-                        project.star = false;
-                    }
-
-                    if (configGithub.hasOwnProperty("repo")) {
-                        projectGithub.repo = configGithub.repo;
-                    }
-
-                    if (configGithub.hasOwnProperty("star") && !configGithub["star"]) {
-                        //project.showStar = false;
                         projectGithub.star = false;
-
-                    }
-
-                    if (configGithub.hasOwnProperty("fork") && !configGithub["fork"]) {
                         projectGithub.fork = false;
                     }
+                    project.id = idIndex++;
+                    projectList.push(project);
+                } catch (err) {
+                    //swal("" , "" + err + "<pre><code>"  + rowText + "</code></pre>", "error");
 
+                    var errorMsg = "";
+                    errorMsg += "<div class='error'>";
 
-                } else {
-                    project.hasGithub = false;
-                    projectGithub.star = false;
-                    projectGithub.fork = false;
+                    errorMsg += "<div class='error-title'>" + err + "</div>"
+                    errorMsg += "<div class='error-content'><pre><code>" + rowText + "</code></pre>";
+                    errorMsg += "</div>";
+                    swal({
+                        "title": "",
+                        "text": errorMsg,
+                        "html": true,
+                        type: "error"
+
+                    });
+                    console.log(err);
+                    console.log(rowText);
+                    return;
+
                 }
-                project.id = idIndex++;
-                projectList.push(project);
                 //console.log(parts[0]);
             }
-        });
+        }
+
 
 
         //var categoryList = [];

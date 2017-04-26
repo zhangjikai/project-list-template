@@ -402,3 +402,44 @@ nav a#openup {
 #gen-html {
   visibility: hidden;
 }
+.error {
+  max-width: 500px;
+  max-height: 400px;
+  overflow: auto;
+  text-align: left;
+}
+.error-title {
+  color: red;
+}
+.error-content {
+  width: 100%;
+}
+.error-content code,
+.error-content pre {
+  font-family: Consolas, Monaco, Andale Mono, monospace;
+  color: inherit;
+}
+.error-content code {
+  font-family: Consolas, Monaco, Andale Mono, monospace;
+  margin: 0 2px;
+}
+.error-content pre {
+  font-family: Consolas, Monaco, Andale Mono, monospace;
+  line-height: 1.7em;
+  padding: 6px 10px;
+  border-left: 5px solid #6CE26C;
+}
+.error-content pre > code {
+  font-family: Consolas, Monaco, Andale Mono, monospace;
+  border: 0;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  line-height: 1.6em;
+  font-size: .95em;
+  white-space: pre;
+  background: 0 0;
+}
+.error-content code {
+  color: #666555;
+}

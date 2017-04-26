@@ -17,7 +17,7 @@
 
 <kbd>
 ![](screenshot/screenshot.png)
-</kdb>
+</kbd>
 ## 使用
 1. clone 项目到本地
     ```

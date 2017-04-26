@@ -16,7 +16,7 @@
 使用 Vue.js 写的一个项目列表模板，效果如下所示。使用时不需要修改模板文件，只要按一定规则编写 Markdown 文件即可。同时该项目逻辑比较简单，可以作为 Vue.js 的一个入门示例项目。
 
 <kbd>
-![](screenshot/screenshot.png)
+<img src="screenshot/screenshot.png">
 </kbd>
 
 ## 使用

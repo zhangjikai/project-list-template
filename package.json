@@ -1,7 +1,7 @@
 {
-  "name": "vue-learn",
+  "name": "Project List Template",
   "version": "1.0.0",
-  "description": "learn vue.js",
+  "description": "A project list template written by Vue.js",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

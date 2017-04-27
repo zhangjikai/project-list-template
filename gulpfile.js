@@ -30,11 +30,15 @@ gulp.task("webpack", function (callback) {
 
     //webpack配置文件
     var config = {
-        watch: true,
+        watch: false,
         plugins: [
             commonsPlugin,
-            new ExtractTextPlugin("../css/[name].css")
-            //uglifyJsPlugin,
+            new ExtractTextPlugin("../css/[name].css"),
+            new webpack.LoaderOptionsPlugin({
+                minimize: true
+            }),
+            uglifyJsPlugin
+            //uglifyJsPlugin
             //new OptimizeCssAssetsPlugin({
             //    assetNameRegExp: /\.css$/g,
             //    cssProcessor: require('cssnano'),

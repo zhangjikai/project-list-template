@@ -30,7 +30,7 @@ gulp.task("webpack", function (callback) {
 
     //webpack配置文件
     var config = {
-        watch: false,
+        watch: true,
         plugins: [
             commonsPlugin,
             new ExtractTextPlugin("../css/[name].css"),
@@ -53,7 +53,6 @@ gulp.task("webpack", function (callback) {
             path: __dirname + '/dist/js',
             filename: '[name].js'
         },
-
 
         module: {
             loaders: [

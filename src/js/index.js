@@ -11,6 +11,7 @@ import project from '../components/project/project.vue'
 import sidebar from '../components/sidebar/sidebar.vue'
 import projectList from '../../data.json'
 import config from  '../../config.json'
+import eventBus from '../components/event/EventHub'
 
 
 Vue.component("project", project);
@@ -42,7 +43,7 @@ let categoryObjMap = {};
 let showByCategory = config.category;
 let newProjectList = projectList;
 let isCollapse = document.body.clientWidth < 768;
-console.log(document.body.clientWidth);
+//console.log(document.body.clientWidth);
 //console.log(projectList);
 if (showByCategory) {
     let arrList;
@@ -119,6 +120,8 @@ if (showByCategory) {
 
 //console.log(data);
 
+var bus = new Vue();
+
 var app = new Vue({
     el: '#app',
     data: function () {
@@ -126,7 +129,8 @@ var app = new Vue({
             projects: newProjectList,
             categoryMap: categoryObjMap,
             showByCategory: showByCategory,
-            config: config
+            config: config,
+            bus: bus
 
         }
     },
@@ -138,13 +142,31 @@ var app = new Vue({
             } else {
                 container.style.marginLeft = "260px";
             }
+
+            //console.log(this.$refs);
+        }
+    },
+
+    mounted: function () {
+        console.log(this.$refs);
+        this.collapseClick(isCollapse);
+        if (!isCollapse) {
+            console.log(this.$refs);
+            //console.log(app.$refs);
+            //app.$children[0].collapse();
+            //this.$refs.side.$emit('collapseSign', isCollapse);
         }
     }
+
+
 });
 
 app.collapseClick(isCollapse);
-if(!isCollapse) {
-    app.$children[0].collapse();
+if (!isCollapse) {
+    eventBus.$emit("collapseSign", isCollapse);
+    //console.log(app.$refs);
+    //app.$children[0].collapse();
+    //app.$refs.side.$emit('collapseSign', isCollapse);
 }
 
 smoothScroll.init();

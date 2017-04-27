@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue Demo</title>
+</head>
+<body>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+<div id="app">
+    <button @click="increase">增加 1</button>
+    <p>这个按钮被点击了 {{ counter }} 次。</p>
+</div>
+
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            counter: 0
+        },
+        methods: {
+            increase: function() {
+                this.counter++;
+            }
+        }
+    })
+</script>
+
+</body>
+</html>

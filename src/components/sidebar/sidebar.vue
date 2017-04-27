@@ -6,6 +6,7 @@
         <div class="header">
             <i class="fa fa-bars" aria-hidden="true" @click="collapse"></i>
         </div>
+        {{bus}}
 
         <div class="side-outer" id="side-outer">
             <div v-if="showByCategory">
@@ -36,8 +37,18 @@
 </template>
 
 <script>
+    import eventHub from "../event/EventHub"
+
     export default {
-        props: ["categoryMap", "showByCategory", "projects"],
+        props: ["categoryMap", "showByCategory", "projects", "bus"],
+        created: function() {
+            var vm = this;
+            eventHub.$on('collapseSign', function(isCollapse){
+                if(!isCollapse) {
+                    vm.collapse();
+                }
+            });
+        },
         data: function () {
             return {
                 isCollapse: true

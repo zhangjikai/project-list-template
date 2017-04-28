@@ -16,7 +16,7 @@ English | [中文](README.md)
 <!-- tocstop -->
 
 ## Introduction
-This is a project list shown template written by Vue2, and the effect is shown as below. You just need to write the markdown file according to some defined rules and needn't to change the template file. Meanwhile this program has a very simple logic which is suit for start of Vue.
+This is a project list shown template written by Vue2, and the effect is shown as below. You just need to write the markdown file according to some defined rules and needn't to change the template file. Meanwhile this program has a very simple logic which is suitable for starting of Vue.
 
 <kbd>
 <img src="screenshot/screenshot.png">
@@ -106,7 +106,7 @@ You can use the code block with `config` lang to set your project information. Y
   * `fork` - whether show fork info
 
 ### Project Details
-You can use normal markdown syntax in this section. If the details are too long, you can use <!-- more -->` to split the details content, and the content behind the tag will be folded.
+You can use normal markdown syntax in this section. If the details are too long, you can use `<!-- more -->` to split the details content, and the content behind the tag will be folded.
 ```
 short introduction
 <!-- more -->

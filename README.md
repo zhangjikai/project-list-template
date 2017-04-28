@@ -1,5 +1,5 @@
 
-中文 | [English](README_en.md)
+中文 | [English](README_EN.md)
 
 # 项目列表模板
 

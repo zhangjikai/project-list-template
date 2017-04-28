@@ -48,6 +48,7 @@ gulp.task("webpack", function (callback) {
         ],
         entry: {
             index: __dirname + '/src/js/index.js'
+            //index: __dirname + '/demo.js'
         },
         output: {
             path: __dirname + '/dist/js',

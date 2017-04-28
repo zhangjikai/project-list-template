@@ -5,26 +5,24 @@
     <title>Vue Demo</title>
 </head>
 <body>
-<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!--<script src="https://unpkg.com/vue/dist/vue.js"></script>-->
 
 <div id="app">
-    <button @click="increase">增加 1</button>
-    <p>这个按钮被点击了 {{ counter }} 次。</p>
+    <comp @child_change="childChange"></comp>
 </div>
 
-
+<script type="text/javascript" src="dist/js/common.js"></script>
+<script type="text/javascript" src="dist/js/index.js"></script>
 <script>
     var app = new Vue({
         el: '#app',
-        data: {
-            counter: 0
-        },
         methods: {
-            increase: function() {
-                this.counter++;
+            childChange: function() {
+                console.log("child change");
             }
         }
-    })
+
+    });
 </script>
 
 </body>

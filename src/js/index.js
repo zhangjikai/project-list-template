@@ -148,14 +148,14 @@ var app = new Vue({
     },
 
     mounted: function () {
-        console.log(this.$refs);
-        this.collapseClick(isCollapse);
-        if (!isCollapse) {
-            console.log(this.$refs);
+        //console.log(this.$refs);
+        //this.collapseClick(isCollapse);
+        //if (!isCollapse) {
+            //console.log(this.$refs);
             //console.log(app.$refs);
             //app.$children[0].collapse();
             //this.$refs.side.$emit('collapseSign', isCollapse);
-        }
+        //}
     }
 
 

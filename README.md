@@ -1,3 +1,6 @@
+
+中文 | [English](README_en.md)
+
 # 项目列表模板
 
 <!-- toc -->

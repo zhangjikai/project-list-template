@@ -5,5 +5,6 @@
     "expandText": "详细介绍",
     "collapseText": "收起",
     "defaultCategory": "---------------------------",
-    "github": "zhangjikai/project-list-template"
+    "github": "zhangjikai/project-list-template",
+    "busuanzi": true
 }

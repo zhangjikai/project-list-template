@@ -121,7 +121,7 @@
         methods: {
 
             expand: function () {
-                var vm = this;
+                let vm = this;
                 if(vm.showShort) {
                     vm.showShort = !vm.showShort;
                 } else {
@@ -129,7 +129,7 @@
                         vm.showShort = !vm.showShort;
                     }, 500);
                 }
-                var content = document.querySelector("#content" + vm.project.id);
+                let content = document.querySelector("#content" + vm.project.id);
                 if (!vm.hasPreHeight) {
                     vm.preHeight = document.querySelector('#content-copy' + vm.project.id).clientHeight;
                     content.style.height = content.clientHeight + "px";
@@ -137,7 +137,7 @@
                     //console.log(vm.preHeight);
                 }
 
-                var heightCopy = content.clientHeight;
+                let heightCopy = content.clientHeight;
                 content.style.height = vm.preHeight + "px";
                 vm.preHeight = heightCopy;
 

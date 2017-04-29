@@ -13,6 +13,8 @@ import projectList from '../../data.json'
 import config from  '../../config.json'
 import eventBus from '../components/event/EventHub'
 
+import '../../node_modules/babel-polyfill/dist/polyfill.min.js';
+
 
 Vue.component("project", project);
 Vue.component("sidebar", sidebar);
@@ -120,6 +122,11 @@ if (showByCategory) {
 
 //console.log(data);
 
+if (!config.busuanzi) {
+    let footer = document.querySelector("#footer");
+    footer.style.display = "none";
+}
+
 var bus = new Vue();
 
 var app = new Vue({
@@ -137,25 +144,35 @@ var app = new Vue({
     methods: {
         collapseClick: function (isCollapse) {
             var container = document.querySelector("#project-container");
+            var footer = document.querySelector("#footer");
             if (isCollapse) {
                 container.style.marginLeft = "50px";
+                footer.style.marginLeft = "50px";
             } else {
                 container.style.marginLeft = "260px";
+                footer.style.marginLeft = "260px";
             }
+
 
             //console.log(this.$refs);
         }
     },
 
     mounted: function () {
-        //console.log(this.$refs);
-        //this.collapseClick(isCollapse);
-        //if (!isCollapse) {
-            //console.log(this.$refs);
-            //console.log(app.$refs);
-            //app.$children[0].collapse();
-            //this.$refs.side.$emit('collapseSign', isCollapse);
-        //}
+
+        if (config.busuanzi) {
+            let windowHeight = window.innerHeight;
+            let bodyHeight = document.body.offsetHeight;
+            let appContent = document.querySelector("#app");
+            let appHeight = appContent.offsetHeight;
+
+            if (bodyHeight < windowHeight) {
+                appContent.style.minHeight = windowHeight - bodyHeight + appHeight + "px";
+            }
+
+
+        }
+
     }
 
 
@@ -164,9 +181,7 @@ var app = new Vue({
 app.collapseClick(isCollapse);
 if (!isCollapse) {
     eventBus.$emit("collapseSign", isCollapse);
-    //console.log(app.$refs);
-    //app.$children[0].collapse();
-    //app.$refs.side.$emit('collapseSign', isCollapse);
+
 }
 
 smoothScroll.init();

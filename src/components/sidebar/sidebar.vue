@@ -56,8 +56,8 @@
         },
         methods: {
             collapse: function () {
-                var vm = this;
-                var menuContent = document.querySelector("#side-outer");
+                let vm = this;
+                let menuContent = document.querySelector("#side-outer");
                 if (!vm.isCollapse) {
                     vm.isCollapse = !vm.isCollapse;
                     setTimeout(function () {
@@ -66,7 +66,7 @@
 
                 } else {
                     vm.isCollapse = !vm.isCollapse;
-                    console.log(222);
+                    //console.log(222);
                     menuContent.style.display = "block";
                 }
 

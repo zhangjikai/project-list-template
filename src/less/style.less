@@ -1,15 +1,21 @@
 @import "variable";
 
 body {
+
   background: @body-color;
   //padding: @padding-base-vertical;
   font-family: @font-family-sans;
   z-index: 2;
   padding: 0px;
   margin: 0px;
-  height: 100%;
   font-size: 16px;
 
+}
+
+html {
+
+  margin: 0px;
+  padding: 0px;
 }
 
 @media screen and (max-width: 992px) {
@@ -23,12 +29,76 @@ img {
 }
 
 #app {
-  height: 100%;
+  margin: 0px;
+  padding: 0px;
 }
 
 .project-container {
+  //margin: @len-small;
   min-width: 300px;
   margin-left: 50px;
+  //padding: 0px;
   padding: @len-small;
-  transition: all 0.5s
+  transition: all 0.5s;
+  padding-bottom: 0px;
+  //positon: relative;
+  //min-height: 100%;
+  //height: 100%;
+
 }
+
+/*.footer {
+  //position: absolute;
+  //width: 100%;
+  //bottom: @len-small;
+  height: 60px;
+  background: green;
+  color: #FFF;
+  position: relative;
+  width: 100%;
+  margin-top: -60px;
+  text-align: center;
+}*/
+
+.footer {
+  height: @len-large;
+}
+
+.footer {
+  display: block;
+
+  transition: all 0.5s;
+  margin-left: 260px;
+  margin-top: 0px;
+
+  color: #666;
+  text-align: center;
+  font-size: 12px;
+  //line-height: @len-huge;
+  i {
+    display: inline-block;
+    margin-right: @len-tiny;
+    margin-left: 0px;
+  }
+
+  span {
+    display: inline-block;
+    margin-right: @len-small;
+    margin-left: 0px;
+  }
+
+  .split {
+
+    height: 0.8em;
+    display: inline-block;
+    border-right: 1px solid #666;
+    margin-left: 0px;
+    padding: 0px;
+  }
+
+  #busuanzi_container_site_uv {
+    margin-right: 0px;
+  }
+}
+
+

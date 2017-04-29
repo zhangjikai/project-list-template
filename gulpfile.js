@@ -56,13 +56,24 @@ gulp.task("webpack", function (callback) {
         },
 
         module: {
+
+
             loaders: [
-                {test: /\.vue$/, loader: 'vue-loader'},
+                {
+                    test: /\.vue$/,
+                    loader: 'babel-loader!vue-loader',
+                },
                 {test: /\.css$/, loader: ExtractTextPlugin.extract({fallback: "style-loader", use: "css-loader"})},
                 {
                     test: /\.js$/,
                     exclude: /(node_modules|bower_components)/,
-                    loader: 'babel-loader'
+                    loader: 'babel-loader',
+                    query: {
+                        babelrc: false,
+                        presets: [
+                            ['es2015', {modules: false}]
+                        ]
+                    }
                 },
                 {
                     test: /\.less$/,

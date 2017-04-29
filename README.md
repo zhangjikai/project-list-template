@@ -5,14 +5,14 @@
 
 <!-- toc -->
 
-- [前言](#%E5%89%8D%E8%A8%80)
-- [使用](#%E4%BD%BF%E7%94%A8)
-- [Markdown 文件规则](#markdown-%E6%96%87%E4%BB%B6%E8%A7%84%E5%88%99)
-  * [项目开始标记](#项目开始标记)
-  * [项目信息](#项目信息)
-  * [项目介绍](#%E9%A1%B9%E7%9B%AE%E4%BB%8B%E7%BB%8D)
-  * [完整示例](#完整示例)
-- [全局配置](#%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE)
+* [项目列表模板](#项目列表模板)
+  * [前言](#前言)
+  * [使用](#使用)
+  * [Markdown 文件规则](#markdown-文件规则)
+  * [Emphasis](#emphasis)
+  * [Lists](#lists)
+    * [项目开始标记](#项目开始标记)
+    * [项目信息](#项目信息)
 
 <!-- tocstop -->
 
@@ -126,3 +126,4 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 * `collapseText` - 收起介绍按钮显示的文字
 * `defaultCategory` - 项目默认类别
 * `github` - github corner，格式为 `用户名` 或者 `用户名/仓库`，为空则不显示
+* `busuanzi` - 是否显示 `不蒜子` 网页统计

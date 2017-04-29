@@ -3,15 +3,14 @@ English | [中文](README.md)
 
 <!-- toc -->
 
-
-* [Introduction](#introduction)
-* [Usage](#usage)
-* [Markdown File Rules](#markdown-file-rules)
-  * [Start Tag](#start-tag)
-  * [Project Information](#project-information)
-  * [Project Details](#project-details)
-  * [Complete Sample](#complete-sample)
-* [Global Config](#global-config)
+* [Project List Template](#project-list-template)
+  * [Introduction](#introduction)
+  * [Usage](#usage)
+  * [Markdown File Rules](#markdown-file-rules)
+  * [Emphasis](#emphasis)
+  * [Lists](#lists)
+    * [Start Tag](#start-tag)
+    * [Project Information](#project-information)
 
 <!-- tocstop -->
 
@@ -125,3 +124,4 @@ You can set global configurations in the `config.json`. Following are all suppor
 * `collapseText` - display text of the collapse details button.
 * `defaultCategory` - default category of the project.
 * `github` - github corner, formats are `usename` or `usename/repository`, and will be hidden if this configuration is empty.
+* `busuanzi` - whether show `busuanzi` page visited count.

@@ -1,18 +1,18 @@
 English | [中文](README.md)
 # Project List Template
 
-<!-- toc -->
 
-* [Project List Template](#project-list-template)
-  * [Introduction](#introduction)
-  * [Usage](#usage)
-  * [Markdown File Rules](#markdown-file-rules)
-  * [Emphasis](#emphasis)
-  * [Lists](#lists)
+
+* [Introduction](#introduction)
+* [Usage](#usage)
+* [Markdown File Rules](#markdown-file-rules)
     * [Start Tag](#start-tag)
     * [Project Information](#project-information)
+    * [Project Details](#project-details)
+    * [Complete Sample](#complete-sample)
+* [Global Config](#global-config)
 
-<!-- tocstop -->
+
 
 ## Introduction
 This is a project list shown template written by Vue2, and the effect is shown as below. You just need to write the markdown file according to some defined rules and needn't to change the template file. Meanwhile this program has a very simple logic which is suitable for starting of Vue.
